@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 01:23:16 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 11:04:04 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/25 22:25:56 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,14 +104,11 @@ typedef struct s_pf
 */
 
 /* -------------------- array functions -------------------------- */
-char		*ft_strcat(char *dest, const char *src);
 size_t		ft_arraysize(void **array);
 char		**ft_copy_strarray(char **array);
 void		ft_free_array(void **array);
 void		ft_free_array_size(void **array, size_t size);
 int			ft_putintarray(int *array, int size);
-char		**ft_split_charset(char *s, char *charset);
-char		**ft_split(const char *s, char c);
 
 /* -------------------- sorting functions -------------------------*/
 void	ft_qsort(void *base, size_t nmemb, size_t size, int (*cmp)(const void *, const void *));
@@ -178,6 +175,9 @@ char		*ft_utoa(unsigned long long n);
 char		*ft_itoa_base(unsigned long long n, int base, int uppercase);
 
 /* -------------------- string operations -------------------- */
+char		*ft_strcat(char *dest, const char *src);
+char		**ft_split_charset(char *s, char *charset);
+char		**ft_split(const char *s, char c);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strdup(const char *src);

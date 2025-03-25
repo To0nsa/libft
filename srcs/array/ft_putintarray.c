@@ -6,27 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 22:17:44 by nlouis            #+#    #+#             */
-/*   Updated: 2025/02/08 15:10:55 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/25 22:45:56 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_putintarray.c
+ * @brief Prints an array of integers to standard output.
+ *
+ * This file contains the implementation of `ft_putintarray`, a helper
+ * function that displays a space-separated array of integers using
+ * `ft_printf`.
+ *
+ * @author nlouis
+ * @date 2024/12/13
+ */
 #include "libft.h"
 
-/** ft_putintarray()
- * Prints an array of int separated by spaces.
+/**
+ * @brief Prints an integer array to standard output.
  *
- * @array: The array of integers to be printed.
- * @size: The number of elements in the array.
+ * Each integer is printed using `ft_printf` followed by a space,
+ * except the last element. The function returns the total number of
+ * characters printed.
  *
- * Returns: The total number of bytes written, or -1 if an error occurs.
+ * @param array A pointer to an array of integers.
+ * @param size  The number of elements in the array.
  *
- * Usage:
- * - Use this function to display an integer array in a space-separated format.
- * - Returns the bytes written for potential error handling.
+ * @return The total number of characters printed on success,
+ *         or -1 if `ft_printf` fails.
  *
- * Notes:
- * - If `array` is NULL or `size` is 0, the function does nothing and returns 0.
- * - The function does not print a newline; add "\n" manually if needed.
+ * @note If `array` is NULL or size <= 0, the function returns 0.
  */
 int	ft_putintarray(int *array, int size)
 {

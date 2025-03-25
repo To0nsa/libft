@@ -6,22 +6,36 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:39:51 by nlouis            #+#    #+#             */
-/*   Updated: 2025/02/08 15:11:29 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/25 22:41:40 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_arraysize.c
+ * @brief Calculates the number of elements in a NULL-terminated array.
+ *
+ * This file contains the implementation of `ft_arraysire`, which counts the
+ * number of elements in a NULL-terminated array of pointers.
+ *
+ * @author nlouis
+ * @date 2025/02/08
+ */
 #include "libft.h"
 
-/** ft_arraysize()
- * Calculates the number of elements in a NULL-terminated array.
+/**
+ * @brief Calculates the number of elements in a NULL-terminated array.
  *
- * @array: The NULL-terminated array (can be of any type).
+ * This function iterates over a pointer array (usually a `char **` or 
+ * similar) and returns the number of non-NULL elements until it hits the 
+ * terminating NULL.
  *
- * Returns: The number of elements (excluding the NULL terminator).
+ * @param array A NULL-terminated array of pointers.
  *
- * Usage:
- * - Works for any NULL-terminated array (e.g., `char **`, `int **`, `void **`).
- * - If `array` is NULL, the function returns 0.
+ * @return The number of elements before the NULL terminator.
+ *         Returns 0 if the input array is NULL.
+ *
+ * @note This is commonly used to get the size of a string array like
+ *       the result of `ft_split`, or an environment variable array.
  */
 size_t	ft_arraysize(void **array)
 {

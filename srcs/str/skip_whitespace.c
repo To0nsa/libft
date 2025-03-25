@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 00:37:23 by nlouis            #+#    #+#             */
-/*   Updated: 2024/10/21 00:37:28 by nlouis           ###   ########.fr       */
+/*   Created: 2024/10/21 01:13:08 by nlouis            #+#    #+#             */
+/*   Updated: 2025/03/25 22:51:50 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+void	skip_whitespace_index(const char *input, int *i)
 {
-	return (c >= 0 && c <= 127);
+	while (ft_isspace(input[*i]))
+		(*i)++;
+}
+
+char	*skip_whitespace_ptr(const char *s)
+{
+	while (ft_isspace(*s))
+		s++;
+	return ((char *)s);
 }

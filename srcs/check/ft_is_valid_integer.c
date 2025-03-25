@@ -6,26 +6,34 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 07:55:29 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/24 20:43:16 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/25 22:48:19 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_is_valid_integer.c
+ * @brief Validates whether a string represents a valid `long long` integer.
+ *
+ * This file provides a utility function to check whether a given string is a
+ * valid integer representation that fits within the `long long` range.
+ * The function supports optional '+' or '-' signs.
+ *
+ * @author nlouis
+ * @date 2025/01/31
+ */
 #include "libft.h"
 
 /**
- * is_in_longlong_range()
- * Checks whether the given numeric string can be safely stored 
- * within the range of a `long long` integer.
+ * @brief Checks if a numeric string fits within the `long long` range.
  *
- * @str: The numeric string to validate (excluding the sign).
- * @negative: A boolean indicating whether the number is negative.
+ * This helper function verifies whether the numeric value represented by
+ * the string is within the bounds of a signed `long long`, taking into
+ * account the sign.
  *
- * Returns: true if the number is within the range of `long long`,
- * false otherwise.
+ * @param str The numeric string to check (without sign).
+ * @param negative Indicates whether the number is negative.
  *
- * - The function ensures that the number does not exceed LLONG_MAX 
- *   (or LLONG_MIN in case of a negative number).
- * - It processes the string digit by digit, checking for overflow.
+ * @return true if the string fits within `long long` bounds, false otherwise.
  */
 static bool	is_in_longlong_range(const char *str, bool negative)
 {
@@ -52,21 +60,14 @@ static bool	is_in_longlong_range(const char *str, bool negative)
 }
 
 /**
- * ft_is_valid_integer()
- * Checks whether a given string represents a valid integer.
+ * @brief Validates if a string represents a valid `long long` integer.
  *
- * @str: The string to validate.
+ * This function checks whether the input string is a valid numeric
+ * representation (optional sign, digits only) that fits in a `long long`.
  *
- * Returns: true if the string represents a valid `long long` integer,
- * false otherwise.
+ * @param str The input string to validate.
  *
- * Usage:
- * - Use `ft_is_valid_integer()` to verify if a string can be converted
- *   into a valid signed integer without overflow.
- * - The function allows an optional '+' or '-' sign at the beginning.
- * - It ensures that the string is not empty after the sign and 
- *   that all characters are digits.
- * - It prevents numeric overflows by checking `LLONG_MAX` and `LLONG_MIN`.
+ * @return true if the string is valid, false otherwise.
  */
 bool	ft_is_valid_integer(const char *str)
 {
