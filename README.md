@@ -9,6 +9,8 @@
 
 
 [🔗 View on GitHub](https://github.com/to0nsa/libft)
+📚 [View full documentation](https://to0nsa.github.io/libft/)
+
 
 This C library was developed during my training at **42/Hive School** and has grown over time into a practical, reusable toolkit. It includes a wide range of utilities for **string manipulation**, **memory management**, **data structures**, **math**, and **custom I/O** — all written from scratch in C.
 
