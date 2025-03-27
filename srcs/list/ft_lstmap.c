@@ -6,33 +6,45 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 21:03:36 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:08:56 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:39:13 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_lstmap.c
+ * @brief Creates a new list by applying a function to each element of a list.
+ *
+ * This file contains the implementation of `ft_lstmap`, which constructs a
+ * new list by applying a transformation function to each element's content
+ * of an existing list. Memory is properly managed and cleanup is performed
+ * if any allocation fails during the process.
+ * 
+ * @author nlouis
+ * @date 2024/10/20
+ * @ingroup linked_list
+ */
 #include "libft.h"
 
 /**
- * ft_lstmap()
- * Creates a new list by applying a function to each node’s content of
- * an existing list.
+ * @brief Applies a function to each element of a list and builds a new list.
  *
- * @lst: The head node of the original list.
- * @f: A function to apply to the content of each node.
- * @del: A function to delete the content in case of allocation failure.
+ * Iterates through the input list `lst`, applies the function `f` to the
+ * content of each node, and creates a new list with the results. If any
+ * allocation fails, the entire new list is cleared using the `del` function.
  *
- * Returns: A new list with each node’s content transformed by `f`,
- *          or NULL if allocation fails at any point.
+ * @param lst Pointer to the head of the original list.
+ * @param f Function to apply to the content of each node.
+ * @param del Function used to delete the content of a node if needed.
+ * 
+ * @return A new list with the transformed content, or NULL if allocation fails.
  *
- * Usage:
- * - Use `ft_lstmap()` to generate a new list with transformed content
- * 	from another list.
- * - Applies `f` to each node’s content to create new content.
- * - Uses `ft_lstnew()` to create new nodes and `ft_lstadd_back()`
- * 	to append them.
- * - If memory allocation fails, uses `del` to free any created content and
- * 	clears the new list.
- * - Does nothing and returns NULL if `lst` or `f` is NULL.
+ * @note This function allocates new memory and performs deep copies of the
+ *       transformed content. You must free the returned list when done.
+ *
+ * @see ft_lstnew
+ * @see ft_lstadd_back
+ * @see ft_lstclear
+ * @ingroup linked_list
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

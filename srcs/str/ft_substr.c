@@ -6,28 +6,44 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:48:53 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:34:09 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:21:36 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_substr.c
+ * @brief Extracts a substring from a string.
+ *
+ * This file contains the implementation of the `ft_substr` function,
+ * which creates a new string from the source string `s` starting at
+ * index `start` and taking up to `len` characters. If `start` is beyond
+ * the length of the string, an empty string is returned. If memory allocation
+ * fails, NULL is returned.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_substr()
- * Allocates and returns a substring from the string @s.
+ * @brief Extracts a substring from a string.
  *
- * @s: The source string.
- * @start: The start index of the substring in @s.
- * @len: The maximum number of characters to include in the substring.
+ * Allocates and returns a new string, which is a substring of `s` starting from
+ * index `start` and up to `len` characters long. If `start` is greater than or equal
+ * to the length of `s`, an empty string is returned. The length of the returned substring
+ * is either `len` or the remaining length from `start`, whichever is smaller.
  *
- * Returns: A newly allocated string containing the substring,
- *			or an empty string if @start is beyond the end of @s,
- *			or NULL if allocation fails.
+ * @param s The source string.
+ * @param start The starting index in the source string.
+ * @param len The maximum number of characters to copy.
  *
- * Notes:
- * - The substring is null-terminated.
- * - If @len extends past the end of @s, it is trimmed to fit.
- * - The caller is responsible for freeing the returned string.
+ * @return A newly allocated string containing the substring, or NULL if memory allocation fails.
+ *         If `start` is out of bounds, an empty string is returned.
+ *
+ * @see ft_strlen
+ * @see ft_strlcpy
+ * @ingroup string_utils
  */
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

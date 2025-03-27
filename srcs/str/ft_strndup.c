@@ -6,28 +6,41 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/02 16:10:39 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:31:20 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:13:34 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strndup.c
+ * @brief Duplicates a string up to a maximum number of characters.
+ *
+ * This file contains the implementation of `ft_strndup`, which allocates
+ * and returns a new string that is a duplicate of the input `src`, limited
+ * to `n` characters.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strndup()
- * Duplicates up to n characters from a string into a new allocation.
+ * @brief Creates a copy of a string, up to `n` characters.
  *
- * @src: The source string to duplicate.
- * @n: Maximum number of characters to copy.
+ * This function allocates memory and copies at most `n` characters
+ * from the string `src` to a new string. The new string is always
+ * null-terminated.
  *
- * Returns: A newly allocated string containing at most n characters from @src,
- *			null-terminated. Returns NULL if allocation fails.
+ * @param src The source string to duplicate.
+ * @param n   The maximum number of characters to copy.
  *
- * Notes:
- * - If @n is greater than the length of @src, duplicates the entire string.
- * - The caller is responsible for freeing the returned string.
- * - Safer alternative when working with partial strings or bounded buffers.
+ * @return A pointer to the newly allocated string, or NULL if memory
+ *         allocation fails.
+ *
+ * @see ft_strlcpy
+ * @see ft_strlen
+ * @ingroup string_utils
  */
-
 char	*ft_strndup(const char *src, size_t n)
 {
 	char	*copy;

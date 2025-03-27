@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:58:55 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:45:00 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:35:39 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
  *
  * @author nlouis
  * @date 2024/11/21
+ * @ingroup array_utils
  */
 #include "libft.h"
 
@@ -36,6 +37,7 @@
  *
  * @note Safe to call with NULL. Use after functions like `ft_split` or
  *       `ft_copy_strarray` to release memory.
+ * @ingroup array_utils
  */
 void	ft_free_array(void **array)
 {
@@ -60,6 +62,7 @@ void	ft_free_array(void **array)
  *
  * @note Useful when the array is not NULL-terminated or its size is known
  *       ahead of time.
+ * @ingroup array_utils
  */
 void	ft_free_array_size(void **array, size_t size)
 {

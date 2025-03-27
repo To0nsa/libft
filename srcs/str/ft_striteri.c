@@ -6,28 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:45:09 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:26:26 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:04:16 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_striteri.c
+ * @brief Applies a function to each character of a string with its index.
+ *
+ * This file contains the implementation of `ft_striteri`, which allows 
+ * applying a function to each character of a string along with its index.
+ * The string is modified in place.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_striteri()
- * Applies a function to each character of a string with its index.
+ * @brief Applies a function to each character of a string, passing its index.
  *
- * @s: The string to iterate over.
- * @f: The function to apply, taking the index and a pointer to the char.
+ * Iterates over the string `s` and applies the function `f` to each character.
+ * The function receives the index of the character and a pointer to it, 
+ * allowing in-place modification.
  *
- * Returns: Nothing (void).
+ * @param s The string to iterate over.
+ * @param f The function to apply to each character.
  *
- * Notes:
- * - The function @f can modify the characters in-place.
- * - Iteration stops at the null terminator.
- * - Does nothing if @s or @f is NULL.
+ * @note If either `s` or `f` is NULL, the function does nothing.
  *
- * Example:
- * - Can be used to transform a string to uppercase, lowercase, etc.
+ * @ingroup string_utils
  */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

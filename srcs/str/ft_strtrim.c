@@ -6,20 +6,33 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:48:35 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:33:37 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:18:24 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strtrim.c
+ * @brief Trims characters from the beginning and end of a string.
+ *
+ * This file contains the implementation of `ft_strtrim`, a function that
+ * removes all leading and trailing characters from a string `s1` that
+ * are present in the `set` string.
+ *
+ * Helper functions include logic to identify where to start and stop
+ * the trimming.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_is_in_set()
- * Checks if a character is present in the given set.
+ * @brief Checks if a character is present in a given set.
  *
- * @c: The character to check.
- * @set: The set of characters to search in.
- *
- * Returns: 1 if @c is found in @set, 0 otherwise.
+ * @param c The character to check.
+ * @param set The null-terminated string containing the set of characters.
+ * @return 1 if `c` is in `set`, 0 otherwise.
  */
 static int	ft_is_in_set(char c, const char *set)
 {
@@ -36,14 +49,11 @@ static int	ft_is_in_set(char c, const char *set)
 }
 
 /**
- * ft_trim_start()
- * Calculates the index of the first character in @s1
- * that is not in @set.
+ * @brief Finds the starting index after trimming leading characters.
  *
- * @s1: The input string.
- * @set: The set of characters to trim.
- *
- * Returns: The index of the first character to keep.
+ * @param s1 The string to trim.
+ * @param set The set of characters to remove.
+ * @return The index of the first character not in `set`.
  */
 static size_t	ft_trim_start(const char *s1, const char *set)
 {
@@ -56,14 +66,11 @@ static size_t	ft_trim_start(const char *s1, const char *set)
 }
 
 /**
- * ft_trim_end()
- * Calculates the index just after the last character in @s1
- * that is not in @set.
+ * @brief Finds the ending index before trimming trailing characters.
  *
- * @s1: The input string.
- * @set: The set of characters to trim.
- *
- * Returns: The index one past the last character to keep.
+ * @param s1 The string to trim.
+ * @param set The set of characters to remove.
+ * @return The index of the last character not in `set` + 1.
  */
 static size_t	ft_trim_end(const char *s1, const char *set)
 {
@@ -76,20 +83,22 @@ static size_t	ft_trim_end(const char *s1, const char *set)
 }
 
 /**
- * ft_strtrim()
- * Trims all characters from the beginning and end of a string that are
- * present in the given set.
+ * @brief Trims characters from both ends of a string.
  *
- * @s1: The input string to trim.
- * @set: The set of characters to remove from both ends of @s1.
+ * Allocates and returns a copy of the string `s1` with the characters
+ * specified in `set` removed from the beginning and end.
  *
- * Returns: A newly allocated trimmed string,
- *          or NULL if allocation fails or if inputs are NULL.
+ * @param s1 The original null-terminated string to trim.
+ * @param set The set of characters to trim.
+ * @return A newly allocated trimmed string, or NULL on allocation failure.
  *
- * Notes:
- * - Uses helper functions to find start and end indexes to copy.
- * - If the entire string is trimmed, returns an empty string.
- * - Caller is responsible for freeing the returned string.
+ * @note If the resulting trimmed string is empty, a string containing only
+ *       '\0' is returned.
+ *
+ * @see ft_trim_start
+ * @see ft_trim_end
+ * @see ft_strlcpy
+ * @ingroup string_utils
  */
 char	*ft_strtrim(const char *s1, const char *set)
 {

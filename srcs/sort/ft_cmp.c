@@ -6,26 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 10:57:16 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 11:01:08 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:26:18 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_cmp.c
+ * @brief Comparison functions for qsort usage.
+ *
+ * Provides `int_cmp` and `double_cmp` for use with `ft_qsort`.
+ *
+ * These functions compare the values pointed to and return a result
+ * suitable for use with generic sorting routines.
+ *
+ * @author nlouis
+ * @date 2025/03/25
+ * @ingroup sorting_utils
+ * @see ft_qsort
+ */
 #include "libft.h"
 
 /**
- * double_cmp()
- * Comparator function for sorting an array of doubles.
+ * @brief Comparison function for two doubles.
  *
- * @a: Pointer to the first double.
- * @b: Pointer to the second double.
+ * Compares the values pointed to by `a` and `b`.
  *
- * Returns:
- *	- Negative value if *a < *b
- *	- Zero if *a == *b
- *	- Positive value if *a > *b
+ * @param a Pointer to the first double.
+ * @param b Pointer to the second double.
+ * @return Negative if `a < b`, 0 if equal, positive if `a > b`.
  *
- * Note:
- *	Works correctly with all double values except NaN.
+ * @see ft_qsort
+ * @ingroup sorting_utils
  */
 int double_cmp(const void *a, const void *b)
 {
@@ -36,19 +47,16 @@ int double_cmp(const void *a, const void *b)
 }
 
 /**
- * int_cmp()
- * Comparator function for sorting an array of integers.
+ * @brief Comparison function for two integers.
  *
- * @a: Pointer to the first int.
- * @b: Pointer to the second int.
+ * Compares the values pointed to by `a` and `b`.
  *
- * Returns:
- *   - Negative value if *a < *b
- *   - Zero if *a == *b
- *   - Positive value if *a > *b
+ * @param a Pointer to the first integer.
+ * @param b Pointer to the second integer.
+ * @return Negative if `a < b`, 0 if equal, positive if `a > b`.
  *
- * Note:
- * 	This form is safe and avoids overflow that can happen with direct subtraction.
+ * @see ft_qsort
+ * @ingroup sorting_utils
  */
 int int_cmp(const void *a, const void *b)
 {

@@ -6,19 +6,33 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 14:07:09 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:13:27 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:34:42 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file vector.c
+ * @brief Vector normalization and length operations.
+ *
+ * This file provides utility functions to compute the length of a vector,
+ * normalize vectors, and divide a vector by a scalar.
+ * 
+ * @author nlouis
+ * @date 2025/03/22
+ * @ingroup math_utils
+ */
 #include "libft.h"
 
 /**
- * get_vector_length()
- * Computes the length (magnitude) of a 2D vector.
+ * @brief Computes the length (magnitude) of a 2D vector.
  *
- * @vec: The input 2D vector.
+ * Uses the Euclidean norm formula: sqrt(x^2 + y^2).
  *
- * Returns: The length of the vector (sqrt(x² + y²)).
+ * @param vec A 2D vector.
+ * 
+ * @return The magnitude (length) of the vector.
+ *
+ * @ingroup math_utils
  */
 double	get_vector_length(t_dpoint vec)
 {
@@ -29,16 +43,18 @@ double	get_vector_length(t_dpoint vec)
 }
 
 /**
- * divide_vector_by_scalar()
- * Divides a vector by a scalar value.
+ * @brief Divides a 2D vector by a scalar.
  *
- * @vec: The input 2D vector.
- * @scalar: The scalar to divide by.
+ * Each component of the vector is divided by the scalar value.
  *
- * Returns: A new vector scaled by 1 / scalar.
+ * @param vec The original vector.
+ * @param scalar The scalar to divide by.
+ * 
+ * @return A new vector with divided components.
  *
- * Note:
- * - Does not handle division by zero; caller must check.
+ * @warning Does not handle division by zero.
+ *
+ * @ingroup math_utils
  */
 t_dpoint	divide_vector_by_scalar(t_dpoint vec, double scalar)
 {
@@ -50,16 +66,17 @@ t_dpoint	divide_vector_by_scalar(t_dpoint vec, double scalar)
 }
 
 /**
- * get_normalized_vector()
- * Returns the unit (normalized) form of a 2D vector.
+ * @brief Returns the normalized (unit length) vector.
  *
- * @vector: The input 2D vector.
+ * If the vector is zero-length, a (0, 0) vector is returned.
  *
- * Returns: A unit vector in the same direction as input.
- *          Returns (0, 0) if the input vector is zero-length.
+ * @param vector The input vector to normalize.
+ * 
+ * @return A unit vector in the same direction.
  *
- * Usage:
- * - Useful to keep direction but remove magnitude.
+ * @see get_vector_length
+ * @see divide_vector_by_scalar
+ * @ingroup math_utils
  */
 t_dpoint	get_normalized_vector(t_dpoint vector)
 {

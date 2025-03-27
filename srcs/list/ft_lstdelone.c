@@ -6,25 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 19:50:54 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:09:31 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:38:57 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_lstdelone.c
+ * @brief Deletes a single node of a linked list.
+ *
+ * This file provides the implementation of `ft_lstdelone`, a function that
+ * frees a single list node and its content using a user-provided delete
+ * function. This does not affect any other nodes in the list.
+ * 
+ * It is typically used inside other list-cleaning operations like
+ * `ft_lstclear`.
+ * 
+ * @author nlouis
+ * @date 2024/10/19
+ * @ingroup linked_list
+ */
 #include "libft.h"
 
 /**
- * ft_lstdelone()
- * Deletes and frees a single node from a linked list.
+ * @brief Deletes and frees a single list node.
  *
- * @lst: The node to delete.
- * @del: A function used to free the node's content.
+ * Frees the memory of the given list node and its content using the
+ * `del` function. The `next` pointer of the node is not accessed or freed.
  *
- * Returns: Nothing (void).
- *
- * Usage:
- * - Use `ft_lstdelone()` to delete one node without affecting the rest.
- * - Applies `del` to free the content, then frees the node itself.
- * - Does nothing if `lst` or `del` is NULL.
+ * @param lst A pointer to the node to delete.
+ * @param del A pointer to the function used to free the content.
+ * 
+ * @ingroup linked_list
  */
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

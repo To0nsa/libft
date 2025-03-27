@@ -6,30 +6,43 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:47:53 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:31:44 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:14:39 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strnstr.c
+ * @brief Locates a substring in a string within a limited length.
+ *
+ * This file contains the implementation of `ft_strnstr`, a function that 
+ * searches for the first occurrence of the substring `little` in the string 
+ * `big`, but not beyond `len` characters.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strnstr()
- * Locates the first occurrence of a substring within a string,
- * searching at most len characters.
+ * @brief Searches for a substring in a string within a max length.
  *
- * @big: The string to search in.
- * @little: The substring to find.
- * @len: The maximum number of characters to search.
+ * This function searches for the first occurrence of the null-terminated
+ * string `little` in the string `big`, where not more than `len` characters
+ * are searched. Characters after a `\0` character are not searched.
  *
- * Returns: A pointer to the first occurrence of @little in @big,
- *			or NULL if not found within @len characters.
+ * If `little` is an empty string, `big` is returned. If `little` occurs
+ * nowhere in `big` within the first `len` characters, NULL is returned.
  *
- * Notes:
- * - If @little is an empty string, returns @big.
- * - Stops searching when @len is reached, even if @little is not found.
- * - Not suitable for binary data; works only with null-terminated strings.
+ * @param big    The main string to be searched.
+ * @param little The substring to search for.
+ * @param len    The maximum number of characters to search in `big`.
+ *
+ * @return A pointer to the first occurrence of `little` in `big` within
+ *         `len` characters, or NULL if not found.
+ *
+ * @ingroup string_utils
  */
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 22:17:44 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:45:56 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:35:44 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
  *
  * @author nlouis
  * @date 2024/12/13
+ * @ingroup array_utils
  */
 #include "libft.h"
 
@@ -37,6 +38,7 @@
  *         or -1 if `ft_printf` fails.
  *
  * @note If `array` is NULL or size <= 0, the function returns 0.
+ * @ingroup array_utils
  */
 int	ft_putintarray(int *array, int size)
 {

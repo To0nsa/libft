@@ -6,25 +6,40 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 19:51:02 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:09:00 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:39:06 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_lstiter.c
+ * @brief Iterates over a linked list and applies a function to each node.
+ *
+ * This file implements `ft_lstiter`, which applies a user-defined function
+ * to the content of each node in a singly linked list.
+ * It does not modify the structure of the list itself.
+ * 
+ * It is typically used to perform side effects (like printing or logging)
+ * on each node’s content.
+ * 
+ * @author nlouis
+ * @date 2024/10/19
+ * @ingroup linked_list
+ */
 #include "libft.h"
 
 /**
- * ft_lstiter()
- * Iterates over a linked list and applies a function to each node’s content.
+ * @brief Iterates over a list and applies a function to each node's content.
  *
- * @lst: The head node of the list to be traversed.
- * @f: A function pointer that is applied to each node's content.
+ * This function traverses the given linked list and applies the function
+ * `f` to the `content` of each node. It does not allocate or free any
+ * memory, and it does not modify the list structure.
  *
- * Returns: Nothing (void).
- *
- * Usage:
- * - Use `ft_lstiter()` to apply a function to every node's content in a list.
- * - The function `f` receives each node's content as an argument.
- * - Does nothing if `lst` or `f` is NULL.
+ * @param lst Pointer to the first node of the list.
+ * @param f   Function to apply to the content of each node.
+ * 
+ * @note The function `f` should not modify the list structure.
+ * 
+ * @ingroup linked_list
  */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

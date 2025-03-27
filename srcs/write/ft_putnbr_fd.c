@@ -6,26 +6,39 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:42:46 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 10:02:10 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:48:35 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_putnbr_fd.c
+ * @brief File output function to write an integer to a file descriptor.
+ *
+ * This file contains the implementation of `ft_putnbr_fd`, which writes
+ * an integer to the specified file descriptor. It handles negative values
+ * and the special case for the minimum integer value (`-2147483648`).
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup file_output
+ */
 #include "libft.h"
 
 /**
- * ft_putnbr_fd()
- * Writes an integer to the given file descriptor.
+ * @brief Writes an integer to a file descriptor.
  *
- * @n: The integer to write.
- * @fd: The file descriptor to write to.
+ * This function writes the integer `n` to the file specified by the file
+ * descriptor `fd`. If the integer is negative, it first writes the negative
+ * sign. For values greater than 9, it recursively writes the digits of the
+ * integer from left to right.
  *
- * Returns: Nothing (void).
+ * The special case of the minimum integer value (`-2147483648`) is handled
+ * separately because it cannot be negated without causing overflow.
  *
- * Notes:
- * - Handles negative numbers, including the edge case of INT_MIN.
- * - Uses recursion to print digits in correct order.
- * - Converts digits to characters before writing.
- * - INT_MIN is handled separately to avoid overflow on negation.
+ * @param n The integer to write.
+ * @param fd The file descriptor to which the integer will be written.
+ *
+ * @ingroup file_output
  */
 void	ft_putnbr_fd(int n, int fd)
 {

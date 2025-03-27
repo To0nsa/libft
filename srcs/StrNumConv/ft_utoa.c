@@ -6,25 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:19:56 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:58:04 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:41:45 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_utoa.c
+ * @brief Converts an unsigned long long integer to a string.
+ *
+ * This file contains the implementation of `ft_utoa`, which converts an unsigned
+ * long long integer to its string representation. It allocates memory for the
+ * resulting string, handles the case for zero, and returns the string representation.
+ *
+ * @author nlouis
+ * @date 2024/11/08
+ * @ingroup number_conversions
+ */
 #include "libft.h"
 
 /**
- * ft_utoa()
- * Converts an unsigned long long to a decimal string.
+ * @brief Converts an unsigned long long integer to a string.
  *
- * @n: The unsigned number to convert.
+ * This function converts an unsigned long long integer `n` into its string
+ * representation. The function allocates memory for the string, which must be
+ * freed by the caller. If the input number is zero, the string "0" is returned.
  *
- * Returns: A newly allocated null-terminated string representing @n,
- *          or NULL if allocation fails.
+ * @param n The unsigned long long integer to convert to a string.
  *
- * Notes:
- * - Works for all values of unsigned long long, including 0.
- * - The caller is responsible for freeing the returned string.
- * - No sign is added since the value is always non-negative.
+ * @return A dynamically allocated string representing `n`, or `NULL` if memory
+ *         allocation fails.
+ *
+ * @ingroup number_conversions
  */
 char	*ft_utoa(unsigned long long n)
 {

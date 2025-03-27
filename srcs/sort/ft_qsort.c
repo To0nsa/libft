@@ -6,23 +6,47 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 09:00:55 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 10:55:33 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:08:05 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_qsort.c
+ * @brief Implementation of a generic quicksort with median-of-three pivoting.
+ *
+ * This file contains the implementation of `ft_qsort`, which sorts any
+ * array using the quicksort algorithm. It includes optimizations like
+ * insertion sort for small partitions and median-of-three pivot selection.
+ *
+ * @author nlouis
+ * @date 2024/12/13
+ * @ingroup sorting_utils
+ */
 #include "libft.h"
 
-/*
- * Helper to access element at index i in the array.
+/**
+ * @brief Gets the pointer to the i-th element of an array.
+ *
+ * @param base Base pointer of the array.
+ * @param i Index of the element.
+ * @param size Size in bytes of each element.
+ * @return Pointer to the i-th element.
  */
 static void	*get_elem(void *base, size_t i, size_t size)
 {
 	return ((char *)base + (i * size));
 }
 
-/*
- * Insertion sort for small partitions.
- * Efficient for small sub-arrays.
+/**
+ * @brief Sorts a subarray using insertion sort.
+ *
+ * Used by `quicksort` when the subarray size is below the threshold.
+ *
+ * @param base Base pointer of the array.
+ * @param start Start index of the subarray.
+ * @param end End index of the subarray.
+ * @param size Size of each element.
+ * @param cmp Comparison function.
  */
 static void	insertion_sort(void *base, size_t start, size_t end,
 				size_t size, int (*cmp)(const void*, const void*))
@@ -46,8 +70,17 @@ static void	insertion_sort(void *base, size_t start, size_t end,
 	}
 }
 
-/*
- * Median-of-three pivot selection for improved performance.
+/**
+ * @brief Selects a pivot using the median-of-three method.
+ *
+ * Swaps the median of the first, middle, and last element to the end.
+ *
+ * @param base Base pointer of the array.
+ * @param start Start index of the subarray.
+ * @param end End index of the subarray.
+ * @param size Size of each element.
+ * @param cmp Comparison function.
+ * @return Index of the pivot element (moved to the end).
  */
 static size_t	median_of_three(void *base, size_t start, size_t end,
 					size_t size, int (*cmp)(const void*, const void*))
@@ -65,9 +98,18 @@ static size_t	median_of_three(void *base, size_t start, size_t end,
 	return (end);
 }
 
-/*
- * Partition around pivot.
- * Returns pivot index.
+/**
+ * @brief Partitions the array using Lomuto partition scheme.
+ *
+ * Moves elements less than the pivot to the left and greater ones to the
+ * right.
+ *
+ * @param base Base pointer of the array.
+ * @param start Start index of the subarray.
+ * @param end End index of the subarray (pivot).
+ * @param size Size of each element.
+ * @param cmp Comparison function.
+ * @return Final pivot index.
  */
 static size_t	partition(void *base, size_t start, size_t end, size_t size,
 					int (*cmp)(const void*, const void*))
@@ -94,8 +136,17 @@ static size_t	partition(void *base, size_t start, size_t end, size_t size,
 	return (i);
 }
 
-/*
- * QuickSort main logic (optimized tail recursion, insertion sort threshold).
+/**
+ * @brief Recursive quicksort implementation with tail call optimization.
+ *
+ * Recursively sorts the smaller partition first to avoid stack overflow.
+ * Uses insertion sort for small subarrays.
+ *
+ * @param base Base pointer of the array.
+ * @param start Start index.
+ * @param end End index.
+ * @param size Size of each element.
+ * @param cmp Comparison function.
  */
 static void	quicksort(void *base, size_t start, size_t end, size_t size,
 						int (*cmp)(const void*, const void*))
@@ -126,19 +177,24 @@ static void	quicksort(void *base, size_t start, size_t end, size_t size,
 	}
 }
 
-/*
- * ft_qsort()
- * Generic quicksort implementation.
+/**
+ * @brief Sorts a generic array using quicksort with insertion fallback.
  *
- * @base: Pointer to the array to sort.
- * @nmemb: Number of elements.
- * @size: Size of each element.
- * @cmp: Comparison function (returns <0, 0, or >0).
+ * This function sorts an array of any data type using the quicksort
+ * algorithm. For small subarrays, insertion sort is used instead for better
+ * performance.
  *
- * Notes:
- * - Uses median-of-three pivot selection for optimal pivots.
- * - Switches to insertion sort for small partitions (QSORT_THRESHOLD).
- * - Optimizes recursion to avoid stack overflows.
+ * @param base Pointer to the first element of the array.
+ * @param nmemb Number of elements in the array.
+ * @param size Size (in bytes) of each element.
+ * @param cmp Comparison function, must return:
+ *            - Negative if first < second
+ *            - Zero if first == second
+ *            - Positive if first > second
+ *
+ * @see int_cmp
+ * @see double_cmp
+ * @ingroup sorting_utils
  */
 void	ft_qsort(void *base, size_t nmemb, size_t size,
 			int (*cmp)(const void *, const void *))

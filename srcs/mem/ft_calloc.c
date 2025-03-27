@@ -6,26 +6,42 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:35:45 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:19:11 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:04:52 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_calloc.c
+ * @brief Allocates and zero-initializes an array in memory.
+ *
+ * This file contains the implementation of `ft_calloc`, which allocates
+ * memory for an array of elements and initializes all bytes to zero.
+ * It is a safer alternative to `malloc` as it includes overflow protection.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup memory_utils
+ */
 #include "libft.h"
 
 /**
- * ft_calloc()
- * Allocates memory for an array and initializes it to zero.
+ * @brief Allocates and zero-initializes memory for an array.
  *
- * @nmemb: Number of elements.
- * @size: Size of each element.
+ * This function allocates memory for an array of @p nmemb elements of
+ * @p size bytes each and initializes all bytes in the allocated memory
+ * to zero. It also includes overflow protection for `nmemb * size`.
  *
- * Returns: A pointer to the allocated memory, or NULL on failure or overflow.
+ * @param nmemb Number of elements to allocate.
+ * @param size  Size in bytes of each element.
  *
- * Usage:
- * - Similar to the standard calloc().
- * - Performs an overflow check: (nmemb * size) must be safe.
- * - If total size is 0, still returns malloc(0) for conformity.
- * - Memory is zeroed using ft_memset().
+ * @return A pointer to the allocated memory, or NULL if the allocation
+ *         fails or if an overflow is detected.
+ *
+ * @note The returned memory must be freed using `free` when no longer used.
+ *
+ * @see ft_memset
+ * @see malloc
+ * @ingroup memory_utils
  */
 void	*ft_calloc(size_t nmemb, size_t size)
 {

@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 13:39:51 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:41:40 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:35:33 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
  *
  * @author nlouis
  * @date 2025/02/08
+ * @ingroup array_utils
  */
 #include "libft.h"
 
@@ -36,6 +37,7 @@
  *
  * @note This is commonly used to get the size of a string array like
  *       the result of `ft_split`, or an environment variable array.
+ * @ingroup array_utils
  */
 size_t	ft_arraysize(void **array)
 {

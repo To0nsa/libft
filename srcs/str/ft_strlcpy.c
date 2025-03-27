@@ -6,28 +6,39 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:46:27 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:29:01 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:09:08 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strlcpy.c
+ * @brief Safely copies a string with buffer size limitation.
+ *
+ * This file provides the implementation of `ft_strlcpy`, which copies a
+ * string from `src` to `dest` ensuring null-termination, and avoiding buffer
+ * overflows. The function mimics the behavior of the standard `strlcpy`.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strlcpy()
- * Copies a string into a buffer, ensuring null-termination.
+ * @brief Copies a string from `src` to `dest`, up to `size` - 1 characters.
  *
- * @dest: The destination buffer.
- * @src: The source string to copy.
- * @size: The size of the destination buffer.
+ * Copies up to `size - 1` characters from the null-terminated string `src`
+ * to `dest`, null-terminating the result. If `size` is 0, nothing is written
+ * to `dest`, but the length of `src` is still returned.
  *
- * Returns: The total length of the source string (excluding null terminator).
+ * @param dest Destination buffer.
+ * @param src Source null-terminated string to copy.
+ * @param size Total size of destination buffer.
  *
- * Notes:
- * - Copies up to size - 1 characters from src to dest.
- * - Always null-terminates dest if size > 0.
- * - Return value allows detection of truncation:
- *	- If return >= size, the copy was truncated.
- *	- If return < size, the full string was copied.
+ * @return The length of `src`. This allows detection of truncation:
+ *         if the return value is >= `size`, truncation occurred.
+ *
+ * @ingroup string_utils
  */
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

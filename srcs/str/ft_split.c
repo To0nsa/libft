@@ -6,28 +6,35 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 14:33:58 by nlouis            #+#    #+#             */
-/*   Updated: 2025/02/08 14:26:24 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:35:50 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_split.c
+ * @brief Splits a string into substrings using a single delimiter.
+ *
+ * This file contains the implementation of the `ft_split` function, which
+ * divides a string into an array of substrings based on a single character
+ * delimiter. Each substring is dynamically allocated.
+ *
+ * Helper functions:
+ * - `ft_w_count`: counts the number of substrings (words).
+ * - `ft_fill_array`: fills the array with allocated substrings.
+ *
+ * @author nlouis
+ * @date 2024/12/12
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
-/** ft_split()
- * Splits a string into an array of substrings using a delimiter.
+/**
+ * @brief Counts how many substrings will result from splitting.
  *
- * @s: The input string to split.
- * @c: The delimiter character.
- *
- * Returns: A dynamically allocated NULL-terminated array of substrings,
- * or NULL on failure.
- *
- * Usage:
- * - Use `ft_split()` to separate words in a string based on a delimiter.
- * - It handles multiple consecutive delimiters correctly.
- * - Each word is allocated separately, and the array should be freed with
- * `ft_free_array()`.
+ * @param str The input string to scan.
+ * @param c The delimiter character.
+ * @return The number of substrings (words) in the input.
  */
-
 static size_t	ft_w_count(const char *str, char c)
 {
 	size_t	w_count;
@@ -49,6 +56,21 @@ static size_t	ft_w_count(const char *str, char c)
 	return (w_count);
 }
 
+/**
+ * @brief Fills the output array with substrings from input.
+ *
+ * Each substring is allocated using `ft_substr`, and the array is NULL-
+ * terminated. On allocation failure, previously allocated strings are freed.
+ *
+ * @param array The output array of substrings.
+ * @param s The input string to split.
+ * @param c The delimiter character.
+ * @param w_count The number of substrings to extract.
+ * @return 1 on success, 0 on failure.
+ *
+ * @see ft_substr
+ * @see ft_free_array
+ */
 static int	ft_fill_array(char **array, const char *s, char c, size_t w_count)
 {
 	size_t	i;
@@ -75,6 +97,22 @@ static int	ft_fill_array(char **array, const char *s, char c, size_t w_count)
 	return (1);
 }
 
+/**
+ * @brief Splits a string into substrings based on a delimiter character.
+ *
+ * Allocates and returns a NULL-terminated array of substrings resulting from
+ * splitting the input string by the delimiter character.
+ *
+ * @param s The string to split.
+ * @param c The delimiter character.
+ * @return A newly allocated array of substrings, or NULL on failure.
+ *
+ * @see ft_w_count
+ * @see ft_fill_array
+ * @see ft_substr
+ * @see ft_free_array
+ * @ingroup string_utils
+ */
 char	**ft_split(const char *s, char c)
 {
 	char		**array;

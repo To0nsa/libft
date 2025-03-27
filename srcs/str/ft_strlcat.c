@@ -6,28 +6,44 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:45:53 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:27:55 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:07:43 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strlcat.c
+ * @brief Appends a string to another with buffer size limitation.
+ *
+ * This file contains the implementation of `ft_strlcat`, which safely
+ * concatenates two strings with a size limit, ensuring null-termination.
+ * It mimics the behavior of the standard `strlcat` function.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strlcat()
- * Appends src to the end of dest, up to size - 1 characters.
+ * @brief Concatenates `src` to the end of `dest` while ensuring null-termination.
  *
- * @dest: The destination string (must be null-terminated).
- * @src: The source string to append.
- * @size: Total size of the destination buffer.
+ * This function appends the `src` string to the end of the `dest` string.
+ * It ensures that the result fits within the buffer size given by `size`,
+ * including the null-terminator. If `size` is less than or equal to the
+ * length of `dest`, the function returns `size + strlen(src)` without
+ * appending.
  *
- * Returns: The total length of the string it tried to create:
- *          - If return >= size, truncation occurred.
- *          - If return < size, all of src was appended.
+ * @param dest The destination buffer.
+ * @param src The source string to append.
+ * @param size The total size of the destination buffer.
  *
- * Notes:
- * - Always null-terminates the result (if size > 0).
- * - Does nothing if size <= strlen(dest).
- * - Safe alternative to strcat, prevents buffer overflows.
+ * @return The total length of the string it tried to create:
+ *         `strlen(dest) + strlen(src)`.
+ *         This value can be used to detect truncation.
+ *
+ * @see ft_strlen
+ * @see ft_strlcpy
+ * @ingroup string_utils
  */
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

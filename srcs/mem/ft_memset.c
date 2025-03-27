@@ -6,25 +6,38 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:41:32 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:22:23 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:04:25 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_memset.c
+ * @brief Fills a block of memory with a constant byte.
+ *
+ * This file contains the implementation of `ft_memset`, which sets the first
+ * @p n bytes of the memory area pointed to by @p s to the specified byte @p c.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup memory_utils
+ */
 #include "libft.h"
 
 /**
- * ft_memset()
- * Fills a block of memory with a constant byte.
+ * @brief Fills memory with a constant byte.
  *
- * @s: Pointer to the memory area to fill.
- * @c: Byte value to set (converted to unsigned char).
- * @n: Number of bytes to fill.
+ * This function sets each of the first @p n bytes of the memory area pointed
+ * to by @p s to the constant byte value @p c (converted to an unsigned char).
  *
- * Returns: A pointer to the memory area @s.
+ * @param s Pointer to the memory area to fill.
+ * @param c Byte value to fill the memory with.
+ * @param n Number of bytes to fill.
  *
- * Usage:
- * - Sets the first @n bytes of the memory block to the byte value @c.
- * - Commonly used to initialize memory (e.g., to 0 or -1).
+ * @return A pointer to the memory area @p s.
+ *
+ * @note Useful for initializing memory to zero or another value.
+ *
+ * @ingroup memory_utils
  */
 void	*ft_memset(void *s, int c, size_t n)
 {

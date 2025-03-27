@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:36:09 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:56:12 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:35:54 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
  * 
  * @author nlouis
  * @date 2024/10/21
+ * @ingroup char_check
  */
 #include "libft.h"
 
@@ -28,6 +29,7 @@
  * 
  * @param c The character to check.
  * @return 1 if the character is between 0 and 127, 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isascii(int c)
 {
@@ -39,6 +41,7 @@ int	ft_isascii(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is between '0' and '9', 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isdigit(int c)
 {
@@ -50,6 +53,7 @@ int	ft_isdigit(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is 'A'-'Z' or 'a'-'z', 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isalpha(int c)
 {
@@ -61,6 +65,7 @@ int	ft_isalpha(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is a letter or a digit, 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isalnum(int c)
 {
@@ -73,6 +78,7 @@ int	ft_isalnum(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is 'a'-'z', 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_islower(int c)
 {
@@ -84,6 +90,7 @@ int	ft_islower(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is printable (32 to 126), 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isprint(int c)
 {
@@ -95,6 +102,7 @@ int	ft_isprint(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is a punctuation character, 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_ispunct(int c)
 {
@@ -107,6 +115,7 @@ int	ft_ispunct(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is a sign, 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_issign(int c)
 {
@@ -118,6 +127,7 @@ int	ft_issign(int c)
  * 
  * @param c The character to check.
  * @return 1 if the character is between 'A' and 'Z', 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isupper(int c)
 {
@@ -131,8 +141,28 @@ int	ft_isupper(int c)
  *
  * @param c The character to check.
  * @return 1 if the character is a whitespace, 0 otherwise.
+ * @ingroup char_check
  */
 int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= '\t' && c <= '\r'));
+}
+
+/**
+ * @brief Checks if a numeric string represents a positive integer.
+ *
+ * This function determines if the given string represents a strictly
+ * positive integer (i.e., does not start with a minus sign).
+ *
+ * @param str A null-terminated string to check.
+ * @return 1 if the string represents a positive integer, 0 otherwise.
+ * @ingroup char_check
+ */
+int	ft_isstrpositive(const char *str)
+{
+	if (!str || *str == '\0')
+		return (0);
+	if (*str == '-')
+		return (0);
+	return (1);
 }

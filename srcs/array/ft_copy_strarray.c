@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 00:53:03 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:41:48 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:35:35 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
  *
  * @author nlouis
  * @date 2025/01/03
+ * @ingroup array_utils
  */
 #include "libft.h"
 
@@ -40,6 +41,7 @@
  * @see ft_strdup
  * @see ft_free_array
  * @see ft_arraysize
+ * @ingroup array_utils
  */
 char	**ft_copy_strarray(char **array)
 {

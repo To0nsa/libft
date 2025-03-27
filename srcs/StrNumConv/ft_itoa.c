@@ -6,23 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:38:09 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:57:17 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:39:41 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_itoa.c
+ * @brief Converts a long long integer to a string.
+ *
+ * This file contains the implementation of `ft_itoa`, which converts a
+ * long long integer to its string representation. It handles both positive
+ * and negative numbers and allocates memory for the resulting string.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup number_conversions
+ */
 #include "libft.h"
 
 /**
- * ft_nlen()
- * Calculates the number of characters needed to represent a number in base 10.
+ * @brief Calculates the length of the number when converted to a string.
  *
- * @n: The number to evaluate.
+ * This helper function calculates how many digits are required to represent
+ * a long long integer `n` as a string. It also accounts for the negative sign
+ * if the number is negative and the zero case.
  *
- * Returns: The number of characters, including '-' if the number is negative.
+ * @param n The long long integer whose length is to be calculated.
  *
- * Notes:
- * - Returns 1 for n == 0 (one digit).
- * - Handles negative numbers by counting the minus sign.
+ * @return The number of digits required to represent `n` as a string.
+ *
+ * @see ft_itoa
+ * @ingroup number_conversions
  */
 static size_t	ft_nlen(long long n)
 {
@@ -40,19 +54,20 @@ static size_t	ft_nlen(long long n)
 }
 
 /**
- * ft_itoa()
- * Converts a signed long long integer to a string representation.
+ * @brief Converts a long long integer to a string.
  *
- * @n: The number to convert.
+ * This function converts a long long integer `n` to its string representation.
+ * It handles the case where `n` is zero and also handles negative numbers by
+ * adding a minus sign. The function allocates memory for the resulting string,
+ * which must be freed by the caller.
  *
- * Returns: A newly allocated string representing the number,
- *          or NULL if allocation fails.
+ * @param n The long long integer to convert to a string.
  *
- * Notes:
- * - Handles negative numbers and returns a string with '-' prefix.
- * - Uses unsigned long long internally to avoid overflow on -LLONG_MIN.
- * - The returned string is null-terminated.
- * - Caller is responsible for freeing the result.
+ * @return A dynamically allocated string representing `n`. Returns `NULL` if
+ *         memory allocation fails.
+ *
+ * @see ft_nlen
+ * @ingroup number_conversions
  */
 char	*ft_itoa(long long n)
 {

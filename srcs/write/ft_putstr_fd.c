@@ -6,26 +6,39 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:43:12 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 10:02:38 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:50:11 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_putstr_fd.c
+ * @brief File output function to write a string to a file descriptor.
+ *
+ * This file contains the implementation of `ft_putstr_fd`, which writes
+ * a string to the specified file descriptor. It ensures that all the string
+ * is written, even if interruptions happen (e.g., `EINTR`).
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup file_output
+ */
 #include "libft.h"
 
 /**
- * ft_putstr_fd()
- * Writes a string to the given file descriptor with robust error handling.
+ * @brief Writes a string to a file descriptor.
  *
- * @str: The null-terminated string to write.
- * @fd: The file descriptor to write to.
+ * This function writes the null-terminated string `str` to the file
+ * specified by the file descriptor `fd`. It handles interruptions during
+ * the write process (e.g., `EINTR`), ensuring that the entire string is written.
+ * If the string is `NULL`, it returns `-1`. It returns the total number of
+ * bytes written on success.
  *
- * Returns: The total number of bytes written on success,
- *          or -1 on error.
+ * @param str The string to write.
+ * @param fd The file descriptor to which the string will be written.
  *
- * Notes:
- * - Handles partial writes and interruptions (EINTR).
- * - Returns -1 immediately if @str is NULL or a fatal write error occurs.
- * - Unlike the standard libft version, this implementation is more robust.
+ * @return The total number of bytes written, or -1 on error.
+ * 
+ * @ingroup file_output
  */
 int	ft_putstr_fd(char *str, int fd)
 {

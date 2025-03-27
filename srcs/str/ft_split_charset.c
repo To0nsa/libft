@@ -6,22 +6,37 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 14:38:15 by nlouis            #+#    #+#             */
-/*   Updated: 2025/02/08 15:26:32 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:35:41 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_split_charset.c
+ * @brief Splits a string into substrings based on a set of delimiters.
+ *
+ * This file provides the implementation of `ft_split_charset`, a utility
+ * function that splits a string into an array of substrings, using a set
+ * of characters as delimiters (charset).
+ * Each substring is dynamically allocated.
+ *
+ * Helper functions are defined as static for internal use:
+ * - `ft_is_charset`: checks if a character is in the charset.
+ * - `ft_w_count_charset`: counts the number of substrings (words).
+ * - `ft_fill_array_charset`: fills the output array with substrings.
+ *
+ * @author nlouis
+ * @date 2025/02/08
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
+
 /**
- * ft_split_charset
- * Splits a string into an array of substrings using multiple delimiters.
- * Preserves empty fields ("" when consecutive delimiters appear).
+ * @brief Checks if a character belongs to a charset.
  *
- * @s: The input string to split.
- * @charset: A string containing multiple delimiter characters.
- *
- * Returns: A newly allocated NULL-terminated array of substrings, or
- * NULL on failure.
+ * @param c The character to check.
+ * @param charset The set of delimiter characters.
+ * @return 1 if the character is in the charset, 0 otherwise.
  */
 static int	ft_is_charset(char c, const char *charset)
 {
@@ -34,6 +49,13 @@ static int	ft_is_charset(char c, const char *charset)
 	return (0);
 }
 
+/**
+ * @brief Counts how many substrings will result from splitting.
+ *
+ * @param str The input string to split.
+ * @param charset The set of delimiter characters.
+ * @return The number of substrings (fields) expected in the result.
+ */
 static size_t	ft_w_count_charset(char *str, char *charset)
 {
 	size_t	count;
@@ -57,6 +79,18 @@ static size_t	ft_w_count_charset(char *str, char *charset)
 	return (count + 1);
 }
 
+/**
+ * @brief Fills the array with substrings from the input string.
+ *
+ * @param array The output array of substrings.
+ * @param s The input string to split.
+ * @param charset The set of delimiter characters.
+ * @param field_count The number of substrings to extract.
+ * @return 1 on success, 0 on allocation failure.
+ *
+ * @see ft_substr
+ * @see ft_free_array
+ */
 static int	ft_fill_array_charset(char **array, char *s,
 										char *charset, size_t field_count)
 {
@@ -84,6 +118,21 @@ static int	ft_fill_array_charset(char **array, char *s,
 	return (1);
 }
 
+/**
+ * @brief Splits a string into substrings based on a character set.
+ *
+ * This function uses a charset (set of delimiters) to split the string
+ * `s` into a NULL-terminated array of substrings.
+ *
+ * @param s The string to split.
+ * @param charset The set of delimiter characters.
+ * @return A newly allocated array of substrings, or NULL on error.
+ *
+ * @see ft_w_count_charset
+ * @see ft_fill_array_charset
+ * @see ft_free_array
+ * @ingroup string_utils
+ */
 char	**ft_split_charset(char *s, char *charset)
 {
 	char		**array;

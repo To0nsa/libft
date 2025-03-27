@@ -6,32 +6,47 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 20:24:25 by riamaev           #+#    #+#             */
-/*   Updated: 2025/03/25 09:23:54 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:36:00 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * ft_strcat()
- * Concatenates the src string to the end of dest.
+ * @file ft_strcat.c
+ * @brief Concatenates one string to the end of another.
  *
- * @dest: The destination string (must be large enough to hold the result).
- * @src: The source string to append.
+ * This file contains the implementation of `ft_strcat`, which appends the
+ * source string to the destination string, assuming the destination has
+ * enough space to hold the result.
  *
- * Returns: A pointer to the resulting string @dest.
+ * @author nlouis
+ * @date 2025/03/09
+ * @ingroup string_utils
+ */
+#include "libft.h"
+
+/**
+ * @brief Appends the `src` string to the end of the `dest` string.
  *
- * Usage:
- * - Appends src to the end of dest, including the null terminator.
- * - Assumes dest is properly null-terminated and has enough space.
- * - Behavior is undefined if dest overlaps with src.
+ * This function assumes that `dest` points to a buffer large enough to hold
+ * the resulting string, including the null terminator.
+ *
+ * @param dest The destination string to which `src` will be appended.
+ * @param src The source string to append.
+ * @return A pointer to the destination string (`dest`).
+ *
+ * @note The behavior is undefined if the destination buffer is not large
+ *       enough to contain the result.
+ *
+ * @ingroup string_utils
  */
 char	*ft_strcat(char *dest, const char *src)
 {
 	char	*dest_ptr;
 
 	dest_ptr = dest;
-	while (*dest_ptr != '\0')
+	while (*dest_ptr)
 		dest_ptr++;
-	while (*src != '\0')
+	while (*src)
 	{
 		*dest_ptr = *src;
 		dest_ptr++;

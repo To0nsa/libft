@@ -6,25 +6,39 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:38:49 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:20:05 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:04:47 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_memchr.c
+ * @brief Locates the first occurrence of a byte in a memory area.
+ *
+ * This file contains the implementation of `ft_memchr`, a function
+ * that searches for the first occurrence of a byte in a memory block.
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup memory_utils
+ */
 #include "libft.h"
 
 /**
- * ft_memchr()
- * Locates the first occurrence of a byte in a memory block.
+ * @brief Scans memory for the first occurrence of a specific byte.
  *
- * @s: Pointer to the memory area to search.
- * @c: Byte value to look for (converted to unsigned char).
- * @n: Number of bytes to examine.
+ * This function scans the initial @p n bytes of the memory area
+ * pointed to by @p s for the first instance of the byte @p c
+ * (converted to an `unsigned char`). If the byte is found, a
+ * pointer to the matching byte is returned.
  *
- * Returns: A pointer to the first occurrence of c in s,
- *          or NULL if c is not found within the first n bytes.
+ * @param s Pointer to the memory block to be scanned.
+ * @param c Byte to search for, interpreted as unsigned char.
+ * @param n Number of bytes to scan.
  *
- * Usage:
- * - Useful for scanning raw memory for a specific byte value.
+ * @return A pointer to the matching byte in memory, or NULL if
+ *         the byte is not found in the first @p n bytes.
+ *
+ * @ingroup memory_utils
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

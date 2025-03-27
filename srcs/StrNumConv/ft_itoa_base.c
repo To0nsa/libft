@@ -6,24 +6,39 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:10:01 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:56:35 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:37:29 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_itoa_base.c
+ * @brief Converts an unsigned long long integer to a string in a specified base.
+ *
+ * This file contains the implementation of `ft_itoa_base`, which converts an
+ * unsigned long long integer to a string representation in a specified base.
+ * It supports bases ranging from 2 to 16 and can produce either lowercase or
+ * uppercase hexadecimal output based on the `uppercase` flag.
+ *
+ * @author nlouis
+ * @date 2025/11/08
+ * @ingroup number_conversions
+ */
 #include "libft.h"
 
 /**
- * ft_baselen()
- * Calculates the number of digits needed to represent a number in a given base.
+ * @brief Calculates the length of the number in the specified base.
  *
- * @n: The number to evaluate.
- * @base: The base in which the number will be represented.
+ * This helper function calculates how many digits are required to represent
+ * a number `n` in the specified `base`. It repeatedly divides the number by
+ * the base until it becomes 0, counting the number of iterations.
  *
- * Returns: The number of digits required.
+ * @param n The number to calculate the length for.
+ * @param base The base used for the calculation (between 2 and 16).
  *
- * Notes:
- * - Returns 1 if n == 0 (since '0' is still one digit).
- * - Assumes base is valid and greater than 1.
+ * @return The number of digits required to represent `n` in the given base.
+ *
+ * @see ft_itoa_base
+ * @ingroup number_conversions
  */
 static size_t	ft_baselen(unsigned long long n, int base)
 {
@@ -41,20 +56,24 @@ static size_t	ft_baselen(unsigned long long n, int base)
 }
 
 /**
- * ft_itoa_base()
- * Converts an unsigned long long number to a string in the given base.
+ * @brief Converts an unsigned long long integer to a string in the specified base.
  *
- * @n: The number to convert.
- * @base: The numeric base (between 2 and 16).
- * @uppercase: If non-zero, uses uppercase letters for bases > 10.
+ * This function takes an unsigned long long integer `n` and converts it to a
+ * string representation in the specified `base` (between 2 and 16). The
+ * `uppercase` flag controls whether hexadecimal letters are uppercase (`1`)
+ * or lowercase (`0`). The function allocates memory for the resulting string
+ * and returns a pointer to it.
  *
- * Returns: A newly allocated string representing the number,
- *          or NULL if allocation fails or base is invalid.
+ * @param n The unsigned long long integer to convert.
+ * @param base The base for conversion (between 2 and 16).
+ * @param uppercase If `1`, hexadecimal letters will be uppercase; if `0`,
+ *                  they will be lowercase.
  *
- * Notes:
- * - Supports bases from binary (2) to hexadecimal (16).
- * - Uses uppercase or lowercase digits based on @uppercase flag.
- * - Caller is responsible for freeing the returned string.
+ * @return A string representing `n` in the given base, or `NULL` if an error
+ *         occurs (e.g., invalid base or memory allocation failure).
+ *
+ * @see ft_baselen
+ * @ingroup number_conversions
  */
 char	*ft_itoa_base(unsigned long long n, int base, int uppercase)
 {

@@ -6,28 +6,43 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:40:38 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:21:20 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 12:04:37 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_memcpy.c
+ * @brief Copies bytes from one memory area to another.
+ *
+ * This file provides the implementation of `ft_memcpy`, an optimized 
+ * memory copy function that uses 64-bit chunks where possible.
+ * It is typically used for copying raw memory blocks.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup memory_utils
+ */
 #include "libft.h"
 
 /**
- * ft_memcpy()
- * Copies n bytes from source memory area to destination.
+ * @brief Copies @p n bytes from @p src to @p dest.
  *
- * @dest: Pointer to the destination buffer.
- * @src: Pointer to the source buffer.
- * @n: Number of bytes to copy.
+ * This function performs a memory copy from the source pointer @p src 
+ * to the destination pointer @p dest. It copies 64-bit chunks when 
+ * possible for performance, then completes with byte-by-byte copying.
  *
- * Returns: A pointer to the destination buffer,
- *          or NULL if dest or src is NULL.
+ * @param dest Pointer to the destination memory area.
+ * @param src Pointer to the source memory area.
+ * @param n Number of bytes to copy.
  *
- * Notes:
- * - Uses 64-bit chunks when possible for faster copying.
- * - Falls back to byte-by-byte copy for remaining bytes.
- * - Does not handle overlapping memory (use ft_memmove for that).
- * - If dest == src, does nothing and returns dest.
+ * @return A pointer to the destination memory area @p dest.
+ *
+ * @note If either @p dest or @p src is NULL, the function returns NULL.
+ *       This implementation handles overlapping memory incorrectly and 
+ *       should not be used when overlap is possible — use `ft_memmove` 
+ *       instead in such cases.
+ *
+ * @ingroup memory_utils
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

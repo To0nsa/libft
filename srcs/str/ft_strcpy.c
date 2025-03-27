@@ -6,25 +6,36 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 09:18:26 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:25:33 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:02:57 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strcmp.c
+ * @brief Compares two strings lexicographically.
+ *
+ * This file contains the implementation of `ft_strcmp`, which compares
+ * two null-terminated strings character by character.
+ * 
+ * @author nlouis
+ * @date 2025/01/28
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strcpy()
- * Copies a null-terminated string into another buffer.
+ * @brief Compares two strings lexicographically.
  *
- * @dst: The destination buffer (must be large enough).
- * @src: The source string to copy.
+ * This function compares the characters of `s1` and `s2` one by one.
+ * The comparison stops at the first differing character or when a null byte
+ * is reached.
  *
- * Returns: A pointer to the destination string @dst.
+ * @param s1 Pointer to the first null-terminated string.
+ * @param s2 Pointer to the second null-terminated string.
+ * @return An integer less than, equal to, or greater than 0 if `s1` is found
+ *         to be less than, equal to, or greater than `s2`, respectively.
  *
- * Notes:
- * - Copies characters from @src to @dst, including the null terminator.
- * - Undefined behavior if @dst and @src overlap.
- * - Make sure @dst is allocated with enough space.
+ * @ingroup string_utils
  */
 char	*ft_strcpy(char *dst, const char *src)
 {

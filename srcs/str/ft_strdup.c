@@ -6,25 +6,36 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:44:51 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:25:53 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:04:21 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strdup.c
+ * @brief Duplicates a null-terminated string.
+ *
+ * This file contains the implementation of `ft_strdup`, which creates a
+ * newly allocated copy of a string using `malloc`.
+ * 
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strdup()
- * Duplicates a string by allocating memory and copying the content.
+ * @brief Allocates and duplicates a null-terminated string.
  *
- * @src: The source string to duplicate.
+ * Allocates memory for a copy of the string `src`, copies its contents
+ * (including the null terminator), and returns a pointer to the new string.
  *
- * Returns: A pointer to the newly allocated copy of the string,
- *          or NULL if allocation fails.
+ * @param src The source string to duplicate.
+ * @return A pointer to the newly allocated string, or NULL on allocation
+ * failure.
  *
- * Notes:
- * - The new string is null-terminated.
- * - Uses malloc() and ft_strlcpy() for allocation and copying.
- * - The caller is responsible for freeing the returned string.
+ * @see ft_strlcpy
+ * @see ft_strlen
+ * @ingroup string_utils
  */
 char	*ft_strdup(const char *src)
 {

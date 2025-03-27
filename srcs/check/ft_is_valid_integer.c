@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 07:55:29 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 22:48:19 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 11:36:50 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
  *
  * @author nlouis
  * @date 2025/01/31
+ * @ingroup char_check
  */
 #include "libft.h"
 
@@ -34,6 +35,9 @@
  * @param negative Indicates whether the number is negative.
  *
  * @return true if the string fits within `long long` bounds, false otherwise.
+ * 
+ * @see ft_isdigit
+ * @ingroup char_check
  */
 static bool	is_in_longlong_range(const char *str, bool negative)
 {
@@ -68,6 +72,9 @@ static bool	is_in_longlong_range(const char *str, bool negative)
  * @param str The input string to validate.
  *
  * @return true if the string is valid, false otherwise.
+ * 
+ * @see is_in_longlong_range
+ * @ingroup char_check
  */
 bool	ft_is_valid_integer(const char *str)
 {

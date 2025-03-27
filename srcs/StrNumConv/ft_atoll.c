@@ -6,25 +6,43 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 21:00:10 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:37:23 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:34:06 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_atoll.c
+ * @brief Converts a string to a long long integer (ft_atoll).
+ *
+ * This file contains the implementation of the `ft_atoll` function, which converts
+ * a string representation of a number to a `long long` integer. The function handles
+ * optional leading signs (`+` or `-`), whitespace characters, and ensures that
+ * overflow is avoided during conversion.
+ *
+ * The helper function `ft_check_overflow` is used to check for potential overflow
+ * conditions while converting the string.
+ *
+ * @author nlouis
+ * @date 2025/10/20
+ * @ingroup number_conversions
+ */
 #include "libft.h"
 
 /**
- * ft_check_overflow()
- * Checks if appending a digit would cause overflow in long long conversion.
+ * @brief Checks if the result of the ongoing conversion would overflow.
  *
- * @num: The current accumulated number.
- * @digit: The next digit character to append.
- * @sign: The sign of the number (1 for positive, -1 for negative).
+ * This helper function checks whether converting a string to a `long long` would
+ * cause an overflow. It compares the current value being accumulated with the maximum
+ * and minimum values allowed for a `long long` integer to prevent overflow.
  *
- * Returns: true if the operation would overflow, false otherwise.
+ * @param num The current number being formed during the conversion.
+ * @param digit The current digit being processed in the string.
+ * @param sign The sign of the number being processed: 1 for positive, -1 for negative.
  *
- * Notes:
- * - Compares against LLONG_MAX and LLONG_MIN thresholds.
- * - Prevents undefined behavior during conversion in ft_atoll().
+ * @return True if overflow would occur, false otherwise.
+ *
+ * @see ft_atoll
+ * @ingroup number_conversions
  */
 static bool	ft_check_overflow(long long num, char digit, int sign)
 {
@@ -50,20 +68,21 @@ static bool	ft_check_overflow(long long num, char digit, int sign)
 }
 
 /**
- * ft_atoll()
- * Converts a string to a long long integer with overflow checking.
+ * @brief Converts a string to a long long integer (ft_atoll).
  *
- * @str: The input null-terminated string to convert.
+ * This function converts a string to a `long long` integer, considering an optional
+ * leading sign (`+` or `-`) and handling whitespace characters. The function reads
+ * each digit, converts it to an integer, and checks for overflow using the
+ * `ft_check_overflow` helper function. It stops parsing when a non-digit character
+ * is encountered or when the string ends.
  *
- * Returns: The converted value as a long long,
- *          or ATOI_ERROR if overflow occurs.
+ * @param str The string to convert to a `long long` integer.
  *
- * Notes:
- * - Skips leading whitespace characters (spaces, \t, \n, etc.).
- * - Handles optional '+' or '-' sign.
- * - Only processes numeric characters after the sign.
- * - Uses ft_check_overflow() to safely detect overflows.
- * - The return type is long long for extended range support.
+ * @return The converted `long long` integer, or `ATOI_ERROR` if overflow occurs.
+ *
+ * @see ft_check_overflow
+ * @see ATOI_ERROR
+ * @ingroup number_conversions
  */
 long long	ft_atoll(const char *str)
 {

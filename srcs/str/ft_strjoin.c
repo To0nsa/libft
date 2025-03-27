@@ -6,26 +6,40 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:45:28 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:27:28 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:06:31 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_strjoin.c
+ * @brief Concatenates two strings into a new one.
+ *
+ * This file provides the implementation of functions to join two strings
+ * (`ft_strjoin`) and a variant that optionally frees the input strings
+ * after concatenation (`ft_strjoin_and_free`).
+ *
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
 #include "libft.h"
 
 /**
- * ft_strjoin()
- * Allocates and returns a new string, result of the concatenation of s1 and s2.
+ * @brief Concatenates two strings into a newly allocated string.
  *
- * @s1: The first input string. If NULL, it's treated as an empty string.
- * @s2: The second input string. If NULL, it's treated as an empty string.
+ * Allocates a new string containing the contents of `s1` followed by `s2`.
+ * If either string is NULL, it is treated as an empty string.
  *
- * Returns: A newly allocated string containing s1 followed by s2,
- *          or NULL if allocation fails.
+ * @param s1 The first string.
+ * @param s2 The second string.
+ * @return A new string containing the concatenation of `s1` and `s2`,
+ *         or NULL if memory allocation fails.
  *
- * Notes:
- * - Handles NULL inputs gracefully by treating them as empty strings.
- * - The resulting string is null-terminated.
- * - The caller is responsible for freeing the returned string.
+ * @note The caller is responsible for freeing the returned string.
+ *
+ * @see ft_strlen
+ * @see ft_strlcpy
+ * @ingroup string_utils
  */
 char	*ft_strjoin(const char *s1, const char *s2)
 {
@@ -50,22 +64,26 @@ char	*ft_strjoin(const char *s1, const char *s2)
 }
 
 /**
- * ft_strjoin_and_free()
- * Concatenates two strings into a new one and frees the originals if requested.
+ * @brief Concatenates two strings and optionally frees the originals.
  *
- * @s1: The first input string. If NULL, it's treated as an empty string.
- * @s2: The second input string. If NULL, it's treated as an empty string.
- * @free_s1: If non-zero, frees s1 after joining.
- * @free_s2: If non-zero, frees s2 after joining.
+ * This function joins two strings into a new one. Depending on the values of
+ * `free_s1` and `free_s2`, it can free the memory of `s1` and/or `s2` after
+ * use.
  *
- * Returns: A newly allocated string containing s1 followed by s2,
- *          or NULL if allocation fails.
+ * @param s1 First string to join.
+ * @param s2 Second string to join.
+ * @param free_s1 If non-zero, `s1` is freed after concatenation.
+ * @param free_s2 If non-zero, `s2` is freed after concatenation.
  *
- * Notes:
- * - Useful for efficient string construction while managing memory.
- * - The resulting string is null-terminated.
- * - Caller is responsible for freeing the returned string.
- * - s1 and/or s2 will be freed depending on the flags.
+ * @return A new string containing the concatenation of `s1` and `s2`,
+ *         or NULL if allocation fails.
+ *
+ * @note If `s1` or `s2` is NULL, it is replaced with an empty string.
+ *
+ * @see ft_strdup
+ * @see ft_strlen
+ * @see ft_strlcpy
+ * @ingroup string_utils
  */
 char	*ft_strjoin_and_free(char *s1, char *s2, int free_s1, int free_s2)
 {

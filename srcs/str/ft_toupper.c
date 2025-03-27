@@ -6,22 +6,40 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:16:37 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/25 09:35:24 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:23:51 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * ft_toupper()
- * Converts a lowercase letter to its uppercase equivalent.
+ * @file ft_toupper.c
+ * @brief Converts a character to uppercase.
  *
- * @c: The character to convert.
+ * This file contains the implementation of the `ft_toupper` function,
+ * which takes an integer `c` (representing a character) and converts
+ * it to uppercase if it is a lowercase letter. If `c` is already in
+ * uppercase or not a letter, it is returned unchanged.
  *
- * Returns: The uppercase equivalent if @c is a lowercase letter,
- *          otherwise returns @c unchanged.
+ * @author nlouis
+ * @date 2024/10/21
+ * @ingroup string_utils
+ */
+#include "libft.h"
+
+/**
+ * @brief Converts a character to uppercase.
  *
- * Notes:
- * - Only affects characters in the range 'a' to 'z'.
- * - Behavior is undefined for non-ASCII values.
+ * If the character `c` is a lowercase letter (between 'a' and 'z'),
+ * it is converted to its uppercase equivalent by subtracting the 
+ * difference between the ASCII values of 'a' and 'A'. If `c` is not
+ * a lowercase letter, the function returns `c` unchanged.
+ *
+ * @param c The character to convert.
+ *
+ * @return The uppercase version of `c` if it is a lowercase letter;
+ *         otherwise, returns `c` unchanged.
+ *
+ * @see ft_tolower
+ * @ingroup char_check
  */
 int	ft_toupper(int c)
 {
