@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 01:23:16 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/27 09:33:50 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/03/27 14:01:32 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,12 +155,14 @@ typedef struct s_pf
  * @ref ft_free_array
  * @ref ft_free_array_size
  * @ref ft_putintarray
+ * @ref ft_is_array_sorted
  */
 size_t		ft_arraysize(void **array);
 char		**ft_copy_strarray(char **array);
 void		ft_free_array(void **array);
 void		ft_free_array_size(void **array, size_t size);
 int			ft_putintarray(int *array, int size);
+bool		ft_is_array_sorted(const int *array, size_t size);
 
 /**
  * @defgroup char_check Character Classification
