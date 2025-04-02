@@ -6,7 +6,7 @@
 /*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 01:23:16 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/27 14:01:32 by nlouis           ###   ########.fr       */
+/*   Updated: 2025/04/02 15:03:37 by nlouis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@
 # include <stddef.h>	/* size_t, NULL */
 # include <stdint.h>	/* uint64_t, etc. */
 # include <stdio.h>		/* perror, printf for debugging */
+# include <string.h>	/* to be able to use it in other projects */
 
 /* ************************************************************************** */
 /*                              MACRO DEFINITIONS                             */
