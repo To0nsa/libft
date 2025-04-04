@@ -1,6 +1,6 @@
 # libft – C Utility Library
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)(LICENSE)
 ![Language: C](https://img.shields.io/badge/language-C-blue.svg)
 ![Made at 42/Hive](https://img.shields.io/badge/made%20at-42%20Hive-blueviolet)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-libft-black?logo=github)](https://github.com/nicolas-lovis/libft)
