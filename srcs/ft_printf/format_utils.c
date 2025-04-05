@@ -1,100 +1,90 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   format_utils.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nlouis <nlouis@student.hive.fi>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 14:03:25 by nlouis            #+#    #+#             */
-/*   Updated: 2025/03/26 11:37:47 by nlouis           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 /**
  * @file format_utils.c
- * @brief Utilities for handling padding, width, and precision in ft_printf.
+ * @brief Utilities for handling padding, width, and precision in `ft_printf`.
  *
- * This file contains helper functions to handle field width, precision,
- * and padding logic for formatted output inside the ft_printf implementation.
+ * @details
+ * This file contains utility functions used during format string interpretation
+ * in `ft_printf`. It manages the logic for:
+ * - Field width
+ * - Padding with spaces or zeroes
+ * - Precision for strings
  *
- * These utilities work with the format specification struct `t_fmt`
- * and update the global printf state in `t_pf`.
+ * These functions interact with the `t_fmt` structure (format specifier)
+ * and update output state through the `t_pf` structure.
  *
- * @author nlouis
+ * @author Toonsa
  * @date 2024/11/13
  * @ingroup ft_printf
  */
-#include "libft.h"
 
-/**
- * @brief Prints padding characters for formatting alignment.
- *
- * Writes a specified number of padding characters (e.g., spaces or zeros)
- * to the standard output using `write_char_safely`, updating the total
- * byte count in `t_pf`.
- *
- * @param padding Number of padding characters to print.
- * @param pad_char The character to use for padding.
- * @param pf Pointer to the printf state structure.
- *
- * @note If a write error occurs, `pf->write_error` is set.
- * 
- * @see write_char_safely
- * @ingroup ft_printf
- */
-void	print_padding(int padding, char pad_char, t_pf *pf)
-{
-	if (padding <= 0)
-		return ;
-	while (padding > 0)
-	{
-		write_char_safely(1, pad_char, pf);
-		if (pf->write_error != 0)
-			return ;
-		padding--;
-	}
-}
+ #include "libft.h"
 
-/**
- * @brief Adjusts string length based on precision.
- *
- * Used for string (`%s`) formatting to truncate the output to match
- * the given precision if specified.
- *
- * @param fmt Pointer to the format specifier struct.
- * @param len The original length of the string.
- *
- * @return The adjusted length, truncated to precision if applicable.
- * 
- * @ingroup ft_printf
- */
-int	handle_precision_s(t_fmt *fmt, int len)
-{
-	if (fmt->precision >= 0 && fmt->precision < len)
-		len = fmt->precision;
-	return (len);
-}
-
-/**
- * @brief Computes the padding needed for width formatting.
- *
- * Calculates how many characters should be added to satisfy the
- * field width requirement for the current formatted argument.
- *
- * @param fmt Pointer to the format specifier struct.
- * @param len The length of the content to be printed.
- *
- * @return The number of padding characters required.
- *         Returns 0 if content is already wide enough.
- * 
- * @ingroup ft_printf
- */
-int	handle_width(t_fmt *fmt, size_t len)
-{
-	int	padding;
-
-	padding = fmt->width - len;
-	if (padding < 0)
-		padding = 0;
-	return (padding);
-}
+ /**
+  * @brief Prints a series of padding characters.
+  *
+  * @details
+  * This function prints `padding` number of characters (typically `' '` or `'0'`)
+  * using `write_char_safely`. It is used to align formatted output to the desired width.
+  *
+  * If a write error occurs, it sets `pf->write_error`.
+  *
+  * @param padding Number of characters to pad.
+  * @param pad_char Character used for padding (usually ' ' or '0').
+  * @param pf Print context to track output and errors.
+  *
+  * @see write_char_safely
+  * @ingroup ft_printf
+  */
+ void	print_padding(int padding, char pad_char, t_pf *pf)
+ {
+	 while (padding-- > 0)
+	 {
+		 write_char_safely(1, pad_char, pf);
+		 if (pf->write_error)
+			 return ;
+	 }
+ }
+ 
+ /**
+  * @brief Applies precision limit to string length.
+  *
+  * @details
+  * Truncates the given string length to the precision value if one
+  * is specified (non-negative). Used when formatting `%s`.
+  *
+  * @param fmt Format specifier structure.
+  * @param len Original string length.
+  *
+  * @return Truncated length if precision applies, otherwise original length.
+  * @ingroup ft_printf
+  */
+ int	handle_precision_s(t_fmt *fmt, int len)
+ {
+	 if (fmt->precision >= 0 && fmt->precision < len)
+		 return (fmt->precision);
+	 return (len);
+ }
+ 
+ /**
+  * @brief Computes the number of padding characters to apply.
+  *
+  * @details
+  * Calculates how many characters must be padded to the left or right
+  * to meet the field width requirement.
+  *
+  * @param fmt Format descriptor.
+  * @param len Length of the current content to be printed.
+  *
+  * @return Number of characters to pad (may be zero).
+  * @ingroup ft_printf
+  */
+ int	handle_width(t_fmt *fmt, size_t len)
+ {
+	 int	padding;
+ 
+	 padding = fmt->width - (int)len;
+	 if (padding < 0)
+		 return (0);
+	 return (padding);
+ }
+ 

@@ -19,7 +19,7 @@
  *
  * @ingroup array_utils
  */
-#include "ft_array.h"
+#include "libft.h"
 
 /**
  * @brief Calculates the number of elements in a NULL-terminated array.

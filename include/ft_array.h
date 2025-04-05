@@ -4,6 +4,7 @@
  * @date 2025/04/04
  * @brief Utility functions for handling pointer and integer arrays.
  *
+ * @details
  * This header is part of the libft project and provides a collection
  * of helper functions to operate on generic arrays, particularly:
  *
@@ -17,15 +18,9 @@
  * - Checking sorting order
  * - Printing integer arrays for debugging
  *
- * All functions are written to be memory-safe and are suitable for use
+ * @note All functions are written to be memory-safe and are suitable for use
  * in projects that require manipulation of dynamically allocated array data.
  *
- * @see ft_arraysize
- * @see ft_copy_strarray
- * @see ft_free_array
- * @see ft_free_array_size
- * @see ft_is_array_sorted
- * @see ft_putintarray
  *
  * @ingroup array_utils
  */
@@ -34,13 +29,26 @@
 
 # include <stddef.h>	// size_t
 # include <stdbool.h>	// bool
+# include <stdlib.h>	// malloc, free
 
 /**
  * @defgroup array_utils Array Utilities
  * @brief Functions for working with pointer arrays (char**, void**, etc.).
  *
- * Includes functions like copying, freeing, measuring size of arrays, etc.
- * This group is useful for handling string arrays, environment variables, etc.
+ * @details
+ * Includes functions for:
+ * - Measuring array size
+ * - Copying or freeing arrays
+ * - Printing and checking sort
+ * 
+ * This group includes:
+ * @see ft_arraysize
+ * @see ft_copy_strarray
+ * @see ft_free_array
+ * @see ft_free_array_size
+ * @see ft_is_array_sorted
+ * @see ft_putintarray
+ * 
  * @{
  */
 
