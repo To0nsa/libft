@@ -11,9 +11,9 @@
  *
  * @ingroup string_utils
  */
-size_t	ft_strlen(const char *str)
+size_t ft_strlen(const char* str)
 {
-	size_t	len;
+	size_t len;
 
 	len = 0;
 	while (str[len] != '\0')
@@ -36,9 +36,9 @@ size_t	ft_strlen(const char *str)
  *
  * @ingroup string_utils
  */
-char	*ft_strcat(char *dest, const char *src)
+char* ft_strcat(char* dest, const char* src)
 {
-	char	*dest_ptr;
+	char* dest_ptr;
 
 	dest_ptr = dest;
 	while (*dest_ptr)
@@ -66,16 +66,16 @@ char	*ft_strcat(char *dest, const char *src)
  *
  * @ingroup string_utils
  */
-char	*ft_strchr(const char *str, int c)
+char* ft_strchr(const char* str, int c)
 {
 	while (*str)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
+		if (*str == (char) c)
+			return ((char*) str);
 		str++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
+	if ((char) c == '\0')
+		return ((char*) str);
 	return (NULL);
 }
 
@@ -97,14 +97,14 @@ char	*ft_strchr(const char *str, int c)
  * @see ft_strcmp
  * @ingroup string_utils
  */
-int	ft_strcmp(const char *s1, const char *s2)
+int ft_strcmp(const char* s1, const char* s2)
 {
 	while (*s1 && (*s1 == *s2))
 	{
 		s1++;
 		s2++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return ((unsigned char) *s1 - (unsigned char) *s2);
 }
 
 /**
@@ -126,7 +126,7 @@ int	ft_strcmp(const char *s1, const char *s2)
  *
  * @ingroup string_utils
  */
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int ft_strncmp(const char* s1, const char* s2, size_t n)
 {
 	while (n > 0 && *s1 && (*s1 == *s2))
 	{
@@ -136,7 +136,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (n == 0)
 		return (0);
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return ((unsigned char) *s1 - (unsigned char) *s2);
 }
 
 /**
@@ -153,9 +153,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
  *
  * @ingroup string_utils
  */
-char	*ft_strcpy(char *dst, const char *src)
+char* ft_strcpy(char* dst, const char* src)
 {
-	char	*ret;
+	char* ret;
 
 	ret = dst;
 	while (*src)
@@ -180,9 +180,9 @@ char	*ft_strcpy(char *dst, const char *src)
  *
  * @ingroup string_utils
  */
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t ft_strlcpy(char* dest, const char* src, size_t size)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
 	if (size > 0)
@@ -213,13 +213,13 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
  * @see ft_strlen
  * @ingroup string_utils
  */
-char	*ft_strdup(const char *src)
+char* ft_strdup(const char* src)
 {
-	char	*copy;
-	size_t	src_len;
+	char*  copy;
+	size_t src_len;
 
 	src_len = ft_strlen(src);
-	copy = (char *)malloc((src_len + 1) * sizeof(char));
+	copy    = (char*) malloc((src_len + 1) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	ft_strlcpy(copy, src, src_len + 1);
@@ -230,7 +230,7 @@ char	*ft_strdup(const char *src)
  * @brief Applies a function to each character of a string, passing its index.
  *
  * Iterates over the string `s` and applies the function `f` to each character.
- * The function receives the index of the character and a pointer to it, 
+ * The function receives the index of the character and a pointer to it,
  * allowing in-place modification.
  *
  * @param s The string to iterate over.
@@ -240,12 +240,12 @@ char	*ft_strdup(const char *src)
  *
  * @ingroup string_utils
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_striteri(char* s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
+	size_t i;
 
 	if (!s || !f)
-		return ;
+		return;
 	i = 0;
 	while (s[i])
 	{
@@ -271,21 +271,21 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
  * @see ft_strlcpy
  * @ingroup string_utils
  */
-char	*ft_strjoin(const char *s1, const char *s2)
+char* ft_strjoin(const char* s1, const char* s2)
 {
-	char	*new_str;
-	size_t	s1_len;
-	size_t	s2_len;
-	size_t	total_len;
+	char*  new_str;
+	size_t s1_len;
+	size_t s2_len;
+	size_t total_len;
 
 	if (!s1)
 		s1 = "";
 	if (!s2)
 		s2 = "";
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
+	s1_len    = ft_strlen(s1);
+	s2_len    = ft_strlen(s2);
 	total_len = s1_len + s2_len;
-	new_str = (char *)malloc((total_len + 1) * sizeof(char));
+	new_str   = (char*) malloc((total_len + 1) * sizeof(char));
 	if (!new_str)
 		return (NULL);
 	ft_strlcpy(new_str, s1, s1_len + 1);
@@ -294,7 +294,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 }
 
 /**
- * @brief Concatenates `src` to the end of `dest` while ensuring null-termination.
+ * @brief Concatenates `src` to the end of `dest` while ensuring
+ * null-termination.
  *
  * This function appends the `src` string to the end of the `dest` string.
  * It ensures that the result fits within the buffer size given by `size`,
@@ -314,18 +315,18 @@ char	*ft_strjoin(const char *s1, const char *s2)
  * @see ft_strlcpy
  * @ingroup string_utils
  */
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t ft_strlcat(char* dest, const char* src, size_t size)
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	total_len;
-	size_t	space_left;
+	size_t dest_len;
+	size_t src_len;
+	size_t total_len;
+	size_t space_left;
 
 	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
+	src_len  = ft_strlen(src);
 	if (size <= dest_len)
 		return (size + src_len);
-	total_len = dest_len + src_len;
+	total_len  = dest_len + src_len;
 	space_left = size - dest_len;
 	ft_strlcpy(dest + dest_len, src, space_left);
 	return (total_len);
@@ -343,7 +344,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
  * @param s The original null-terminated string to map.
  * @param f The function to apply to each character, receiving
  *          the index and the character.
- * 
+ *
  * @return A new string with transformed characters, or NULL if
  *         allocation fails or if input is NULL.
  *
@@ -351,16 +352,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
  *
  * @ingroup string_utils
  */
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char* ft_strmapi(char const* s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-	size_t	i;
-	char	*new_str;
+	size_t len;
+	size_t i;
+	char*  new_str;
 
 	if (!s || !f)
 		return (NULL);
-	len = ft_strlen(s);
-	new_str = (char *)malloc((len + 1) * sizeof(char));
+	len     = ft_strlen(s);
+	new_str = (char*) malloc((len + 1) * sizeof(char));
 	if (!new_str)
 		return (NULL);
 	i = 0;
@@ -390,15 +391,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
  * @see ft_strlen
  * @ingroup string_utils
  */
-char	*ft_strndup(const char *src, size_t n)
+char* ft_strndup(const char* src, size_t n)
 {
-	char	*copy;
-	size_t	src_len;
+	char*  copy;
+	size_t src_len;
 
 	src_len = ft_strlen(src);
 	if (n < src_len)
 		src_len = n;
-	copy = (char *)malloc((src_len + 1) * sizeof(char));
+	copy = (char*) malloc((src_len + 1) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	ft_strlcpy(copy, src, src_len + 1);
@@ -424,13 +425,13 @@ char	*ft_strndup(const char *src, size_t n)
  *
  * @ingroup string_utils
  */
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char* ft_strnstr(const char* big, const char* little, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	size_t i;
+	size_t j;
 
 	if (*little == '\0')
-		return ((char *)big);
+		return ((char*) big);
 	i = 0;
 	while (big[i] && i < len)
 	{
@@ -438,7 +439,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (little[j] && i + j < len && big[i + j] == little[j])
 			j++;
 		if (little[j] == '\0')
-			return ((char *)big + i);
+			return ((char*) big + i);
 		i++;
 	}
 	return (NULL);
@@ -462,19 +463,19 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
  *
  * @ingroup string_utils
  */
-char	*ft_strrchr(const char *str, int c)
+char* ft_strrchr(const char* str, int c)
 {
-	char	*last_occurrence;
+	char* last_occurrence;
 
 	last_occurrence = NULL;
 	while (*str)
 	{
-		if (*str == (char)c)
-			last_occurrence = (char *)str;
+		if (*str == (char) c)
+			last_occurrence = (char*) str;
 		str++;
 	}
-	if ((char)c == '\0')
-		return ((char *)str);
+	if ((char) c == '\0')
+		return ((char*) str);
 	return (last_occurrence);
 }
 
@@ -482,33 +483,34 @@ char	*ft_strrchr(const char *str, int c)
  * @brief Extracts a substring from a string.
  *
  * Allocates and returns a new string, which is a substring of `s` starting from
- * index `start` and up to `len` characters long. If `start` is greater than or equal
- * to the length of `s`, an empty string is returned. The length of the returned substring
- * is either `len` or the remaining length from `start`, whichever is smaller.
+ * index `start` and up to `len` characters long. If `start` is greater than or
+ * equal to the length of `s`, an empty string is returned. The length of the
+ * returned substring is either `len` or the remaining length from `start`,
+ * whichever is smaller.
  *
  * @param s The source string.
  * @param start The starting index in the source string.
  * @param len The maximum number of characters to copy.
  *
- * @return A newly allocated string containing the substring, or NULL if memory allocation fails.
- *         If `start` is out of bounds, an empty string is returned.
+ * @return A newly allocated string containing the substring, or NULL if memory
+ * allocation fails. If `start` is out of bounds, an empty string is returned.
  *
  * @see ft_strlen
  * @see ft_strlcpy
  * @ingroup string_utils
  */
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char* ft_substr(const char* s, unsigned int start, size_t len)
 {
-	char			*substr;
-	size_t			str_len;
-	size_t			max_len;
+	char*  substr;
+	size_t str_len;
+	size_t max_len;
 
 	if (s == NULL)
 		return (NULL);
 	str_len = ft_strlen(s);
 	if (start >= str_len)
 	{
-		substr = (char *)malloc(sizeof(char));
+		substr = (char*) malloc(sizeof(char));
 		if (substr == NULL)
 			return (NULL);
 		substr[0] = '\0';
@@ -517,7 +519,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	max_len = str_len - start;
 	if (max_len > len)
 		max_len = len;
-	substr = (char *)malloc((max_len + 1) * sizeof(char));
+	substr = (char*) malloc((max_len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	ft_strlcpy(substr, s + start, max_len + 1);
@@ -540,7 +542,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
  * @see ft_toupper
  * @ingroup string_utils
  */
-int	ft_tolower(int c)
+int ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + ('a' - 'A');
@@ -551,7 +553,7 @@ int	ft_tolower(int c)
  * @brief Converts a character to uppercase.
  *
  * If the character `c` is a lowercase letter (between 'a' and 'z'),
- * it is converted to its uppercase equivalent by subtracting the 
+ * it is converted to its uppercase equivalent by subtracting the
  * difference between the ASCII values of 'a' and 'A'. If `c` is not
  * a lowercase letter, the function returns `c` unchanged.
  *
@@ -563,7 +565,7 @@ int	ft_tolower(int c)
  * @see ft_tolower
  * @ingroup char_check
  */
-int	ft_toupper(int c)
+int ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - ('a' - 'A');

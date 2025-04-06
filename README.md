@@ -7,19 +7,16 @@
 
 > A modular C library built from scratch during 42/Hive School.
 
-
 [🔗 View on GitHub](https://github.com/to0nsa/libft)
-📚 [View full documentation](https://to0nsa.github.io/libft/)
+**[📚 View full documentation](https://to0nsa.github.io/libft/)**
 
+This C library was developed during my training at **42/Hive School** and has grown over time into a practical, reusable toolkit. It includes a wide range of utilities for **string, array, 2Darray manipulation**, **memory management**, **data structures**, **math**, and **custom I/O** — all written from scratch in C.
 
-This C library was developed during my training at **42/Hive School** and has grown over time into a practical, reusable toolkit. It includes a wide range of utilities for **string manipulation**, **memory management**, **data structures**, **math**, and **custom I/O** — all written from scratch in C.
-
-By reimplementing core functions like `printf` and `qsort`, I deepened my understanding of **low-level programming**, **pointer logic**, and **performance optimization**. Each function was added to solve real challenges I encountered, helping me develop a strong foundation in writing **robust**, **readable**, and **maintainable** code.
+By reimplementing core functions like `printf` and `qsort`, I deepened my understanding of **low-level programming**, **pointer logic**, and **performance optimization**. Each function was added to solve real challenges I encountered, helping me develop a strong foundation in writing **robust**, **readable**, **reusable** and **maintainable** code.
 
 Special care was given to **error handling**, **code clarity**, and **project structure**. The library is organized, well-documented, and designed for **portability** across UNIX-like systems.
 
 In addition to replicating standard behaviors, Libft introduces **custom tools** not found in the C standard library — giving **greater flexibility** and **control** in real-world use cases. It promotes **code reusability** and can be easily integrated into new or existing C projects.
-
 
 ---
 
@@ -31,6 +28,7 @@ In addition to replicating standard behaviors, Libft introduces **custom tools**
 Libft provides a robust set of functions designed to handle common string operations, such as copying, joining, trimming, splitting, and comparing strings. Each function is carefully crafted to ensure efficient and reliable handling of string data, with a focus on **error handling** and **memory safety**.
 
 **Features:**
+
 - **Memory Safety**: Functions like `ft_strcpy`, `ft_strdup`, and `ft_strcat` ensure safe copying, avoiding buffer overflows or unintentional memory corruption.
 - **Error Handling**: Most functions, especially those dealing with dynamic memory allocation (e.g., `ft_strdup`), gracefully handle errors such as memory allocation failures, returning `NULL` when necessary.
 - **String Manipulation**:

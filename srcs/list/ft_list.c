@@ -18,35 +18,35 @@
  * @ingroup linked_list
  */
 
- #include "libft.h"
+#include "libft.h"
 
- /**
-  * @brief Allocates and initializes a new list node.
-  *
-  * @details
-  * Allocates memory for a new `t_list` node and sets its `content` to the
-  * provided pointer. The `next` pointer of the new node is set to NULL.
-  *
-  * @param content The content to store in the new node.
-  * @return A pointer to the newly created node, or NULL if allocation fails.
-  *
-  * @note This function does not copy the content; it stores the pointer
-  * as-is. The caller is responsible for managing the memory of the
-  * content if necessary.
-  *
-  * @ingroup linked_list
-  */
- t_list	*ft_lstnew(void *content)
- {
-	 t_list	*new_node;
+/**
+ * @brief Allocates and initializes a new list node.
+ *
+ * @details
+ * Allocates memory for a new `t_list` node and sets its `content` to the
+ * provided pointer. The `next` pointer of the new node is set to NULL.
+ *
+ * @param content The content to store in the new node.
+ * @return A pointer to the newly created node, or NULL if allocation fails.
+ *
+ * @note This function does not copy the content; it stores the pointer
+ * as-is. The caller is responsible for managing the memory of the
+ * content if necessary.
+ *
+ * @ingroup linked_list
+ */
+t_list* ft_lstnew(void* content)
+{
+	t_list* new_node;
 
-	 new_node = (t_list *)malloc(sizeof(t_list));
-	 if (!new_node)
-		 return (NULL);
-	 new_node->content = content;
-	 new_node->next = NULL;
-	 return (new_node);
- }
+	new_node = (t_list*) malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next    = NULL;
+	return (new_node);
+}
 
 /**
  * @brief Adds a new node to the beginning of a linked list.
@@ -57,15 +57,15 @@
  *
  * @param lst A pointer to the pointer to the first node of the list.
  * @param new The new node to add to the beginning of the list.
- * 
+ *
  * @ingroup linked_list
  */
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void ft_lstadd_front(t_list** lst, t_list* new)
 {
 	if (!lst || !new)
-		return ;
+		return;
 	new->next = *lst;
-	*lst = new;
+	*lst      = new;
 }
 
 /**
@@ -77,21 +77,21 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
  *
  * @param lst A pointer to the pointer to the first node of the list.
  * @param new The new node to add to the end of the list.
- * 
+ *
  * @see ft_lstlast
  * @ingroup linked_list
  */
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void ft_lstadd_back(t_list** lst, t_list* new)
 {
-	t_list	*last;
+	t_list* last;
 
 	if (!lst || !new)
-		return ;
+		return;
 	if (!(*lst))
 		*lst = new;
 	else
 	{
-		last = ft_lstlast(*lst);
+		last       = ft_lstlast(*lst);
 		last->next = new;
 	}
 }
@@ -106,10 +106,10 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
  * pointer passed.
  *
  * @param content A pointer to the memory to be freed.
- * 
+ *
  * @ingroup linked_list
  */
-void	ft_del(void *content)
+void ft_del(void* content)
 {
 	free(content);
 }
@@ -123,13 +123,13 @@ void	ft_del(void *content)
  *
  * @param lst A pointer to the node to delete.
  * @param del A pointer to the function used to free the content.
- * 
+ *
  * @ingroup linked_list
  */
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void ft_lstdelone(t_list* lst, void (*del)(void*))
 {
 	if (!lst || !del)
-		return ;
+		return;
 	del(lst->content);
 	free(lst);
 }
@@ -144,17 +144,17 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
  *
  * @param lst A pointer to the pointer to the first node of the list.
  * @param del A pointer to the function used to delete the content of each node.
- * 
+ *
  * @see ft_lstdelone
  * @ingroup linked_list
  */
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void ft_lstclear(t_list** lst, void (*del)(void*))
 {
-	t_list	*current;
-	t_list	*next_node;
+	t_list* current;
+	t_list* next_node;
 
 	if (!lst || !del)
-		return ;
+		return;
 	current = *lst;
 	while (current)
 	{
@@ -173,12 +173,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
  * (the node with `next == NULL`) is found.
  *
  * @param lst Pointer to the head of the list.
- * 
+ *
  * @return A pointer to the last node in the list, or NULL if the list is empty.
- * 
+ *
  * @ingroup linked_list
  */
-t_list	*ft_lstlast(t_list *lst)
+t_list* ft_lstlast(t_list* lst)
 {
 	if (!lst)
 		return (NULL);
@@ -197,15 +197,15 @@ t_list	*ft_lstlast(t_list *lst)
  *
  * @param lst Pointer to the first node of the list.
  * @param f   Function to apply to the content of each node.
- * 
+ *
  * @note The function `f` should not modify the list structure.
- * 
+ *
  * @ingroup linked_list
  */
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void ft_lstiter(t_list* lst, void (*f)(void*))
 {
 	if (!lst || !f)
-		return ;
+		return;
 	while (lst)
 	{
 		f(lst->content);
@@ -224,7 +224,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
  * @param lst Pointer to the head of the original list.
  * @param f Function to apply to the content of each node.
  * @param del Function used to delete the content of a node if needed.
- * 
+ *
  * @return A new list with the transformed content, or NULL if allocation fails.
  *
  * @note This function allocates new memory and performs deep copies of the
@@ -235,11 +235,11 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
  * @see ft_lstclear
  * @ingroup linked_list
  */
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list* ft_lstmap(t_list* lst, void* (*f)(void*), void (*del)(void*))
 {
-	t_list	*new_list;
-	t_list	*new_node;
-	void	*new_content;
+	t_list* new_list;
+	t_list* new_node;
+	void*   new_content;
 
 	if (!lst || !f)
 		return (NULL);
@@ -247,7 +247,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		new_content = f(lst->content);
-		new_node = ft_lstnew(new_content);
+		new_node    = ft_lstnew(new_content);
 		if (!new_node)
 		{
 			if (del)
@@ -268,15 +268,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
  * Iterates through the list, counting each node until the end is reached.
  *
  * @param lst A pointer to the head of the list.
- * 
+ *
  * @return The total number of nodes in the list. Returns 0 if the list
  *         is empty.
- * 
+ *
  * @ingroup linked_list
  */
-int	ft_lstsize(t_list *lst)
+int ft_lstsize(t_list* lst)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	while (lst)

@@ -25,8 +25,8 @@
  * @brief Calculates the number of elements in a NULL-terminated array.
  *
  * @details
- * This function iterates over a pointer array (usually a `char **` or 
- * similar) and returns the number of non-NULL elements until it hits the 
+ * This function iterates over a pointer array (usually a `char **` or
+ * similar) and returns the number of non-NULL elements until it hits the
  * terminating NULL.
  *
  * @param array A NULL-terminated array of pointers.
@@ -38,9 +38,9 @@
  *       the result of `ft_split`, or an environment variable array.
  * @ingroup array_utils
  */
-size_t	ft_arraysize(void **array)
+size_t ft_arraysize(void** array)
 {
-	size_t	size;
+	size_t size;
 
 	if (!array)
 		return (0);
@@ -54,8 +54,8 @@ size_t	ft_arraysize(void **array)
  * @brief Creates a deep copy of a NULL-terminated string array.
  *
  * @details
- * Allocates a new array of strings and duplicates each string from the 
- * input array using `ft_strdup`. If any allocation fails, all previously 
+ * Allocates a new array of strings and duplicates each string from the
+ * input array using `ft_strdup`. If any allocation fails, all previously
  * allocated strings are freed and NULL is returned.
  *
  * @param array A NULL-terminated array of strings (char **).
@@ -71,16 +71,16 @@ size_t	ft_arraysize(void **array)
  * @see ft_arraysize
  * @ingroup array_utils
  */
-char	**ft_copy_strarray(char **array)
+char** ft_copy_strarray(char** array)
 {
-	size_t	size;
-	size_t	i;
-	char	**copy;
+	size_t size;
+	size_t i;
+	char** copy;
 
 	if (!array)
 		return (NULL);
-	size = ft_arraysize((void **)array);
-	copy = malloc((size + 1) * sizeof(char *));
+	size = ft_arraysize((void**) array);
+	copy = malloc((size + 1) * sizeof(char*));
 	if (!copy)
 		return (NULL);
 	i = 0;
@@ -89,7 +89,7 @@ char	**ft_copy_strarray(char **array)
 		copy[i] = ft_strdup(array[i]);
 		if (!copy[i])
 		{
-			ft_free_array((void **)copy);
+			ft_free_array((void**) copy);
 			return (NULL);
 		}
 		i++;
@@ -111,12 +111,12 @@ char	**ft_copy_strarray(char **array)
  *       `ft_copy_strarray` to release memory.
  * @ingroup array_utils
  */
-void	ft_free_array(void **array)
+void ft_free_array(void** array)
 {
-	size_t	i;
+	size_t i;
 
 	if (!array)
-		return ;
+		return;
 	i = 0;
 	while (array[i])
 		free(array[i++]);
@@ -137,12 +137,12 @@ void	ft_free_array(void **array)
  *       ahead of time.
  * @ingroup array_utils
  */
-void	ft_free_array_size(void **array, size_t size)
+void ft_free_array_size(void** array, size_t size)
 {
-	size_t	i;
+	size_t i;
 
 	if (!array)
-		return ;
+		return;
 	i = 0;
 	while (i < size)
 	{
@@ -159,10 +159,10 @@ void	ft_free_array_size(void **array, size_t size)
  * @param array The array to check.
  * @param size The number of elements in the array.
  * @return true if the array is sorted, false otherwise.
- * 
+ *
  * @ingroup array_utils
  */
-bool	ft_is_array_sorted(const int *array, size_t size)
+bool ft_is_array_sorted(const int* array, size_t size)
 {
 	if (!array || size <= 1)
 		return true;
@@ -191,16 +191,16 @@ bool	ft_is_array_sorted(const int *array, size_t size)
  * @note If `array` is NULL or size <= 0, the function returns 0.
  * @ingroup array_utils
  */
-int	ft_putintarray(int *array, int size)
+int ft_putintarray(int* array, int size)
 {
-	int	total_bytes;
-	int	bytes_written;
-	int	i;
+	int total_bytes;
+	int bytes_written;
+	int i;
 
 	if (!array || size <= 0)
 		return (0);
 	total_bytes = 0;
-	i = 0;
+	i           = 0;
 	while (i < size)
 	{
 		bytes_written = ft_printf("%d", array[i]);

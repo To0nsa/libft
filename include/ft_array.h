@@ -25,11 +25,7 @@
  * @ingroup array_utils
  */
 #ifndef FT_ARRAY_H
-# define FT_ARRAY_H
-
-# include <stddef.h>	// size_t
-# include <stdbool.h>	// bool
-# include <stdlib.h>	// malloc, free
+#define FT_ARRAY_H
 
 /**
  * @defgroup array_utils Array Utilities
@@ -40,7 +36,7 @@
  * - Measuring array size
  * - Copying or freeing arrays
  * - Printing and checking sort
- * 
+ *
  * This group includes:
  * @see ft_arraysize
  * @see ft_copy_strarray
@@ -48,7 +44,7 @@
  * @see ft_free_array_size
  * @see ft_is_array_sorted
  * @see ft_putintarray
- * 
+ *
  * @{
  */
 
@@ -58,7 +54,7 @@
  * @param array The array of pointers (NULL-terminated).
  * @return The number of elements in the array.
  */
-size_t		ft_arraysize(void **array);
+size_t ft_arraysize(void** array);
 
 /**
  * @brief Creates a deep copy of a NULL-terminated string array.
@@ -66,14 +62,14 @@ size_t		ft_arraysize(void **array);
  * @param array The original string array to copy.
  * @return A newly allocated copy of the array, or NULL on failure.
  */
-char		**ft_copy_strarray(char **array);
+char** ft_copy_strarray(char** array);
 
 /**
  * @brief Frees a NULL-terminated array.
  *
  * @param array The array to free.
  */
-void		ft_free_array(void **array);
+void ft_free_array(void** array);
 
 /**
  * @brief Frees an array of pointers with a known size.
@@ -81,7 +77,7 @@ void		ft_free_array(void **array);
  * @param array The array to free.
  * @param size Number of elements in the array.
  */
-void		ft_free_array_size(void **array, size_t size);
+void ft_free_array_size(void** array, size_t size);
 
 /**
  * @brief Prints an array of integers to standard output.
@@ -90,7 +86,7 @@ void		ft_free_array_size(void **array, size_t size);
  * @param size Number of elements.
  * @return The number of characters printed, or -1 on error.
  */
-int			ft_putintarray(int *array, int size);
+int ft_putintarray(int* array, int size);
 
 /**
  * @brief Checks if an array of integers is sorted in ascending order.
@@ -99,7 +95,7 @@ int			ft_putintarray(int *array, int size);
  * @param size Number of elements in the array.
  * @return true if sorted, false otherwise.
  */
-bool		ft_is_array_sorted(const int *array, size_t size);
+bool ft_is_array_sorted(const int* array, size_t size);
 
 /** @} */ // end of array_utils group
 
