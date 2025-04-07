@@ -1,6 +1,6 @@
 # libft – C Utility Library
 
-![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)(LICENSE)
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Language: C](https://img.shields.io/badge/language-C-blue.svg)
 ![Made at 42/Hive](https://img.shields.io/badge/made%20at-42%20Hive-blueviolet)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-libft-black?logo=github)](https://github.com/nicolas-lovis/libft)
@@ -10,11 +10,11 @@
 [🔗 View on GitHub](https://github.com/to0nsa/libft)
 **[📚 View full documentation](https://to0nsa.github.io/libft/)**
 
-This C library was developed during my training at **42/Hive School** and has grown over time into a practical, reusable toolkit. It includes a wide range of utilities for **string, array, 2Darray manipulation**, **memory management**, **data structures**, **math**, and **custom I/O** — all written from scratch in C.
+This C library was developed during my training at **42/Hive School** and has grown over time into a practical, reusable toolkit. It includes a wide range of utilities for **string, array, 2Darray** manipulation, **memory management**, **data structures**, **math**, and **custom I/O** — all written from scratch in C.
 
 By reimplementing core functions like `printf` and `qsort`, I deepened my understanding of **low-level programming**, **pointer logic**, and **performance optimization**. Each function was added to solve real challenges I encountered, helping me develop a strong foundation in writing **robust**, **readable**, **reusable** and **maintainable** code.
 
-Special care was given to **error handling**, **code clarity**, and **project structure**. The library is organized, well-documented, and designed for **portability** across UNIX-like systems.
+Special care was given to **error handling**, **code clarity**, **project structure** and **building documentation**. The library is organized, well-documented, and designed for **portability** across UNIX-like systems.
 
 In addition to replicating standard behaviors, Libft introduces **custom tools** not found in the C standard library — giving **greater flexibility** and **control** in real-world use cases. It promotes **code reusability** and can be easily integrated into new or existing C projects.
 
@@ -23,11 +23,31 @@ In addition to replicating standard behaviors, Libft introduces **custom tools**
 ## Libft Features
 
 <details>
+<summary><strong>see features</strong></summary>
+
+Libft is a foundational C library that offers a comprehensive toolkit for low-level programming. It emphasizes **performance**, **reliability**, and **clarity**, making it a solid base for building larger software systems.
+
+**🔐 Memory-Safe Operations**
+All functions are implemented with a strong focus on memory safety. This includes careful handling of buffer boundaries, null-terminated strings, and dynamic memory allocation to prevent common pitfalls like buffer overflows or memory leaks.
+
+**⚠️ Consistent Error Handling**
+Functions gracefully handle edge cases and failure scenarios, such as null inputs or allocation errors. Return values are designed to be predictable and easily checkable, reducing the risk of undefined behavior.
+
+**🛡️ Defensive Design**
+Every function is built to fail safely. This defensive approach ensures that developers can integrate Libft into their codebases without introducing instability or hidden bugs.
+
+**📘 Solid Documentation**
+Each module is thoroughly documented using Doxygen, with clear descriptions, usage guidelines, and grouping by functionality. This makes the library easy to navigate, understand, and maintain—even as it grows in complexity.
+
+**🧪 Tested and Modular**
+Each component of the library is modular and independently testable, making it easy to maintain, extend, or integrate into larger projects. The code follows clear conventions to support readability and maintainability.
+
+**📚 Educational and Practical**
+Originally designed as an educational exercise, Libft serves both as a learning tool and a practical foundation for writing robust C programs without relying on the standard library in constrained environments.
+
+<details>
 <summary><strong>📚 String</strong></summary>
 
-Libft provides a robust set of functions designed to handle common string operations, such as copying, joining, trimming, splitting, and comparing strings. Each function is carefully crafted to ensure efficient and reliable handling of string data, with a focus on **error handling** and **memory safety**.
-
-**Features:**
 
 - **Memory Safety**: Functions like `ft_strcpy`, `ft_strdup`, and `ft_strcat` ensure safe copying, avoiding buffer overflows or unintentional memory corruption.
 - **Error Handling**: Most functions, especially those dealing with dynamic memory allocation (e.g., `ft_strdup`), gracefully handle errors such as memory allocation failures, returning `NULL` when necessary.
@@ -46,7 +66,6 @@ Libft provides a robust set of functions designed to handle common string operat
 
 Libft provides a set of functions for **string-to-number** and **number-to-string** conversions, allowing seamless manipulation and transformation between different data types.
 
-**Features:**
 - **Integer to String**:
   - `ft_itoa`: Converts an integer to a string representation.
   - `ft_itoa_base`: Converts an integer to a string representation in any given base (binary, hexadecimal).
@@ -66,7 +85,6 @@ These functions allow reliable conversion between different data types efficient
 
 Libft provides a set of functions for efficiently working with arrays, including handling their sizes, copying, freeing, and printing.
 
-**Functions:**
 - **Array Size**:
   - `ft_arraysize`: Returns the number of elements in an array, useful for dynamic arrays where size is not explicitly tracked.
 - **Array Copying**:
@@ -84,7 +102,6 @@ These functions streamline common array operations while ensuring memory safety 
 
 This is a custom implementation of the standard `printf` function, created as part of my **Hive School** curriculum. The goal of this project was to replicate the behavior of the `printf` function while gaining a deeper understanding of how it works.
 
-**Features:**
 - Supports basic format specifiers (e.g., `%s`, `%d`, `%x`, `%c`, etc.)
 - Handles custom formatting (width, precision, and flags)
 - Manages memory efficiently with error handling and safe string manipulation
@@ -94,11 +111,10 @@ This project helped me strengthen my skills in **variadic functions**, **formatt
 </details>
 
 <details>
-<summary><strong>📚 Matrix</strong></summary>
+<summary><strong>📚 2Darray</strong></summary>
 
 Libft provides essential functions for managing 2D arrays (matrices), enabling efficient creation, manipulation, and printing of matrix-like structures.
 
-**Functions:**
 - **Matrix Creation**:
   - `ft_create_matrix`: Allocates memory for a 2D array (matrix) of integers, allowing for easy manipulation of grid-like data structures.
 - **Matrix Copying**:
@@ -118,7 +134,6 @@ These functions simplify the management of matrix-based data, enhancing both the
 
 Libft provides a suite of **memory management** functions that offer essential tools for safe and efficient manipulation of memory. These utilities are designed to handle tasks such as memory allocation, copying, setting, and comparing, ensuring that the program handles memory safely and without errors.
 
-**Features:**
 - Functions for allocating memory (`ft_calloc`, `ft_realloc`).
 - Efficient memory manipulation with utilities like `ft_memcpy`, `ft_memmove`, and `ft_memset`.
 - Memory comparison and search with `ft_memcmp` and `ft_memchr`.
@@ -131,7 +146,6 @@ These functions are crucial for handling raw memory operations and are often use
 
 Libft provides a collection of **Linked List** functions that allow for easy management of dynamic data structures. These functions enable efficient manipulation of linked lists for various use cases, such as quick prototyping or managing non-contiguous memory.
 
-**Functions:**
 - **Creation and Deletion**:
   - `ft_lstnew`: Creates a new node with the given content.
   - `ft_lstdelone`: Deletes a node and frees its memory.
@@ -156,7 +170,6 @@ These functions offer a flexible approach to working with linked lists and can b
 
 Libft provides a set of **I/O helper functions** designed to simplify reading and writing operations with file descriptors, while ensuring **safe and efficient** data handling.
 
-**Functions:**
 - **File Input**:
   - `get_next_line`: Reads a line from a file descriptor, returning it as a string. This is useful for reading files line by line without loading the entire file into memory.
 
@@ -172,7 +185,6 @@ These functions streamline file input and output operations while ensuring **saf
 
 A fully generic, optimized quicksort implementation for sorting any array type.
 
-**Features:**
 - Works with **any data type** (int, double, structs…) via a user-provided comparator.
 - Uses **median-of-three pivot selection** to avoid worst-case scenarios.
 - Falls back to **insertion sort** for small partitions for better performance.
@@ -185,7 +197,6 @@ A fully generic, optimized quicksort implementation for sorting any array type.
 
 Libft provides a set of **mathematical** and **vector-related** functions that are essential for performing geometric and mathematical operations, particularly in **2D/3D vector calculations**.
 
-**Functions:**
 - **Angle Conversion**:
   - `deg_to_rad`: Converts degrees to radians.
   - `rad_to_deg`: Converts radians to degrees.
@@ -217,12 +228,13 @@ These functions provide the foundation for performing efficient **vector mathema
 
 `ft_rand` is a custom implementation of a random number generator (RNG) designed to provide efficient and **deterministic random numbers**. It uses the **Xorshift32** algorithm for generating pseudo-random integers, based on the current system time.
 
-**Features:**
 - **Efficient RNG**: Uses the **Xorshift32** method, which is fast and has a low computational overhead.
 - **Range Control**: Allows specifying a **range** (`min` and `max`) for generating random numbers within a given interval.
 - **System Time Seed**: Seeds the RNG using the system's current time to ensure non-repetitive sequences.
 
 This function is useful for simulations, games, or any applications where you need **randomized behavior** without relying on external libraries or functions.
+</details>
+
 </details>
 
 ---
@@ -250,21 +262,6 @@ int	main(void)
 gcc main.c -I libft/include -L libft/lib -lft -o my_program
 ```
 ℹ️ This links your code against libft.a, using libft.h for declarations.
-</details>
-
----
-## 🗂️ Project Structure
-<details>
-<summary><strong> See project structure  </strong></summary>
-
-```txt
-libft/
-├── include/         # Header file with all function prototypes
-├── srcs/            # Well-organized sources by module (string, math, etc.)
-├── lib/             # Output directory for compiled library (libft.a)
-├── objs/            # Object files (auto-generated)
-└── Makefile         # Clean, silent build system with useful targets
-```
 </details>
 
 ---
