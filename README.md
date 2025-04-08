@@ -40,7 +40,7 @@ Every function is built to fail safely. This defensive approach ensures that dev
 Each module is thoroughly documented using Doxygen, with clear descriptions, usage guidelines, and grouping by functionality. This makes the library easy to navigate, understand, and maintain—even as it grows in complexity.
 
 **🧪 Tested and Modular**
-Each component of the library is modular and independently testable, making it easy to maintain, extend, or integrate into larger projects. The code follows clear conventions to support readability and maintainability.
+Each component of the library is modular, making it easy to maintain, extend, or integrate into larger projects. The code follows clear conventions to support readability and maintainability.
 
 **📚 Educational and Practical**
 Originally designed as an educational exercise, Libft serves both as a learning tool and a practical foundation for writing robust C programs without relying on the standard library in constrained environments.
