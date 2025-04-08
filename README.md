@@ -265,13 +265,6 @@ gcc main.c -I libft/include -L libft/lib -lft -o my_program
 </details>
 
 ---
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
-You are free to use, modify, and distribute this code for academic, personal, or professional purposes. Attribution is appreciated but not required.
-
----
 
 ## 🗂️ Project Structure
 
@@ -321,6 +314,14 @@ libft/
 ```
 
 </details>
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+You are free to use, modify, and distribute this code for academic, personal, or professional purposes. Attribution is appreciated but not required.
 
 ---
 
