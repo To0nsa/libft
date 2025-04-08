@@ -20,7 +20,7 @@ In addition to replicating standard behaviors, Libft introduces **custom tools**
 
 ---
 
-## Libft Features
+## ✨ Libft Features
 
 <details>
 <summary><strong>see features</strong></summary>
