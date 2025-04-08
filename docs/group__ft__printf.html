@@ -489,7 +489,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 <p>'#' flag: alternate form </p>
 
 </div>
@@ -506,7 +506,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 <p>'-' flag: left-justify </p>
 
 </div>
@@ -523,7 +523,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 <p>'+' flag: show plus sign </p>
 
 </div>
@@ -540,7 +540,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 <p>' ' flag: leading space </p>
 
 </div>
@@ -557,7 +557,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 <p>'0' flag: zero padding </p>
 
 </div>
@@ -575,7 +575,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -591,7 +591,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -636,7 +636,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">srcs/ft_printf/print_formatted_number.c</a>&gt;</code></p>
 
 <p>Applies <code>+</code>, space, and <code>#</code> flags to the formatted number. </p>
 <p>Prepends signs or prefixes to the string depending on format specifier and flags. Updates string length accordingly.</p>
@@ -705,7 +705,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">handle_precision_int.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">srcs/ft_printf/handle_precision_int.c</a>&gt;</code></p>
 
 <p>Pads integer string with leading zeros to match precision. </p>
 <p>If precision is greater than the number of digits, this function inserts leading zeros. Handles negative numbers by preserving the <code>-</code> sign at the start of the result.</p>
@@ -761,7 +761,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">srcs/ft_printf/format_and_print_p.c</a>&gt;</code></p>
 
 <p>Converts a pointer to a lowercase hexadecimal string. </p>
 <p>Converts the pointer address to a lowercase hexadecimal string, prepends the <code>"0x"</code> prefix, and returns a newly allocated result.</p>
@@ -811,7 +811,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Formats and prints a character (<code>c</code>). </p>
 <p>Retrieves a single character from the variadic list and prints it with optional alignment and width padding.</p>
@@ -863,7 +863,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Handles <code>d</code> and <code>i</code> format specifiers for ft_printf. </p>
 <p>Converts an integer value to string using <code>ft_itoa</code>, applies formatting using <code>handle_precision_int</code>, and writes the result using <code>print_formatted_number</code>. If a memory allocation fails, the <code>malloc_error</code> flag is set in the state struct.</p>
@@ -915,7 +915,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">srcs/ft_printf/format_and_print_p.c</a>&gt;</code></p>
 
 <p>Handles <code>p</code> format specifier for ft_printf. </p>
 <p>This function formats and prints a pointer argument. It converts the pointer to hexadecimal, applies precision and alignment based on flags, and handles the null case gracefully.</p>
@@ -961,7 +961,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Formats and prints a literal percent sign (<code>%%</code>). </p>
 <p>Prints a single percent character with optional width padding. Padding is done with &lsquo;&rsquo; '<code>or</code>'0'<code>, and alignment respects the </code>FLAG_MINUS` flag.</p>
@@ -1012,7 +1012,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Formats and prints a string (<code>s</code>). </p>
 <p>Retrieves a string from the variadic list and prints it with optional width, alignment, and precision. NULL strings are replaced by <code>"(null)"</code>.</p>
@@ -1067,7 +1067,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Handles <code>u</code> format specifier for ft_printf. </p>
 <p>Converts an unsigned integer to string using <code>ft_utoa</code>, applies precision, and writes the formatted result using <code>print_formatted_number</code>.</p>
@@ -1125,7 +1125,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Handles <code>x</code> and <code>X</code> format specifiers for ft_printf. </p>
 <p>Converts an unsigned integer to hexadecimal using <code>ft_itoa_base</code>, applies precision, and prints the formatted result. If <code>upper</code> is non-zero, the hexadecimal letters are uppercase (for <code>X</code>).</p>
@@ -1172,7 +1172,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Prints formatted output according to the format string. </p>
 <p>Mimics the behavior of the standard <code>printf</code> function:</p><ul>
@@ -1212,7 +1212,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Returns the prefix length for <code>x</code> and <code>X</code> when using <code>#</code> flag. </p>
 <p>The prefix for alternative hexadecimal output is always two characters: <code>0x</code> or <code>0X</code>.</p>
@@ -1266,7 +1266,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">handle_precision_int.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">srcs/ft_printf/handle_precision_int.c</a>&gt;</code></p>
 
 <p>Handles edge case for <code>"0"</code> with precision set to 0. </p>
 <p>When precision is explicitly 0 and the value is also <code>0</code>, the result is normally an empty string unless the <code>#</code> flag is set for hex.</p>
@@ -1315,7 +1315,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -1343,7 +1343,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">srcs/ft_printf/format_and_print_p.c</a>&gt;</code></p>
 
 <p>Returns the default string for a NULL pointer. </p>
 <p>Allocates and returns the literal string <code>(nil)</code> to represent null pointers in <code>p</code> format.</p>
@@ -1396,7 +1396,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Applies precision formatting to a numeric string. </p>
 <p>This is the main function used for formatting <code>d</code>, <code>i</code>, <code>u</code>, <code>x</code>, <code>X</code> according to the precision field of the format string. It takes care of:</p><ul>
@@ -1458,7 +1458,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -1488,7 +1488,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Applies precision limit to string length. </p>
 <p>Truncates the given string length to the precision value if one is specified (non-negative). Used when formatting <code>s</code>.</p>
@@ -1529,7 +1529,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -1559,7 +1559,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Computes the number of padding characters to apply. </p>
 <p>Calculates how many characters must be padded to the left or right to meet the field width requirement.</p>
@@ -1598,7 +1598,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">initialize_printf_structs.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">srcs/ft_printf/initialize_printf_structs.c</a>&gt;</code></p>
 
 <p>Initializes a <code>t_fmt</code> (format specifier) structure. </p>
 <p>Sets formatting fields to their default values:</p><ul>
@@ -1640,7 +1640,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">initialize_printf_structs.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">srcs/ft_printf/initialize_printf_structs.c</a>&gt;</code></p>
 
 <p>Initializes a <code>t_pf</code> (printf state) structure. </p>
 <p>Sets total written characters, write error, and malloc error tracking fields to zero.</p>
@@ -1669,7 +1669,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Allocates and initializes the structures required by <code>ft_printf</code>. </p>
 <p>This function sets up the main state structure (<code>t_pf</code>) and allocates a <code>t_fmt</code> format descriptor. All fields are initialized to their default values. If allocation fails, returns -1.</p>
@@ -1702,7 +1702,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Checks if a character is a valid format flag. </p>
 <p>Recognized flags include:</p><ul>
@@ -1762,7 +1762,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">srcs/ft_printf/process_format_string.c</a>&gt;</code></p>
 
 <p>Delegates the specifier to the appropriate formatter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1821,7 +1821,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">srcs/ft_printf/setup_format.c</a>&gt;</code></p>
 
 <p>Parses format flags and sets corresponding bits. </p>
 <p>Flags include: <code>#</code>, <code>0</code>, <code>-</code>, <code>+</code>, and space.</p>
@@ -1870,7 +1870,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">srcs/ft_printf/setup_format.c</a>&gt;</code></p>
 
 <p>Parses precision (e.g., <code>%.5d</code>). </p>
 <p>Precision is stored in <code>fmt-&gt;precision</code>. If the <code>.</code> is present but no digits follow, precision is set to <code>0</code>.</p>
@@ -1919,7 +1919,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">srcs/ft_printf/setup_format.c</a>&gt;</code></p>
 
 <p>Validates and stores the conversion specifier. </p>
 <p>Accepted specifiers: <code>c</code>, <code>s</code>, <code>p</code>, <code>d</code>, <code>i</code>, <code>u</code>, <code>x</code>, <code>X</code>, <code>%</code></p>
@@ -1969,7 +1969,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">srcs/ft_printf/setup_format.c</a>&gt;</code></p>
 
 <p>Parses field width (e.g., <code>%10d</code>). </p>
 <p>Stores the integer width value in <code>fmt-&gt;width</code>.</p>
@@ -2016,7 +2016,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Prepends the <code>0x</code> or <code>0X</code> prefix to a hexadecimal string. </p>
 <p>Allocates a new string containing the appropriate prefix followed by the original string. Frees the original string and updates the printf context if an allocation error occurs.</p>
@@ -2073,7 +2073,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">srcs/ft_printf/print_formatted_number.c</a>&gt;</code></p>
 
 <p>Prepends a sign character (<code>+</code> or space) to a number string. </p>
 <p>Allocates and returns a new string with the specified sign inserted at the beginning. Frees the old string. Used for <code>d</code> / <code>i</code> formatting.</p>
@@ -2128,7 +2128,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Final formatter and dispatcher for integer output. </p>
 <p>This function prepares a number string for printing by applying:</p><ul>
@@ -2181,7 +2181,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Prints a series of padding characters. </p>
 <p>This function prints <code>padding</code> number of characters (typically &lsquo;&rsquo; '<code>or </code>'0'<code>) using</code>write_char_safely`. It is used to align formatted output to the desired width.</p>
@@ -2236,7 +2236,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -2280,7 +2280,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">srcs/ft_printf/format_and_print_p.c</a>&gt;</code></p>
 
 <p>Prints the pointer string with formatting and padding. </p>
 <p>This function applies precision and width formatting to the pointer string <code>str</code>, processes spacing or alignment flags, and prints the formatted result. It frees the input string once printed.</p>
@@ -2344,7 +2344,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">srcs/ft_printf/print_formatted_number.c</a>&gt;</code></p>
 
 <p>Writes the number string with left/right padding. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2401,7 +2401,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">srcs/ft_printf/print_formatted_number.c</a>&gt;</code></p>
 
 <p>Writes zero-padding and handles printing the sign first if needed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2456,7 +2456,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">srcs/ft_printf/process_format_string.c</a>&gt;</code></p>
 
 <p>Parses a single conversion specifier after <code>%</code>. </p>
 <p>This function processes the format string starting from the current cursor. It resets the format context, sets up the format descriptor, and dispatches the appropriate formatter. If the format is invalid, it prints the raw characters until the next <code>%</code> or end of string.</p>
@@ -2510,7 +2510,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Walks through the format string and dispatches format handlers. </p>
 <p>This is the main format processing loop for <code>ft_printf</code>. It iterates through the characters in the format string. When encountering <code>%</code>, it parses and processes a specifier. Otherwise, it prints the character.</p>
@@ -2554,7 +2554,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Checks whether the alternative form (<code>#</code>) should be applied. </p>
 <p>Alternative form is only applied if the specifier is &lsquo;'x&rsquo;<code>or</code>'X'<code>and the value is non-zero (e.g., not</code>"0"`).</p>
@@ -2593,7 +2593,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">srcs/ft_printf/process_format_string.c</a>&gt;</code></p>
 
 <p>Resets the format context for the next conversion. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2631,7 +2631,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Parses a full format specification (flags, width, precision, specifier). </p>
 <p>Parses from <code>%</code> until the final specifier character. Populates the given <code>t_fmt</code> structure accordingly.</p>
@@ -2685,7 +2685,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Safely writes a single character to a file descriptor. </p>
 <p>Attempts to write <code>c</code> to <code>fd</code>. If interrupted (<code>EINTR</code>), retries. Updates total byte count or sets write error in <code>pf</code> on failure.</p>
@@ -2732,7 +2732,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Safely writes a null-terminated string to a file descriptor. </p>
 <p>This function ensures the full content of <code>str</code> is written to <code>fd</code>, handling partial writes and interruptions caused by signals (<code>EINTR</code>). Updates the <code>total</code> field in <code>t_pf</code> and sets <code>write_error</code> on failure.</p>
@@ -2744,7 +2744,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9" title="Returns the number of characters in a string.">ft_strlen</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9">ft_strlen</a> </dd></dl>
 
 </div>
 </div>
@@ -2786,7 +2786,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">include/ft_printf.h</a>&gt;</code></p>
 
 <p>Safely writes <code>len</code> bytes from a string to a file descriptor. </p>
 <p>Unlike <code>write_safely</code>, this function writes a fixed number of bytes (useful for non-null-terminated data). Handles <code>EINTR</code> and write errors.</p>

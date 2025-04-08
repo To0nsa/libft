@@ -138,7 +138,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">ft_convert.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">include/ft_convert.h</a>&gt;</code></p>
 
 <p>Converts a string to a signed integer. </p>
 <p>Converts the null-terminated string <code>str</code> to a <code>long long</code> value. Handles optional leading whitespace, sign, and overflow.</p>
@@ -171,7 +171,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">ft_convert.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">include/ft_convert.h</a>&gt;</code></p>
 
 <p>Converts a string to a <code>long long</code> value. </p>
 <p>Similar to <code>ft_atoi</code>, but does not cast to int and returns a full <code>long long</code> result. Handles whitespace, signs, and overflow.</p>
@@ -222,7 +222,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__number__conversion_8c.html">ft_number_conversion.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__number__conversion_8c.html">srcs/convert/ft_number_conversion.c</a>&gt;</code></p>
 
 <p>Calculates the number of digits to represent a value in a given base. </p>
 <p>Computes how many characters are needed to express <code>n</code> in base <code>base</code>. Used internally by <code>ft_itoa_base</code>.</p>
@@ -277,7 +277,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__number__conversion_8c.html">ft_number_conversion.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__number__conversion_8c.html">srcs/convert/ft_number_conversion.c</a>&gt;</code></p>
 
 <p>Checks for overflow when converting a string to a long long integer. </p>
 <p>Evaluates whether appending a digit to <code>num</code> would cause it to overflow a signed 32-bit integer, taking into account the current sign.</p>
@@ -310,7 +310,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">ft_convert.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">include/ft_convert.h</a>&gt;</code></p>
 
 <p>Converts an integer to a string. </p>
 <p>Allocates and returns a new string representing the integer <code>n</code>. Handles negative numbers and returns NULL if allocation fails.</p>
@@ -356,7 +356,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">ft_convert.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">include/ft_convert.h</a>&gt;</code></p>
 
 <p>Converts an unsigned integer to a string in a given base. </p>
 <p>Converts the unsigned number <code>n</code> to a string in base <code>base</code> (2–16). Uses lowercase or uppercase digits based on <code>uppercase</code>.</p>
@@ -389,7 +389,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">ft_convert.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__convert_8h.html">include/ft_convert.h</a>&gt;</code></p>
 
 <p>Converts an unsigned long long to a decimal string. </p>
 <p>Converts the value <code>n</code> to its decimal string representation. A null-terminated string is returned. The caller must free it.</p>

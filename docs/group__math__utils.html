@@ -299,7 +299,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 <p>Mathematical constant π </p>
 
 </div>
@@ -317,7 +317,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>A simple struct for storing double float coordinates. </p>
 <p>Represents a 2D point or vector with double-precision.</p><ul>
@@ -339,7 +339,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>A simple struct for storing integer coordinates. </p>
 <p>Represents a 2D point with integer precision.</p><ul>
@@ -382,7 +382,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Clamps a value between a minimum and maximum. </p>
 <p>Ensures that the returned value lies within the interval [<code>min</code>, <code>max</code>]. If the input is below <code>min</code>, returns <code>min</code>. If above <code>max</code>, returns <code>max</code>. Otherwise, returns <code>value</code>.</p>
@@ -414,7 +414,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Converts an angle from degrees to radians. </p>
 <p>Multiplies the given angle in degrees by π/180 to convert it into radians. This is useful when dealing with trigonometric functions that expect radians.</p>
@@ -454,7 +454,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Divides a 2D vector by a scalar. </p>
 <p>Returns a new vector with each component divided by the given scalar. This is often used for vector normalization or scaling down.</p>
@@ -496,7 +496,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes Euclidean distance between two floating-point points. </p>
 <p>Uses the Pythagorean theorem to compute the straight-line distance between two points represented with <code>t_dpoint</code>. This is useful in precise geometric contexts such as physics or rendering systems.</p>
@@ -537,7 +537,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes Euclidean distance between two integer points. </p>
 <p>Applies the Pythagorean theorem to compute the straight-line distance between two 2D integer points. Internally casts to <code>double</code> to perform accurate calculations. The final result is truncated to an integer.</p>
@@ -578,7 +578,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes Manhattan distance between two floating-point points. </p>
 <p>Calculates the Manhattan distance using floating-point coordinates. This version is useful for precise 2D simulations and smooth position interpolation where integer coordinates are insufficient.</p>
@@ -619,7 +619,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes Manhattan distance between two integer points. </p>
 <p>Calculates the sum of the absolute differences in the x and y coordinates. This is often used in grid-based pathfinding like A* or taxicab geometry.</p>
@@ -660,7 +660,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the vector pointing from one point to another. </p>
 <p>Returns the vector representing the displacement from <code>from</code> to <code>to</code>. Useful for direction-based operations.</p>
@@ -701,7 +701,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the dot product of two 2D vectors. </p>
 <p>Calculates the scalar dot product as <code>(x1 * x2 + y1 * y2)</code>. This is useful for projections, angle comparisons, and detecting perpendicular vectors.</p>
@@ -732,7 +732,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Gets the fractional part of a floating-point number. </p>
 <p>Returns the part of the input after the decimal point by subtracting the floored value from the original. This is useful in periodic functions or graphical effects.</p>
@@ -762,7 +762,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Returns the normalized (unit length) vector. </p>
 <p>Produces a vector with length 1 pointing in the same direction as the input. If the input is zero-length, returns (0, 0).</p>
@@ -805,7 +805,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the normalized direction vector between two points. </p>
 <p>Returns a unit-length vector pointing from <code>from</code> to <code>to</code>. This is especially useful for movement or orientation systems.</p>
@@ -839,7 +839,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the angle of a 2D vector in radians. </p>
 <p>Uses <code>atan2(y, x)</code> to return the signed angle from the positive x-axis to the vector direction.</p>
@@ -879,7 +879,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the angle between two points as a direction vector. </p>
 <p>Forms a vector from <code>from</code> to <code>to</code>, then calculates its angle from the x-axis using <code>atan2</code>. Useful for aiming or facing direction.</p>
@@ -913,7 +913,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Computes the length (magnitude) of a 2D vector. </p>
 <p>Uses the Euclidean norm formula: <code>sqrt(x² + y²)</code> to compute the vector's magnitude. This is commonly used for normalization, distance evaluation, and vector-based physics.</p>
@@ -943,7 +943,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Converts an angle from radians to degrees. </p>
 <p>Multiplies the given angle in radians by 180/π to obtain its value in degrees. This is commonly used when interfacing with systems that expect degrees instead of radians.</p>
@@ -973,7 +973,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Wraps an angle in radians to the range [0, 2π). </p>
 <p>Normalizes the angle by continuously adding or subtracting 2π until it fits within the standard interval [0, 2π). This is essential when working with periodic functions or for ensuring angular continuity in rendering and physics.</p>
@@ -1013,7 +1013,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__math_8h.html">ft_math.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__math_8h.html">include/ft_math.h</a>&gt;</code></p>
 
 <p>Wraps a value within the range [0, range). </p>
 <p>Normalizes a value to be within the bounds of <code>[0, range)</code>. If the value is below 0, adds the range. If it's greater than or equal to the range, subtracts the range.</p>

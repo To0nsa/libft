@@ -144,7 +144,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">include/ft_2darray.h</a>&gt;</code></p>
 
 <p>Allocates a 2D array of integers initialized to 0. </p>
 <p>This function allocates a 2D array with the specified number of rows and columns, initializing all values to 0 using <code>ft_calloc</code>. If allocation fails at any point, all previously allocated memory is freed and NULL is returned.</p>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">include/ft_2darray.h</a>&gt;</code></p>
 
 <p>Frees a 2D array of integers. </p>
 <p>Releases memory allocated for a 2D array created with <code>ft_create_matrix</code> or equivalent. Each row is freed individually, followed by the array of pointers.</p>
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">include/ft_2darray.h</a>&gt;</code></p>
 
 <p>Creates a deep copy of a 2D array of integers. </p>
 <p>Allocates and returns a new 2D array with the same dimensions and values as the input. This function is useful when you need to work with a copy of the original data without modifying it.</p>
@@ -285,7 +285,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">include/ft_2darray.h</a>&gt;</code></p>
 
 <p>Prints a 2D array of integers to the standard output. </p>
 <p>Uses <code>ft_printf</code> to print each row of the 2D array on a separate line. Each integer is followed by a space. If any print call fails, returns -1.</p>
@@ -319,7 +319,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">include/ft_2darray.h</a>&gt;</code></p>
 
 <p>Converts a NULL-terminated array of strings to a 2D integer array. </p>
 <p>Each string in the array is interpreted as a row of digit characters. Returns a 2D array of integers where each character is converted to its numeric value (&lsquo;'0&rsquo;<code>→ 0,</code>'1'` → 1, etc.).</p>

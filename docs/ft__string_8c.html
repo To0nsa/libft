@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libft: ft_string.c File Reference</title>
+<title>libft: srcs/str/ft_string.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,24 +69,27 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c882bb6fa009938b7b09c7ff2cbfbf0e.html">str</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b73b02d482d1c4a3db20c3d9ad52d395.html">srcs</a></li><li class="navelem"><a class="el" href="dir_6845177b36225982910c3fa28edeedc2.html">str</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">ft_string.c File Reference</div></div>
+  <div class="headertitle"><div class="title">ft_string.c File Reference<div class="ingroups"><a class="el" href="group__string__utils.html">String Manipulation Utilities</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Returns the number of characters in a string.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="libft_8h_source.html">libft.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for ft_string.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="ft__string_8c__incl.png" border="0" usemap="#aft__string_8c" alt=""/></div>
-<map name="aft__string_8c" id="aft__string_8c">
-<area shape="rect" title=" " alt="" coords="1136,5,1223,31"/>
+<div class="center"><img src="ft__string_8c__incl.png" border="0" usemap="#asrcs_2str_2ft__string_8c" alt=""/></div>
+<map name="asrcs_2str_2ft__string_8c" id="asrcs_2str_2ft__string_8c">
+<area shape="rect" title="Returns the number of characters in a string." alt="" coords="1111,5,1248,31"/>
 <area shape="rect" href="libft_8h.html" title="My custom C library (libft)." alt="" coords="1150,79,1209,104"/>
 <area shape="poly" title=" " alt="" coords="1182,31,1182,65,1177,65,1177,31"/>
 <area shape="rect" title=" " alt="" coords="5,152,73,177"/>
@@ -174,7 +177,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga95de924e4140ae426bf2e05acfb5fe4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a string from <code>src</code> to <code>dest</code>, up to <code>size</code> - 1 characters.  <br /></td></tr>
 <tr class="separator:ga95de924e4140ae426bf2e05acfb5fe4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga828402378653640f545a4be2e00e92f9" id="r_ga828402378653640f545a4be2e00e92f9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9">ft_strlen</a> (const char *str)</td></tr>
-<tr class="memdesc:ga828402378653640f545a4be2e00e92f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of characters in a string.  <br /></td></tr>
 <tr class="separator:ga828402378653640f545a4be2e00e92f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ab3537787399531fe94aabac484610b" id="r_ga4ab3537787399531fe94aabac484610b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga4ab3537787399531fe94aabac484610b">ft_strmapi</a> (char const  *s, char(*f)(unsigned int, char))</td></tr>
 <tr class="memdesc:ga4ab3537787399531fe94aabac484610b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each character of a string to create a new string.  <br /></td></tr>
@@ -201,7 +203,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:gaef116be7b5bceafff4b59f20a4433d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to uppercase.  <br /></td></tr>
 <tr class="separator:gaef116be7b5bceafff4b59f20a4433d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Returns the number of characters in a string. </p>
+<dl class="section author"><dt>Author</dt><dd>Toonsa </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025/04/05 </dd></dl>
+<p>Iterates through the given null-terminated string to determine its length (not including the terminating <code>\0</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string whose length is to be calculated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of characters before the null terminator. </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

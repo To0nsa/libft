@@ -1,6 +1,6 @@
 /**
  * @file ft_output.c
- * @author ...
+ * @author Toonsa
  * @date 2025-04-05
  * @brief File descriptor-based output functions.
  *

@@ -1,5 +1,5 @@
-<map id="ft_list.c" name="ft_list.c">
-<area shape="rect" id="Node000001" title="Linked list operations for libft." alt="" coords="1145,5,1214,31"/>
+<map id="srcs/list/ft_list.c" name="srcs/list/ft_list.c">
+<area shape="rect" id="Node000001" title="Linked list operations for libft." alt="" coords="1118,5,1241,31"/>
 <area shape="rect" id="Node000002" href="$libft_8h.html" title="My custom C library (libft)." alt="" coords="1150,79,1209,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1182,31,1182,65,1177,65,1177,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,152,73,177"/>

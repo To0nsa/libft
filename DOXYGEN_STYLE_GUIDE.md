@@ -280,9 +280,6 @@ HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
 HTML_COLORSTYLE_GAMMA  = 80
 HTML_DYNAMIC_SECTIONS  = YES
-GENERATE_TREEVIEW      = YES
-FULL_PATH_NAMES        = NO
-STRIP_FROM_PATH        = srcs include
 
 #----------------------------------
 # Warnings and Cleanliness

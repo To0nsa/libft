@@ -1,5 +1,5 @@
-<map id="char_check.c" name="char_check.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="44,5,151,31"/>
+<map id="srcs/check/char_check.c" name="srcs/check/char_check.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="8,5,187,31"/>
 <area shape="rect" id="Node000002" href="$ft__check_8h.html" title="Classification and validation functions for characters and strings." alt="" coords="53,79,141,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,31,100,65,95,65,95,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,152,88,177"/>

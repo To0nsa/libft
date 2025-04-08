@@ -1,6 +1,9 @@
 #include "libft.h"
 
 /**
+ * @file ft_string.c
+ * @author Toonsa
+ * @date 2025/04/05
  * @brief Returns the number of characters in a string.
  *
  * Iterates through the given null-terminated string to determine

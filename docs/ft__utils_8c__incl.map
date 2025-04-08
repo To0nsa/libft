@@ -1,5 +1,5 @@
-<map id="ft_utils.c" name="ft_utils.c">
-<area shape="rect" id="Node000001" title="General&#45;purpose utility functions." alt="" coords="1141,5,1218,31"/>
+<map id="srcs/utilities/ft_utils.c" name="srcs/utilities/ft_utils.c">
+<area shape="rect" id="Node000001" title="General&#45;purpose utility functions." alt="" coords="1099,5,1259,31"/>
 <area shape="rect" id="Node000002" href="$libft_8h.html" title="My custom C library (libft)." alt="" coords="1150,79,1209,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1182,31,1182,65,1177,65,1177,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,152,73,177"/>

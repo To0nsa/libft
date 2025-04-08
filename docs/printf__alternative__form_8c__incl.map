@@ -1,5 +1,5 @@
-<map id="printf_alternative_form.c" name="printf_alternative_form.c">
-<area shape="rect" id="Node000001" title="Handles the # flag for hexadecimal output in ft_printf." alt="" coords="1112,5,1247,45"/>
+<map id="srcs/ft_printf/printf_alternative_form.c" name="srcs/ft_printf/printf_alternative_form.c">
+<area shape="rect" id="Node000001" title="Handles the # flag for hexadecimal output in ft_printf." alt="" coords="1105,5,1254,45"/>
 <area shape="rect" id="Node000002" href="$libft_8h.html" title="My custom C library (libft)." alt="" coords="1150,93,1209,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1182,46,1182,79,1177,79,1177,46"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,167,73,192"/>

@@ -13,7 +13,7 @@
  * data structures, suitable for various use cases including stack,
  * queue, and basic graph algorithms.
  *
- * @author nlouis
+ * @author Toonsa
  * @date 2025/04/05
  * @ingroup linked_list
  */

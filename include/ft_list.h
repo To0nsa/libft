@@ -1,6 +1,6 @@
 /**
  * @file ft_list.h
- * @author nlouis
+ * @author Toonsa
  * @date 2025/04/05
  * @brief Linked list for libft.
  *

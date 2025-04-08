@@ -1,5 +1,7 @@
 /**
  * @file libft.h
+ * @author Toonsa
+ * @date 2024/10/21
  * @brief My custom C library (libft).
  *
  * @details
@@ -14,8 +16,6 @@
  * This header allows external programs to access the entire libft
  * functionality through a single include.
  *
- * @author Toonsa
- * @date 2024/10/21
  * @ingroup core
  */
 #ifndef LIBFT_H

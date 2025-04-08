@@ -1,6 +1,6 @@
 /**
  * @file vector.c
- * @author nlouis
+ * @author Toonsa
  * @date 2025-04-05
  * @brief 2D vector utility functions for geometry and direction.
  *

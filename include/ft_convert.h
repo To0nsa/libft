@@ -1,6 +1,6 @@
 /**
  * @file ft_convert.h
- * @author ...
+ * @author Toonsa
  * @date 2025-04-05
  * @brief Numeric conversion utility functions.
  *

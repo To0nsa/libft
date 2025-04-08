@@ -1,6 +1,6 @@
 /**
  * @file ft_utils.c
- * @author ...
+ * @author Toonsa
  * @date 2025-04-05
  * @brief General-purpose utility functions.
  *

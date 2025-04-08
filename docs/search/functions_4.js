@@ -84,7 +84,7 @@ var searchData=
   ['ft_5fstrjoin_5fand_5ffree_81',['ft_strjoin_and_free',['../group__string__utils.html#ga63c2ecb2ed6af7d8032256183418ed9c',1,'ft_string.h']]],
   ['ft_5fstrlcat_82',['ft_strlcat',['../group__string__utils.html#ga87a42176d750415c82eb7d453abb39ee',1,'ft_string.c']]],
   ['ft_5fstrlcpy_83',['ft_strlcpy',['../group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f',1,'ft_string.c']]],
-  ['ft_5fstrlen_84',['ft_strlen',['../group__string__utils.html#ga828402378653640f545a4be2e00e92f9',1,'ft_string.c']]],
+  ['ft_5fstrlen_84',['ft_strlen',['../group__string__utils.html#ga828402378653640f545a4be2e00e92f9',1,'ft_strlen(const char *str):&#160;ft_string.c'],['../group__string__utils.html#ga828402378653640f545a4be2e00e92f9',1,'ft_strlen(const char *str):&#160;ft_string.c']]],
   ['ft_5fstrmapi_85',['ft_strmapi',['../group__string__utils.html#ga4ab3537787399531fe94aabac484610b',1,'ft_string.c']]],
   ['ft_5fstrncmp_86',['ft_strncmp',['../group__string__utils.html#ga9d2fe792187aa4ed08e5864fb2c4d6dc',1,'ft_string.c']]],
   ['ft_5fstrndup_87',['ft_strndup',['../group__string__utils.html#gafe88bad8e470071731600b6d3c02841b',1,'ft_string.c']]],

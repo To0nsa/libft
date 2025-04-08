@@ -144,7 +144,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Default buffer size for reading operations like <code>get_next_line</code>. </p>
 
@@ -162,7 +162,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Maximum number of file descriptors supported simultaneously. </p>
 <p>Used internally to manage static buffers indexed by file descriptors. </p>
@@ -194,7 +194,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">get_next_line.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">srcs/file_utils/get_next_line.c</a>&gt;</code></p>
 
 <p>Extracts the next line from the remainder buffer. </p>
 <p>Allocates and returns a new string containing everything from the start of <code>remainder</code> up to and including the first newline, or up to the null terminator if no newline is found.</p>
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Opens a file with the given flags. </p>
 <p>Safely opens a file with the given flags.</p>
@@ -292,7 +292,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Reads a specified number of bytes from a file descriptor. </p>
 <p>Safely reads data from a file descriptor.</p>
@@ -335,7 +335,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Closes a file descriptor safely. </p>
 <p>Safely closes a file descriptor.</p>
@@ -374,7 +374,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="ft__file_8h.html">ft_file.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ft__file_8h.html">include/ft_file.h</a>&gt;</code></p>
 
 <p>Reads a line from a file descriptor. </p>
 <p>Reads the next line from a file descriptor.</p>
@@ -439,7 +439,7 @@ Depends on BUFFER_SIZE and MAX_FD being defined.</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">get_next_line.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">srcs/file_utils/get_next_line.c</a>&gt;</code></p>
 
 <p>Reads from a file descriptor and appends to the remainder buffer. </p>
 <p>Allocates a temporary buffer and appends read data to the remainder until a newline is found or EOF is reached. It handles reallocation and joins partial strings dynamically.</p>
@@ -483,7 +483,7 @@ Depends on BUFFER_SIZE and MAX_FD being defined.</dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">get_next_line.c</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="get__next__line_8c.html">srcs/file_utils/get_next_line.c</a>&gt;</code></p>
 
 <p>Updates the remainder buffer after a line has been extracted. </p>
 <p>Frees the old remainder and returns a newly allocated string containing the part of the original string after the first newline.</p>
@@ -494,7 +494,7 @@ Depends on BUFFER_SIZE and MAX_FD being defined.</dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new remainder string, or NULL if nothing is left.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9" title="Returns the number of characters in a string.">ft_strlen</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9">ft_strlen</a> </dd>
 <dd>
 <a class="el" href="group__string__utils.html#gac44b46fdf9966cd329bd873d92761611" title="Extracts a substring from a string.">ft_substr</a> </dd></dl>
 
