@@ -13,5 +13,6 @@ var searchData=
   ['sorting_20utilities_10',['Sorting Utilities',['../group__sorting__utils.html',1,'']]],
   ['specifier_11',['specifier',['../group__ft__printf.html#aa2e1f426e9de7054cca328819f7a9ff9',1,'s_fmt']]],
   ['string_20classification_12',['Character and String Classification',['../group__check.html',1,'']]],
-  ['string_20manipulation_20utilities_13',['String Manipulation Utilities',['../group__string__utils.html',1,'']]]
+  ['string_20manipulation_20utilities_13',['String Manipulation Utilities',['../group__string__utils.html',1,'']]],
+  ['structure_14',['🗂️ Project Structure',['../index.html#autotoc_md8',1,'']]]
 ];
