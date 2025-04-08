@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['deg_5fto_5frad_0',['deg_to_rad',['../group__math__utils.html#ga91919af0395758b70f4e040c743c8c59',1,'angle_utils.c']]],
-  ['divide_5fvector_5fby_5fscalar_1',['divide_vector_by_scalar',['../group__math__utils.html#gaf5dc459dc3165732a68103776f3dd254',1,'vector.c']]],
-  ['double_5fcmp_2',['double_cmp',['../group__sorting__utils.html#gaaedb17f00b23fc8b1250f6f76611eb83',1,'ft_cmp.c']]]
+  ['clamp_0',['clamp',['../group__math__utils.html#ga6cb4fc7f99a1e043c43e774e00c985ec',1,'math_utils.c']]],
+  ['convert_5fptr_5fto_5fhex_1',['convert_ptr_to_hex',['../group__ft__printf.html#ga30409282b074f3ebdb581720c01b6e01',1,'format_and_print_p.c']]]
 ];

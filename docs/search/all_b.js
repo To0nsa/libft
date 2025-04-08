@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['prepend_5falternative_5fform_0',['prepend_alternative_form',['../group__ft__printf.html#ga08fd55b27fba90fcd1ddb78affd20223',1,'printf_alternative_form.c']]],
-  ['print_5fformatted_5fnumber_1',['print_formatted_number',['../group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad',1,'print_formatted_number.c']]],
-  ['print_5fformatted_5fnumber_2ec_2',['print_formatted_number.c',['../print__formatted__number_8c.html',1,'']]],
-  ['print_5fpadding_3',['print_padding',['../group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b',1,'format_utils.c']]],
-  ['printf_5falternative_5fform_2ec_4',['printf_alternative_form.c',['../printf__alternative__form_8c.html',1,'']]],
-  ['process_5fformat_5fstring_5',['process_format_string',['../group__ft__printf.html#ga17e86515038f23b89a70e3adbf674563',1,'process_format_string.c']]],
-  ['process_5fformat_5fstring_2ec_6',['process_format_string.c',['../process__format__string_8c.html',1,'']]],
-  ['project_20structure_7',['🗂️ Project Structure',['../index.html#autotoc_md6',1,'']]]
+  ['m_5fpi_0',['M_PI',['../group__math__utils.html#gae71449b1cc6e6250b91f539153a7a0d3',1,'ft_math.h']]],
+  ['malloc_5ferror_1',['malloc_error',['../group__ft__printf.html#ab6525f1b5e1985ba708ce3cfb63a9a9a',1,'s_pf']]],
+  ['management_2',['Memory Management',['../group__memory__utils.html',1,'']]],
+  ['manipulation_20utilities_3',['String Manipulation Utilities',['../group__string__utils.html',1,'']]],
+  ['math_20and_20vector_20utilities_4',['Math and Vector Utilities',['../group__math__utils.html',1,'']]],
+  ['math_5futils_2ec_5',['math_utils.c',['../math__utils_8c.html',1,'']]],
+  ['max_5ffd_6',['MAX_FD',['../group__file__utils.html#gae9c7a3fcf619f9aeb244f8e85a68097f',1,'ft_file.h']]],
+  ['median_5fof_5fthree_7',['median_of_three',['../ft__qsort_8c.html#a38765aa2ac20d069477d2a43910e8106',1,'ft_qsort.c']]],
+  ['memory_20management_8',['Memory Management',['../group__memory__utils.html',1,'']]]
 ];

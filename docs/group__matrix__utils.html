@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libft: Matrix Utilities</title>
+<title>libft: 2D Array Utilities</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__matrix__utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,46 +92,43 @@ $(function() {
   <div class="summary">
 <a href="#files">Files</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">Matrix Utilities</div></div>
+  <div class="headertitle"><div class="title">2D Array Utilities</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Utilities for working with integer matrices.  
+<p>Utilities for working with 2D integer arrays.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:ft__create__matrix_8c" id="r_ft__create__matrix_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__create__matrix_8c.html">ft_create_matrix.c</a></td></tr>
-<tr class="memdesc:ft__create__matrix_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a 2D matrix of integers. <br /></td></tr>
+<tr class="memitem:ft__2darray_8c" id="r_ft__2darray_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__2darray_8c.html">ft_2darray.c</a></td></tr>
+<tr class="memdesc:ft__2darray_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for dynamically allocated 2D integer arrays. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__free__matrix_8c" id="r_ft__free__matrix_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__free__matrix_8c.html">ft_free_matrix.c</a></td></tr>
-<tr class="memdesc:ft__free__matrix_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a dynamically allocated 2D matrix of integers. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__print__matrix_8c" id="r_ft__print__matrix_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__print__matrix_8c.html">ft_print_matrix.c</a></td></tr>
-<tr class="memdesc:ft__print__matrix_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a 2D integer matrix to the standard output. <br /></td></tr>
+<tr class="memitem:ft__2darray_8h" id="r_ft__2darray_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__2darray_8h.html">ft_2darray.h</a></td></tr>
+<tr class="memdesc:ft__2darray_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D integer array utilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga698380527341960a63b32fbcb5d52398" id="r_ga698380527341960a63b32fbcb5d52398"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#ga698380527341960a63b32fbcb5d52398">ft_matrix_copy</a> (int **matrix, size_t rows, size_t cols)</td></tr>
-<tr class="memdesc:ga698380527341960a63b32fbcb5d52398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of a 2D matrix of integers.  <br /></td></tr>
-<tr class="separator:ga698380527341960a63b32fbcb5d52398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga45aa1032102ac7b25a3b9ec2f9f6727d" id="r_ga45aa1032102ac7b25a3b9ec2f9f6727d"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d">ft_create_matrix</a> (size_t rows, size_t cols)</td></tr>
-<tr class="memdesc:ga45aa1032102ac7b25a3b9ec2f9f6727d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a 2D matrix of integers initialized to 0.  <br /></td></tr>
+<tr class="memdesc:ga45aa1032102ac7b25a3b9ec2f9f6727d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a 2D array of integers initialized to 0.  <br /></td></tr>
 <tr class="separator:ga45aa1032102ac7b25a3b9ec2f9f6727d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae08a52c347e0aa2cb121f73be70df635" id="r_gae08a52c347e0aa2cb121f73be70df635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#gae08a52c347e0aa2cb121f73be70df635">ft_free_matrix</a> (int **matrix, size_t rows)</td></tr>
-<tr class="memdesc:gae08a52c347e0aa2cb121f73be70df635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a 2D matrix of integers.  <br /></td></tr>
+<tr class="memdesc:gae08a52c347e0aa2cb121f73be70df635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a 2D array of integers.  <br /></td></tr>
 <tr class="separator:gae08a52c347e0aa2cb121f73be70df635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga698380527341960a63b32fbcb5d52398" id="r_ga698380527341960a63b32fbcb5d52398"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#ga698380527341960a63b32fbcb5d52398">ft_matrix_copy</a> (int **matrix, size_t rows, size_t cols)</td></tr>
+<tr class="memdesc:ga698380527341960a63b32fbcb5d52398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of a 2D array of integers.  <br /></td></tr>
+<tr class="separator:ga698380527341960a63b32fbcb5d52398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab719a4a0403790c713dffbe0795962c8" id="r_gab719a4a0403790c713dffbe0795962c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#gab719a4a0403790c713dffbe0795962c8">ft_print_matrix</a> (int **matrix, size_t rows, size_t cols)</td></tr>
-<tr class="memdesc:gab719a4a0403790c713dffbe0795962c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a 2D matrix of integers to the standard output.  <br /></td></tr>
+<tr class="memdesc:gab719a4a0403790c713dffbe0795962c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a 2D array of integers to the standard output.  <br /></td></tr>
 <tr class="separator:gab719a4a0403790c713dffbe0795962c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2b4d44f201704b0bed838b8e83df3d2e" id="r_ga2b4d44f201704b0bed838b8e83df3d2e"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__matrix__utils.html#ga2b4d44f201704b0bed838b8e83df3d2e">ft_strarr_to_matrix</a> (char **array)</td></tr>
-<tr class="memdesc:ga2b4d44f201704b0bed838b8e83df3d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a 2D matrix of integers to the standard output.  <br /></td></tr>
+<tr class="memdesc:ga2b4d44f201704b0bed838b8e83df3d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a NULL-terminated array of strings to a 2D integer array.  <br /></td></tr>
 <tr class="separator:ga2b4d44f201704b0bed838b8e83df3d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Utilities for working with integer matrices. </p>
-<p>These functions are designed to create, copy, convert, print, and free dynamically allocated 2D integer arrays (matrices).</p>
+<p>Utilities for working with 2D integer arrays. </p>
+<p>These functions are designed to create, copy, convert, print, and free dynamically allocated 2D integer arrays (grids).</p>
 <p>Useful for grid-based applications such as game maps or algorithmic tasks.</p>
 <p>This group includes:</p><ul>
 <li><a class="el" href="group__matrix__utils.html#ga698380527341960a63b32fbcb5d52398">ft_matrix_copy</a></li>
@@ -147,18 +164,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates a 2D matrix of integers initialized to 0. </p>
-<p>This function allocates a matrix with the specified number of rows and columns, initializing all values to 0 using <code>ft_calloc</code>. If allocation fails at any point, all previously allocated memory is freed and NULL is returned.</p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+
+<p>Allocates a 2D array of integers initialized to 0. </p>
+<p>This function allocates a 2D array with the specified number of rows and columns, initializing all values to 0 using <code>ft_calloc</code>. If allocation fails at any point, all previously allocated memory is freed and NULL is returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rows</td><td>Number of rows in the matrix. </td></tr>
-    <tr><td class="paramname">cols</td><td>Number of columns in the matrix. </td></tr>
+    <tr><td class="paramname">rows</td><td>Number of rows in the 2D array. </td></tr>
+    <tr><td class="paramname">cols</td><td>Number of columns in the 2D array. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated matrix, or NULL on failure.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The returned matrix must be freed using <code>ft_free_matrix</code> to prevent memory leaks.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#gae08a52c347e0aa2cb121f73be70df635" title="Frees a 2D matrix of integers.">ft_free_matrix</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated 2D array, or NULL on failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The returned array must be freed using <code>ft_free_matrix</code> to prevent memory leaks.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#gae08a52c347e0aa2cb121f73be70df635" title="Frees a 2D array of integers.">ft_free_matrix</a> </dd></dl>
 
 </div>
 </div>
@@ -188,17 +207,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Frees a 2D matrix of integers. </p>
-<p>This function releases the memory allocated for a matrix created with <code>ft_create_matrix</code> or any similar allocation method. It iterates through each row, frees it, and finally frees the array of row pointers.</p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+
+<p>Frees a 2D array of integers. </p>
+<p>Releases memory allocated for a 2D array created with <code>ft_create_matrix</code> or equivalent. Each row is freed individually, followed by the array of pointers.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">matrix</td><td>A pointer to the matrix to free. </td></tr>
-    <tr><td class="paramname">rows</td><td>The number of rows in the matrix.</td></tr>
+    <tr><td class="paramname">matrix</td><td>A pointer to the 2D array to free. </td></tr>
+    <tr><td class="paramname">rows</td><td>The number of rows in the array.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Passing a NULL matrix is safe and does nothing.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D matrix of integers initialized to 0.">ft_create_matrix</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Passing a NULL array is safe and does nothing.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D array of integers initialized to 0.">ft_create_matrix</a> </dd></dl>
 
 </div>
 </div>
@@ -234,19 +255,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a deep copy of a 2D matrix of integers. </p>
-<p>Allocates and returns a new matrix with the same dimensions and values as the input. This function is useful when you need to work with a copy of the original matrix without modifying it.</p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+
+<p>Creates a deep copy of a 2D array of integers. </p>
+<p>Allocates and returns a new 2D array with the same dimensions and values as the input. This function is useful when you need to work with a copy of the original data without modifying it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">matrix</td><td>The original matrix to copy. </td></tr>
-    <tr><td class="paramname">rows</td><td>The number of rows in the matrix. </td></tr>
-    <tr><td class="paramname">cols</td><td>The number of columns in the matrix. </td></tr>
+    <tr><td class="paramname">matrix</td><td>The original 2D array to copy. </td></tr>
+    <tr><td class="paramname">rows</td><td>The number of rows in the array. </td></tr>
+    <tr><td class="paramname">cols</td><td>The number of columns in the array. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A newly allocated deep copy of the matrix, or NULL on error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Uses <code>ft_create_matrix</code> to allocate the new matrix.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D matrix of integers initialized to 0.">ft_create_matrix</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated deep copy of the array, or NULL on error.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Uses <code>ft_create_matrix</code> to allocate the new array.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D array of integers initialized to 0.">ft_create_matrix</a> </dd></dl>
 
 </div>
 </div>
@@ -282,19 +305,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a 2D matrix of integers to the standard output. </p>
-<p>This function uses <code>ft_printf</code> to display a matrix of integers, printing each row on a separate line. Elements are separated by spaces.</p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+
+<p>Prints a 2D array of integers to the standard output. </p>
+<p>Uses <code>ft_printf</code> to print each row of the 2D array on a separate line. Each integer is followed by a space. If any print call fails, returns -1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">matrix</td><td>A 2D array of integers. </td></tr>
-    <tr><td class="paramname">rows</td><td>The number of rows in the matrix. </td></tr>
-    <tr><td class="paramname">cols</td><td>The number of columns in the matrix.</td></tr>
+    <tr><td class="paramname">rows</td><td>The number of rows in the array. </td></tr>
+    <tr><td class="paramname">cols</td><td>The number of columns in the array. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, or -1 if any write error occurs.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the matrix is NULL or if any <code>ft_printf</code> call fails, the function returns -1.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title="Custom implementation of the standard printf.">ft_printf</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the array is NULL or any <code>ft_printf</code> fails, returns -1.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title="Prints formatted output according to the format string.">ft_printf</a> </dd></dl>
 
 </div>
 </div>
@@ -314,41 +339,33 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a 2D matrix of integers to the standard output. </p>
-<p>This function uses <code>ft_printf</code> to display a matrix of integers, printing each row on a separate line. Elements are separated by spaces.</p>
+<p><code>#include &lt;<a class="el" href="ft__2darray_8h.html">ft_2darray.h</a>&gt;</code></p>
+
+<p>Converts a NULL-terminated array of strings to a 2D integer array. </p>
+<p>Each string in the array is interpreted as a row of digit characters. Returns a 2D array of integers where each character is converted to its numeric value (&lsquo;'0&rsquo;<code>→ 0,</code>'1'` → 1, etc.).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">matrix</td><td>A 2D array of integers. </td></tr>
-    <tr><td class="paramname">rows</td><td>The number of rows in the matrix. </td></tr>
-    <tr><td class="paramname">cols</td><td>The number of columns in the matrix.</td></tr>
+    <tr><td class="paramname">array</td><td>A NULL-terminated array of strings (char **), where each string must contain only digit characters (0–9). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or -1 if any write error occurs.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the matrix is NULL or if any <code>ft_printf</code> call fails, the function returns -1.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e" title="Custom implementation of the standard printf.">ft_printf</a></dd></dl>
-<p>Converts a NULL-terminated array of strings to a 2D int matrix.</p>
-<p>This function interprets each string in the array as a row of digits. It creates a matrix of integers where each character is converted to its numeric value (&lsquo;'0&rsquo;<code>→ 0,</code>'1'` → 1, etc.).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>A NULL-terminated array of strings (char **), where each string must contain only digit characters (0–9).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A newly allocated 2D array of integers, or NULL on failure.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Each string must be the same length. If the allocation fails or the input array is invalid, the function returns NULL.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D matrix of integers initialized to 0.">ft_create_matrix</a> </dd>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated 2D integer array, or NULL on failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Each string must have the same length. If allocation fails or the input is invalid, returns NULL.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__matrix__utils.html#ga45aa1032102ac7b25a3b9ec2f9f6727d" title="Allocates a 2D array of integers initialized to 0.">ft_create_matrix</a> </dd>
 <dd>
-<a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed" title="Calculates the number of elements in a NULL-terminated array.">ft_arraysize</a> </dd>
+<a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed" title="Returns the number of elements in a NULL-terminated array.">ft_arraysize</a> </dd>
 <dd>
-<a class="el" href="group__matrix__utils.html#gae08a52c347e0aa2cb121f73be70df635" title="Frees a 2D matrix of integers.">ft_free_matrix</a> </dd></dl>
+<a class="el" href="group__matrix__utils.html#gae08a52c347e0aa2cb121f73be70df635" title="Frees a 2D array of integers.">ft_free_matrix</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

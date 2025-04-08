@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__memory__utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,29 +101,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:ft__bzero_8c" id="r_ft__bzero_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__bzero_8c.html">ft_bzero.c</a></td></tr>
-<tr class="memdesc:ft__bzero_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets memory bytes to zero. <br /></td></tr>
+<tr class="memitem:ft__memory_8c" id="r_ft__memory_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memory_8c.html">ft_memory.c</a></td></tr>
+<tr class="memdesc:ft__memory_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level memory manipulation utilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__calloc_8c" id="r_ft__calloc_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__calloc_8c.html">ft_calloc.c</a></td></tr>
-<tr class="memdesc:ft__calloc_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and zero-initializes an array in memory. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__memchr_8c" id="r_ft__memchr_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memchr_8c.html">ft_memchr.c</a></td></tr>
-<tr class="memdesc:ft__memchr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locates the first occurrence of a byte in a memory area. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__memcmp_8c" id="r_ft__memcmp_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memcmp_8c.html">ft_memcmp.c</a></td></tr>
-<tr class="memdesc:ft__memcmp_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two memory areas byte by byte. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__memcpy_8c" id="r_ft__memcpy_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memcpy_8c.html">ft_memcpy.c</a></td></tr>
-<tr class="memdesc:ft__memcpy_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies bytes from one memory area to another. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__memmove_8c" id="r_ft__memmove_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memmove_8c.html">ft_memmove.c</a></td></tr>
-<tr class="memdesc:ft__memmove_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely copies memory blocks, even when they overlap. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__memset_8c" id="r_ft__memset_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memset_8c.html">ft_memset.c</a></td></tr>
-<tr class="memdesc:ft__memset_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a block of memory with a constant byte. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__realloc_8c" id="r_ft__realloc_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__realloc_8c.html">ft_realloc.c</a></td></tr>
-<tr class="memdesc:ft__realloc_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates a memory block to a new size. <br /></td></tr>
+<tr class="memitem:ft__memory_8h" id="r_ft__memory_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__memory_8h.html">ft_memory.h</a></td></tr>
+<tr class="memdesc:ft__memory_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level memory manipulation functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -112,25 +114,25 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga5937ab0d08e31d0e3e4a16ec71e293a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a block of memory to zero.  <br /></td></tr>
 <tr class="separator:ga5937ab0d08e31d0e3e4a16ec71e293a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga55cb9602200ccf92a7f43e58c6ee2679" id="r_ga55cb9602200ccf92a7f43e58c6ee2679"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#ga55cb9602200ccf92a7f43e58c6ee2679">ft_calloc</a> (size_t nmemb, size_t size)</td></tr>
-<tr class="memdesc:ga55cb9602200ccf92a7f43e58c6ee2679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and zero-initializes memory for an array.  <br /></td></tr>
+<tr class="memdesc:ga55cb9602200ccf92a7f43e58c6ee2679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and zeroes memory for an array.  <br /></td></tr>
 <tr class="separator:ga55cb9602200ccf92a7f43e58c6ee2679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabf633e8e48a8afbe61947f61de5ac695" id="r_gabf633e8e48a8afbe61947f61de5ac695"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#gabf633e8e48a8afbe61947f61de5ac695">ft_memchr</a> (const void *s, int c, size_t n)</td></tr>
-<tr class="memdesc:gabf633e8e48a8afbe61947f61de5ac695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans memory for the first occurrence of a specific byte.  <br /></td></tr>
+<tr class="memdesc:gabf633e8e48a8afbe61947f61de5ac695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans memory for a specific byte.  <br /></td></tr>
 <tr class="separator:gabf633e8e48a8afbe61947f61de5ac695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga08f665a1828c402f2ffe2e2187f135fc" id="r_ga08f665a1828c402f2ffe2e2187f135fc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#ga08f665a1828c402f2ffe2e2187f135fc">ft_memcmp</a> (const void *s1, const void *s2, size_t n)</td></tr>
 <tr class="memdesc:ga08f665a1828c402f2ffe2e2187f135fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two memory blocks.  <br /></td></tr>
 <tr class="separator:ga08f665a1828c402f2ffe2e2187f135fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga41a6f05af30cf85ff63a08e383826322" id="r_ga41a6f05af30cf85ff63a08e383826322"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#ga41a6f05af30cf85ff63a08e383826322">ft_memcpy</a> (void *dest, const void *src, size_t n)</td></tr>
-<tr class="memdesc:ga41a6f05af30cf85ff63a08e383826322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>.  <br /></td></tr>
+<tr class="memdesc:ga41a6f05af30cf85ff63a08e383826322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies memory from source to destination.  <br /></td></tr>
 <tr class="separator:ga41a6f05af30cf85ff63a08e383826322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga69673d42c601e17a8e682b592167c775" id="r_ga69673d42c601e17a8e682b592167c775"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#ga69673d42c601e17a8e682b592167c775">ft_memmove</a> (void *dest, const void *src, size_t n)</td></tr>
-<tr class="memdesc:ga69673d42c601e17a8e682b592167c775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>, handling overlap.  <br /></td></tr>
+<tr class="memdesc:ga69673d42c601e17a8e682b592167c775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies memory safely, handling overlapping regions.  <br /></td></tr>
 <tr class="separator:ga69673d42c601e17a8e682b592167c775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga557de65a3f3e16f953f5dae59cdb6106" id="r_ga557de65a3f3e16f953f5dae59cdb6106"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106">ft_memset</a> (void *s, int c, size_t n)</td></tr>
 <tr class="memdesc:ga557de65a3f3e16f953f5dae59cdb6106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills memory with a constant byte.  <br /></td></tr>
 <tr class="separator:ga557de65a3f3e16f953f5dae59cdb6106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaff1c7bbfe3c7352d519c48bae12188fe" id="r_gaff1c7bbfe3c7352d519c48bae12188fe"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory__utils.html#gaff1c7bbfe3c7352d519c48bae12188fe">ft_realloc</a> (void *ptr, size_t old_size, size_t new_size)</td></tr>
-<tr class="memdesc:gaff1c7bbfe3c7352d519c48bae12188fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates a memory block to a new size.  <br /></td></tr>
+<tr class="memdesc:gaff1c7bbfe3c7352d519c48bae12188fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes a memory block.  <br /></td></tr>
 <tr class="separator:gaff1c7bbfe3c7352d519c48bae12188fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -180,17 +182,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
 <p>Sets a block of memory to zero. </p>
-<p>This function sets the first <code>n</code> bytes of the memory area pointed to by <code>s</code> to zero (bytes containing '\0'). It is commonly used to initialize buffers or memory blocks to a known cleared state.</p>
+<p>Sets the first <code>n</code> bytes of the memory area pointed to by <code>s</code> to zero ('\0' bytes). Useful for initializing buffers or memory blocks.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Pointer to the memory area to zero out. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to set to zero.</td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to set to zero. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Nothing.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function behaves similarly to the standard <code>bzero</code> function. It is often used in combination with <code>malloc</code>, <code>calloc</code>, or custom memory allocators. <code>ft_memset</code> is preferred.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Behaves similarly to the standard <code>bzero</code> function. Often used with <code>malloc</code>, <code>calloc</code>, or custom memory allocators.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106" title="Fills memory with a constant byte.">ft_memset</a> </dd></dl>
 
 </div>
@@ -221,20 +225,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates and zero-initializes memory for an array. </p>
-<p>This function allocates memory for an array of <code>nmemb</code> elements of <code>size</code> bytes each and initializes all bytes in the allocated memory to zero. It also includes overflow protection for <code>nmemb * size</code>.</p>
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
+<p>Allocates and zeroes memory for an array. </p>
+<p>Allocates memory for <code>nmemb</code> elements of <code>size</code> bytes each and initializes all memory to zero. Includes overflow protection.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nmemb</td><td>Number of elements to allocate. </td></tr>
-    <tr><td class="paramname">size</td><td>Size in bytes of each element.</td></tr>
+    <tr><td class="paramname">nmemb</td><td>Number of elements. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of each element in bytes. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the allocated memory, or NULL if the allocation fails or if an overflow is detected.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The returned memory must be freed using <code>free</code> when no longer used.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106" title="Fills memory with a constant byte.">ft_memset</a> </dd>
-<dd>
-malloc </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the allocated memory, or NULL on failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Equivalent to <code>malloc(nmemb * size)</code> followed by <code>ft_memset(ptr, 0,
+...)</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106" title="Fills memory with a constant byte.">ft_memset</a> </dd></dl>
 
 </div>
 </div>
@@ -270,17 +275,19 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Scans memory for the first occurrence of a specific byte. </p>
-<p>This function scans the initial <code>n</code> bytes of the memory area pointed to by <code>s</code> for the first instance of the byte <code>c</code> (converted to an <code>unsigned char</code>). If the byte is found, a pointer to the matching byte is returned.</p>
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
+<p>Scans memory for a specific byte. </p>
+<p>Searches the first <code>n</code> bytes of the memory area pointed to by <code>s</code> for the first occurrence of the byte <code>c</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td>Pointer to the memory block to be scanned. </td></tr>
-    <tr><td class="paramname">c</td><td>Byte to search for, interpreted as unsigned char. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to scan.</td></tr>
+    <tr><td class="paramname">s</td><td>Pointer to the memory block to scan. </td></tr>
+    <tr><td class="paramname">c</td><td>Byte to search for. </td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to scan. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the matching byte in memory, or NULL if the byte is not found in the first <code>n</code> bytes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the matching byte, or NULL if not found. </dd></dl>
 
 </div>
 </div>
@@ -316,18 +323,19 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
 <p>Compares two memory blocks. </p>
-<p>This function compares the first <code>n</code> bytes of memory areas <code>s1</code> and <code>s2</code>. The comparison is done byte-by-byte using unsigned characters.</p>
+<p>Compares the first <code>n</code> bytes of memory areas <code>s1</code> and <code>s2</code>. Comparison is done byte by byte using unsigned characters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s1</td><td>Pointer to the first memory block. </td></tr>
     <tr><td class="paramname">s2</td><td>Pointer to the second memory block. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to compare.</td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to compare. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An integer less than, equal to, or greater than zero if the first <code>n</code> bytes of <code>s1</code> are found, respectively, to be less than, to match, or be greater than those of <code>s2</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The comparison stops at the first differing byte or after <code>n</code> bytes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Difference between first differing bytes, or 0 if equal. </dd></dl>
 
 </div>
 </div>
@@ -363,18 +371,20 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>. </p>
-<p>This function performs a memory copy from the source pointer <code>src</code> to the destination pointer <code>dest</code>. It copies 64-bit chunks when possible for performance, then completes with byte-by-byte copying.</p>
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
+<p>Copies memory from source to destination. </p>
+<p>Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>. Performs fast 8-byte chunks when possible. Does not support overlapping memory regions.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dest</td><td>Pointer to the destination memory area. </td></tr>
-    <tr><td class="paramname">src</td><td>Pointer to the source memory area. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to copy.</td></tr>
+    <tr><td class="paramname">dest</td><td>Pointer to destination memory. </td></tr>
+    <tr><td class="paramname">src</td><td>Pointer to source memory. </td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to copy. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the destination memory area <code>dest</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If either <code>dest</code> or <code>src</code> is NULL, the function returns NULL. This implementation handles overlapping memory incorrectly and should not be used when overlap is possible — use <code>ft_memmove</code> instead in such cases. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to <code>dest</code>, or NULL if either pointer is NULL.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Use <code>ft_memmove</code> instead when memory regions overlap. </dd></dl>
 
 </div>
 </div>
@@ -410,21 +420,21 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>, handling overlap. </p>
-<p>This function behaves similarly to <code>ft_memcpy</code>, but is safe to use when the source and destination memory areas overlap. It chooses forward or backward copying direction based on pointer addresses.</p>
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
+<p>Copies memory safely, handling overlapping regions. </p>
+<p>Copies <code>n</code> bytes from <code>src</code> to <code>dest</code>. Chooses forward or backward copy direction based on pointer alignment to avoid corruption.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dest</td><td>Destination memory area. </td></tr>
-    <tr><td class="paramname">src</td><td>Source memory area. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to copy.</td></tr>
+    <tr><td class="paramname">dest</td><td>Pointer to destination memory. </td></tr>
+    <tr><td class="paramname">src</td><td>Pointer to source memory. </td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to copy. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the destination memory area <code>dest</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>n</code> is zero, the function returns <code>dest</code> immediately. If memory regions overlap, the function copies from end to start to prevent data corruption.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga41a6f05af30cf85ff63a08e383826322" title="Copies n bytes from src to dest.">ft_memcpy</a> </dd>
-<dd>
-<a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106" title="Fills memory with a constant byte.">ft_memset</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to <code>dest</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is safe for overlapping memory regions.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga41a6f05af30cf85ff63a08e383826322" title="Copies memory from source to destination.">ft_memcpy</a> </dd></dl>
 
 </div>
 </div>
@@ -460,18 +470,19 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
 <p>Fills memory with a constant byte. </p>
-<p>This function sets each of the first <code>n</code> bytes of the memory area pointed to by <code>s</code> to the constant byte value <code>c</code> (converted to an unsigned char).</p>
+<p>Sets the first <code>n</code> bytes of the memory area pointed to by <code>s</code> to the byte value <code>c</code>, converted to unsigned char.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>Pointer to the memory area to fill. </td></tr>
-    <tr><td class="paramname">c</td><td>Byte value to fill the memory with. </td></tr>
-    <tr><td class="paramname">n</td><td>Number of bytes to fill.</td></tr>
+    <tr><td class="paramname">c</td><td>Byte value to write into memory. </td></tr>
+    <tr><td class="paramname">n</td><td>Number of bytes to write. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the memory area <code>s</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Useful for initializing memory to zero or another value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the memory area <code>s</code>. </dd></dl>
 
 </div>
 </div>
@@ -507,27 +518,31 @@ malloc </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Reallocates a memory block to a new size. </p>
-<p>Allocates a new block of memory with size <code>new_size</code>, copies up to <code>old_size</code> bytes from the original <code>ptr</code> into the new block, and frees the old memory.</p>
-<p>If <code>ptr</code> is NULL, this function behaves like <code>malloc(new_size)</code>. If <code>new_size</code> is 0, frees the memory and returns NULL. If allocation fails, returns NULL and the original memory is not freed.</p>
+<p><code>#include &lt;<a class="el" href="ft__memory_8h.html">ft_memory.h</a>&gt;</code></p>
+
+<p>Resizes a memory block. </p>
+<p>Allocates new memory of size <code>new_size</code>, copies up to <code>old_size</code> bytes from <code>ptr</code> into the new block, and frees the old memory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td>Pointer to the previously allocated memory block. </td></tr>
-    <tr><td class="paramname">old_size</td><td>The size of the old memory block in bytes. </td></tr>
-    <tr><td class="paramname">new_size</td><td>The desired new size in bytes.</td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to previously allocated memory. </td></tr>
+    <tr><td class="paramname">old_size</td><td>Size of the old block. </td></tr>
+    <tr><td class="paramname">new_size</td><td>Desired new size. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the new memory block, or NULL on failure.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The content beyond the old size is uninitialized.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga69673d42c601e17a8e682b592167c775" title="Copies n bytes from src to dest, handling overlap.">ft_memmove</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to new memory block, or NULL on failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>ptr</code> is NULL, behaves like <code>malloc(new_size)</code>. If <code>new_size</code> is 0, frees memory and returns NULL.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga69673d42c601e17a8e682b592167c775" title="Copies memory safely, handling overlapping regions.">ft_memmove</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

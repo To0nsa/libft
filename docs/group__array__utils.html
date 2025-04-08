@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__array__utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,40 +101,52 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:ft__arraysize_8c" id="r_ft__arraysize_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__arraysize_8c.html">ft_arraysize.c</a></td></tr>
-<tr class="memdesc:ft__arraysize_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the number of elements in a NULL-terminated array. <br /></td></tr>
+<tr class="memitem:ft__array_8c" id="r_ft__array_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__array_8c.html">ft_array.c</a></td></tr>
+<tr class="memdesc:ft__array_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of pointer and integer array utilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__copy__strarray_8c" id="r_ft__copy__strarray_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__copy__strarray_8c.html">ft_copy_strarray.c</a></td></tr>
-<tr class="memdesc:ft__copy__strarray_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deep copies a NULL-terminated string array. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__free__array_8c" id="r_ft__free__array_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__free__array_8c.html">ft_free_array.c</a></td></tr>
-<tr class="memdesc:ft__free__array_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to free dynamically allocated arrays of pointers. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__putintarray_8c" id="r_ft__putintarray_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__putintarray_8c.html">ft_putintarray.c</a></td></tr>
-<tr class="memdesc:ft__putintarray_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an array of integers to standard output. <br /></td></tr>
+<tr class="memitem:ft__array_8h" id="r_ft__array_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__array_8h.html">ft_array.h</a></td></tr>
+<tr class="memdesc:ft__array_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions for handling pointer and integer arrays. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga9676a1f422cc3ebebc656fdaa7ae8aed" id="r_ga9676a1f422cc3ebebc656fdaa7ae8aed"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed">ft_arraysize</a> (void **array)</td></tr>
-<tr class="memdesc:ga9676a1f422cc3ebebc656fdaa7ae8aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the number of elements in a NULL-terminated array.  <br /></td></tr>
+<tr class="memdesc:ga9676a1f422cc3ebebc656fdaa7ae8aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in a NULL-terminated array.  <br /></td></tr>
 <tr class="separator:ga9676a1f422cc3ebebc656fdaa7ae8aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa294bad6d253710ed5990e67403901f6" id="r_gaa294bad6d253710ed5990e67403901f6"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#gaa294bad6d253710ed5990e67403901f6">ft_copy_strarray</a> (char **array)</td></tr>
 <tr class="memdesc:gaa294bad6d253710ed5990e67403901f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of a NULL-terminated string array.  <br /></td></tr>
 <tr class="separator:gaa294bad6d253710ed5990e67403901f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7442001d09b754cee8ef5b530109e855" id="r_ga7442001d09b754cee8ef5b530109e855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855">ft_free_array</a> (void **array)</td></tr>
-<tr class="memdesc:ga7442001d09b754cee8ef5b530109e855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a NULL-terminated array of pointers.  <br /></td></tr>
+<tr class="memdesc:ga7442001d09b754cee8ef5b530109e855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a NULL-terminated array.  <br /></td></tr>
 <tr class="separator:ga7442001d09b754cee8ef5b530109e855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3c5eae7f2e878969ddfe2ecc39684a17" id="r_ga3c5eae7f2e878969ddfe2ecc39684a17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#ga3c5eae7f2e878969ddfe2ecc39684a17">ft_free_array_size</a> (void **array, size_t size)</td></tr>
-<tr class="memdesc:ga3c5eae7f2e878969ddfe2ecc39684a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a pointer array of known size.  <br /></td></tr>
+<tr class="memdesc:ga3c5eae7f2e878969ddfe2ecc39684a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees an array of pointers with a known size.  <br /></td></tr>
 <tr class="separator:ga3c5eae7f2e878969ddfe2ecc39684a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7869880f5d2881ef52fe2996ee78326e" id="r_ga7869880f5d2881ef52fe2996ee78326e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#ga7869880f5d2881ef52fe2996ee78326e">ft_is_array_sorted</a> (const int *array, size_t size)</td></tr>
+<tr class="memdesc:ga7869880f5d2881ef52fe2996ee78326e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if an array of integers is sorted in ascending order.  <br /></td></tr>
+<tr class="separator:ga7869880f5d2881ef52fe2996ee78326e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae4a3f1e410c4d14ed4209705d61ab57f" id="r_gae4a3f1e410c4d14ed4209705d61ab57f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__array__utils.html#gae4a3f1e410c4d14ed4209705d61ab57f">ft_putintarray</a> (int *array, int size)</td></tr>
-<tr class="memdesc:gae4a3f1e410c4d14ed4209705d61ab57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an integer array to standard output.  <br /></td></tr>
+<tr class="memdesc:gae4a3f1e410c4d14ed4209705d61ab57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an array of integers to standard output.  <br /></td></tr>
 <tr class="separator:gae4a3f1e410c4d14ed4209705d61ab57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for working with pointer arrays (char**, void**, etc.). </p>
-<p>Includes functions like copying, freeing, measuring size of arrays, etc. This group is useful for handling string arrays, environment variables, etc. It contains : <a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed">ft_arraysize</a> <a class="el" href="group__array__utils.html#gaa294bad6d253710ed5990e67403901f6">ft_copy_strarray</a> <a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855">ft_free_array</a> <a class="el" href="group__array__utils.html#ga3c5eae7f2e878969ddfe2ecc39684a17">ft_free_array_size</a> <a class="el" href="group__array__utils.html#gae4a3f1e410c4d14ed4209705d61ab57f">ft_putintarray</a> </p>
+<p>Includes functions for:</p><ul>
+<li>Measuring array size</li>
+<li>Copying or freeing arrays</li>
+<li>Printing and checking sort</li>
+</ul>
+<p>This group includes: </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed" title="Returns the number of elements in a NULL-terminated array.">ft_arraysize</a> </dd>
+<dd>
+<a class="el" href="group__array__utils.html#gaa294bad6d253710ed5990e67403901f6" title="Creates a deep copy of a NULL-terminated string array.">ft_copy_strarray</a> </dd>
+<dd>
+<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array.">ft_free_array</a> </dd>
+<dd>
+<a class="el" href="group__array__utils.html#ga3c5eae7f2e878969ddfe2ecc39684a17" title="Frees an array of pointers with a known size.">ft_free_array_size</a> </dd>
+<dd>
+<a class="el" href="group__array__utils.html#ga7869880f5d2881ef52fe2996ee78326e" title="Checks if an array of integers is sorted in ascending order.">ft_is_array_sorted</a> </dd>
+<dd>
+<a class="el" href="group__array__utils.html#gae4a3f1e410c4d14ed4209705d61ab57f" title="Prints an array of integers to standard output.">ft_putintarray</a> </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga9676a1f422cc3ebebc656fdaa7ae8aed" name="ga9676a1f422cc3ebebc656fdaa7ae8aed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9676a1f422cc3ebebc656fdaa7ae8aed">&#9670;&#160;</a></span>ft_arraysize()</h2>
@@ -132,7 +164,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the number of elements in a NULL-terminated array. </p>
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
+<p>Returns the number of elements in a NULL-terminated array. </p>
+<p>Calculates the number of elements in a NULL-terminated array.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array of pointers (NULL-terminated). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of elements in the array.</dd></dl>
 <p>This function iterates over a pointer array (usually a <code>char **</code> or similar) and returns the number of non-NULL elements until it hits the terminating NULL.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -161,7 +203,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
 <p>Creates a deep copy of a NULL-terminated string array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The original string array to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated copy of the array, or NULL on failure.</dd></dl>
 <p>Allocates a new array of strings and duplicates each string from the input array using <code>ft_strdup</code>. If any allocation fails, all previously allocated strings are freed and NULL is returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -173,9 +224,9 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The returned array must be freed using a function like <code>ft_free_array</code> to avoid memory leaks.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gaaacf33ac82063226a213d2ee49adc65f" title="Allocates and duplicates a null-terminated string.">ft_strdup</a> </dd>
 <dd>
-<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array of pointers.">ft_free_array</a> </dd>
+<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array.">ft_free_array</a> </dd>
 <dd>
-<a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed" title="Calculates the number of elements in a NULL-terminated array.">ft_arraysize</a> </dd></dl>
+<a class="el" href="group__array__utils.html#ga9676a1f422cc3ebebc656fdaa7ae8aed" title="Returns the number of elements in a NULL-terminated array.">ft_arraysize</a> </dd></dl>
 
 </div>
 </div>
@@ -195,7 +246,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Frees a NULL-terminated array of pointers. </p>
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
+<p>Frees a NULL-terminated array. </p>
+<p>Frees a NULL-terminated array of pointers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array to free.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Iterates through the array and frees each non-NULL element, then frees the array itself.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -233,7 +293,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Frees a pointer array of known size. </p>
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
+<p>Frees an array of pointers with a known size. </p>
+<p>Frees a pointer array of known size.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array to free. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements in the array.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Frees each non-NULL element of the array up to the given size, then frees the array itself.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -243,6 +313,55 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Useful when the array is not NULL-terminated or its size is known ahead of time. </dd></dl>
+
+</div>
+</div>
+<a id="ga7869880f5d2881ef52fe2996ee78326e" name="ga7869880f5d2881ef52fe2996ee78326e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7869880f5d2881ef52fe2996ee78326e">&#9670;&#160;</a></span>ft_is_array_sorted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ft_is_array_sorted </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
+<p>Checks if an array of integers is sorted in ascending order. </p>
+<p>Checks if an integer array is sorted in ascending order.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array to check. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if sorted, false otherwise.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array to check. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of elements in the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the array is sorted, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -272,7 +391,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints an integer array to standard output. </p>
+<p><code>#include &lt;<a class="el" href="ft__array_8h.html">ft_array.h</a>&gt;</code></p>
+
+<p>Prints an array of integers to standard output. </p>
+<p>Prints an integer array to standard output.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The array to print. </td></tr>
+    <tr><td class="paramname">size</td><td>Number of elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of characters printed, or -1 on error.</dd></dl>
 <p>Each integer is printed using <code>ft_printf</code> followed by a space, except the last element. The function returns the total number of characters printed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -287,9 +417,12 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

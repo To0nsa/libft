@@ -273,6 +273,57 @@ You are free to use, modify, and distribute this code for academic, personal, or
 
 ---
 
+## 🗂️ Project Structure
+
+<details>
+<summary><strong> See project structure  </strong></summary>
+
+```plaintext
+libft/
+├── docs/
+├── include/
+│   ├── ft_2darray.h
+│   ├── ft_array.h
+│   ├── ft_check.h
+│   ├── ft_convert.h
+│   ├── ft_file.h
+│   ├── ft_list.h
+│   ├── ft_math.h
+│   ├── ft_memory.h
+│   ├── ft_output.h
+│   ├── ft_printf.h
+│   ├── ft_sorting.h
+│   ├── ft_string.h
+│   ├── ft_utils.h
+│   └── libft.h
+├── srcs/
+│   ├── 2Darray/
+│   ├── array/
+│   ├── check/
+│   ├── convert/
+│   ├── file_utils/
+│   ├── ft_printf/
+│   ├── list/
+│   ├── math/
+│   ├── mem/
+│   ├── output/
+│   ├── sort/
+│   ├── str/
+│   └── utilities/
+├── .clang-format
+├── .gitignore
+├── Doxyfile
+├── DOXYGEN_STYLE_GUIDE.md
+├── format_all.sh
+├── LICENSE
+├── Makefile
+└── README.md
+```
+
+</details>
+
+---
+
 ## 📬 Contact
 
 If you have any questions, suggestions, or feedback, feel free to reach out:

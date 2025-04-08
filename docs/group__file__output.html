@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libft: File Output Functions</title>
+<title>libft: File Descriptor Output</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__file__output.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,26 +92,20 @@ $(function() {
   <div class="summary">
 <a href="#files">Files</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">File Output Functions</div></div>
+  <div class="headertitle"><div class="title">File Descriptor Output</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Functions for writing characters, strings, and numbers to a file.  
+<p>Output utilities for writing to file descriptors.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:ft__putchar__fd_8c" id="r_ft__putchar__fd_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__putchar__fd_8c.html">ft_putchar_fd.c</a></td></tr>
-<tr class="memdesc:ft__putchar__fd_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">File output function to write a single character to a file descriptor. <br /></td></tr>
+<tr class="memitem:ft__output_8c" id="r_ft__output_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__output_8c.html">ft_output.c</a></td></tr>
+<tr class="memdesc:ft__output_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor-based output functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__putendl__fd_8c" id="r_ft__putendl__fd_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__putendl__fd_8c.html">ft_putendl_fd.c</a></td></tr>
-<tr class="memdesc:ft__putendl__fd_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">File output function to write a string followed by a newline to a file descriptor. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__putnbr__fd_8c" id="r_ft__putnbr__fd_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__putnbr__fd_8c.html">ft_putnbr_fd.c</a></td></tr>
-<tr class="memdesc:ft__putnbr__fd_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">File output function to write an integer to a file descriptor. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__putstr__fd_8c" id="r_ft__putstr__fd_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__putstr__fd_8c.html">ft_putstr_fd.c</a></td></tr>
-<tr class="memdesc:ft__putstr__fd_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">File output function to write a string to a file descriptor. <br /></td></tr>
+<tr class="memitem:ft__output_8h" id="r_ft__output_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__output_8h.html">ft_output.h</a></td></tr>
+<tr class="memdesc:ft__output_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">File descriptor-based output functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -110,19 +124,13 @@ Functions</h2></td></tr>
 <tr class="separator:gaf67d22101c65f4f3749c37074ad396ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions for writing characters, strings, and numbers to a file. </p>
-<p>This group includes functions that allow writing characters, strings, and numbers to files. These functions are designed to provide easy ways to write data to specified file descriptors.</p>
-<p>The following functions are included:</p><ul>
-<li><code>ft_putchar_fd</code>: Write a single character to a file descriptor.</li>
-<li><code>ft_putendl_fd</code>: Write a string followed by a newline to a file descriptor.</li>
-<li><code>ft_putnbr_fd</code>: Write an integer to a file descriptor.</li>
-<li><code>ft_putstr_fd</code>: Write a string to a file descriptor.</li>
-</ul>
+<p>Output utilities for writing to file descriptors. </p>
+<p>Functions that output characters, strings, and integers to a given file descriptor. These are useful in systems without standard output libraries.</p>
 <p>This group includes:</p><ul>
 <li><a class="el" href="group__file__output.html#ga8ee15a511946c1397bd2bdea4aed6aee">ft_putchar_fd</a></li>
+<li><a class="el" href="group__file__output.html#gaf67d22101c65f4f3749c37074ad396ef">ft_putstr_fd</a></li>
 <li><a class="el" href="group__file__output.html#gaeb112152acfc553d58d61a5df38afcde">ft_putendl_fd</a></li>
-<li><a class="el" href="group__file__output.html#ga63cc0aec12256d125d3f85e472280972">ft_putnbr_fd</a></li>
-<li><a class="el" href="group__file__output.html#gaf67d22101c65f4f3749c37074ad396ef">ft_putstr_fd</a> </li>
+<li><a class="el" href="group__file__output.html#ga63cc0aec12256d125d3f85e472280972">ft_putnbr_fd</a> </li>
 </ul>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga8ee15a511946c1397bd2bdea4aed6aee" name="ga8ee15a511946c1397bd2bdea4aed6aee"></a>
@@ -151,8 +159,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__output_8h.html">ft_output.h</a>&gt;</code></p>
+
 <p>Writes a single character to a file descriptor. </p>
-<p>This function writes the character <code>c</code> to the file specified by the file descriptor <code>fd</code>. It is primarily used for outputting a single character to a file or console.</p>
+<p>This function writes the character <code>c</code> to the file specified by <code>fd</code>. It is primarily used for outputting a single character to a file or standard output.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>The character to write. </td></tr>
@@ -189,8 +199,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__output_8h.html">ft_output.h</a>&gt;</code></p>
+
 <p>Writes a string followed by a newline to a file descriptor. </p>
-<p>This function writes the string <code>s</code> followed by a newline character <code>\n</code> to the file specified by the file descriptor <code>fd</code>. It is typically used for outputting a string with a line break to a file or console.</p>
+<p>This function writes the string <code>s</code> followed by a newline character (<code>\n</code>) to the file descriptor <code>fd</code>. Commonly used to print lines of text.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to write. </td></tr>
@@ -227,9 +239,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__output_8h.html">ft_output.h</a>&gt;</code></p>
+
 <p>Writes an integer to a file descriptor. </p>
-<p>This function writes the integer <code>n</code> to the file specified by the file descriptor <code>fd</code>. If the integer is negative, it first writes the negative sign. For values greater than 9, it recursively writes the digits of the integer from left to right.</p>
-<p>The special case of the minimum integer value (<code>-2147483648</code>) is handled separately because it cannot be negated without causing overflow.</p>
+<p>Outputs the integer <code>n</code> as a string of digits to the given <code>fd</code>. Handles negative numbers and the special case of <code>INT_MIN</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>The integer to write. </td></tr>
@@ -266,8 +279,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__output_8h.html">ft_output.h</a>&gt;</code></p>
+
 <p>Writes a string to a file descriptor. </p>
-<p>This function writes the null-terminated string <code>str</code> to the file specified by the file descriptor <code>fd</code>. It handles interruptions during the write process (e.g., <code>EINTR</code>), ensuring that the entire string is written. If the string is <code>NULL</code>, it returns <code>-1</code>. It returns the total number of bytes written on success.</p>
+<p>This function writes the null-terminated string <code>str</code> to the file descriptor <code>fd</code>. It handles system interruptions (e.g., <code>EINTR</code>) and retries as needed until the full string is written or an unrecoverable error occurs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The string to write. </td></tr>
@@ -280,9 +295,12 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

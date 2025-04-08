@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__ft__printf.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,6 +91,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#files">Files</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Formatted Output (ft_printf)</div></div>
 </div><!--header-->
@@ -85,122 +108,204 @@ Files</h2></td></tr>
 <tr class="memdesc:format__and__print__numbers_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles numeric specifiers for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:format__and__print__p_8c" id="r_format__and__print__p_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a></td></tr>
-<tr class="memdesc:format__and__print__p_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles p format specifier for ft_printf. <br /></td></tr>
+<tr class="memdesc:format__and__print__p_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <code>p</code> format specifier for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:format__print__csper_8c" id="r_format__print__csper_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format__print__csper_8c.html">format_print_csper.c</a></td></tr>
-<tr class="memdesc:format__print__csper_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles printing of c, s, and %% specifiers for ft_printf. <br /></td></tr>
+<tr class="memdesc:format__print__csper_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles printing of <code>c</code>, <code>s</code>, and <code>%%</code> specifiers for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:format__utils_8c" id="r_format__utils_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="format__utils_8c.html">format_utils.c</a></td></tr>
-<tr class="memdesc:format__utils_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for handling padding, width, and precision in ft_printf. <br /></td></tr>
+<tr class="memdesc:format__utils_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utilities for handling padding, width, and precision in <code>ft_printf</code>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ft__printf_8c" id="r_ft__printf_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__printf_8c.html">ft_printf.c</a></td></tr>
-<tr class="memdesc:ft__printf_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a custom printf-like function. <br /></td></tr>
+<tr class="memdesc:ft__printf_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom printf implementation (<code>ft_printf</code> entry point). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ft__printf_8h" id="r_ft__printf_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__printf_8h.html">ft_printf.h</a></td></tr>
+<tr class="memdesc:ft__printf_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal definitions and declarations for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:handle__precision__int_8c" id="r_handle__precision__int_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="handle__precision__int_8c.html">handle_precision_int.c</a></td></tr>
-<tr class="memdesc:handle__precision__int_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precision formatting for integers in ft_printf. <br /></td></tr>
+<tr class="memdesc:handle__precision__int_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precision formatting for integer values in <code>ft_printf</code>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:initialize__printf__structs_8c" id="r_initialize__printf__structs_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="initialize__printf__structs_8c.html">initialize_printf_structs.c</a></td></tr>
-<tr class="memdesc:initialize__printf__structs_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization functions for ft_printf internal structures. <br /></td></tr>
+<tr class="memdesc:initialize__printf__structs_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization helpers for <code>ft_printf</code> internal state. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:print__formatted__number_8c" id="r_print__formatted__number_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a></td></tr>
-<tr class="memdesc:print__formatted__number_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles formatting and output of integers (d, i, u, x, X) in ft_printf. <br /></td></tr>
+<tr class="memdesc:print__formatted__number_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles formatting and output of integers in <code>ft_printf</code>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:printf__alternative__form_8c" id="r_printf__alternative__form_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="printf__alternative__form_8c.html">printf_alternative_form.c</a></td></tr>
-<tr class="memdesc:printf__alternative__form_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative form handling for hexadecimal output in ft_printf. <br /></td></tr>
+<tr class="memdesc:printf__alternative__form_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the <code>#</code> flag for hexadecimal output in ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:process__format__string_8c" id="r_process__format__string_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process__format__string_8c.html">process_format_string.c</a></td></tr>
-<tr class="memdesc:process__format__string_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format string parsing for ft_printf implementation. <br /></td></tr>
+<tr class="memdesc:process__format__string_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles format specifiers for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:setup__format_8c" id="r_setup__format_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setup__format_8c.html">setup_format.c</a></td></tr>
-<tr class="memdesc:setup__format_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the format specifier for ft_printf. <br /></td></tr>
+<tr class="memdesc:setup__format_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses format specifications for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:write__safely_8c" id="r_write__safely_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="write__safely_8c.html">write_safely.c</a></td></tr>
-<tr class="memdesc:write__safely_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe write functions used by ft_printf. <br /></td></tr>
+<tr class="memdesc:write__safely_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe low-level write utilities for ft_printf. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structs__fmt" id="r_structs__fmt"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#structs__fmt">s_fmt</a></td></tr>
+<tr class="memdesc:structs__fmt"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format specifier data.  <a href="group__ft__printf.html#structs__fmt">More...</a><br /></td></tr>
+<tr class="separator:structs__fmt"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structs__pf" id="r_structs__pf"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#structs__pf">s_pf</a></td></tr>
+<tr class="memdesc:structs__pf"><td class="mdescLeft">&#160;</td><td class="mdescRight">State struct for ft_printf.  <a href="group__ft__printf.html#structs__pf">More...</a><br /></td></tr>
+<tr class="separator:structs__pf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga521400f927527d085acd88f3c4c1ed26" id="r_ga521400f927527d085acd88f3c4c1ed26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga521400f927527d085acd88f3c4c1ed26">FLAG_HASH</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="separator:ga521400f927527d085acd88f3c4c1ed26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ed6d8c5e23a50435d0b062421930628" id="r_ga0ed6d8c5e23a50435d0b062421930628"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga0ed6d8c5e23a50435d0b062421930628">FLAG_MINUS</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:ga0ed6d8c5e23a50435d0b062421930628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea7256b4bde3d7bac93b313557817eb3" id="r_gaea7256b4bde3d7bac93b313557817eb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaea7256b4bde3d7bac93b313557817eb3">FLAG_PLUS</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="separator:gaea7256b4bde3d7bac93b313557817eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac52a3bb06f3f41e4333cfa493271b65c" id="r_gac52a3bb06f3f41e4333cfa493271b65c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gac52a3bb06f3f41e4333cfa493271b65c">FLAG_SPACE</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
+<tr class="separator:gac52a3bb06f3f41e4333cfa493271b65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61f982d4a09a1d3aa08ad5f4f2158bd3" id="r_ga61f982d4a09a1d3aa08ad5f4f2158bd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga61f982d4a09a1d3aa08ad5f4f2158bd3">FLAG_ZERO</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:ga61f982d4a09a1d3aa08ad5f4f2158bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga24abcdd5d7eda89284ed4559c7425062" id="r_ga24abcdd5d7eda89284ed4559c7425062"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__ft__printf.html#structs__fmt">s_fmt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a></td></tr>
+<tr class="separator:ga24abcdd5d7eda89284ed4559c7425062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc118d02d8e4ca83468f7123940bb824" id="r_gadc118d02d8e4ca83468f7123940bb824"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="group__ft__printf.html#structs__pf">s_pf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a></td></tr>
+<tr class="separator:gadc118d02d8e4ca83468f7123940bb824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0b782509f3896585fccace1841b730ed" id="r_ga0b782509f3896585fccace1841b730ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga0b782509f3896585fccace1841b730ed">format_and_print_id</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
+<tr class="memitem:gab7eced263df5f448f553c2dfe436225f" id="r_gab7eced263df5f448f553c2dfe436225f"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gab7eced263df5f448f553c2dfe436225f">apply_plus_space_hash_flags</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf, char *str, int *len)</td></tr>
+<tr class="memdesc:gab7eced263df5f448f553c2dfe436225f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies <code>+</code>, space, and <code>#</code> flags to the formatted number.  <br /></td></tr>
+<tr class="separator:gab7eced263df5f448f553c2dfe436225f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e5c084fa5eed942c324f8cd24dc8a83" id="r_ga6e5c084fa5eed942c324f8cd24dc8a83"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga6e5c084fa5eed942c324f8cd24dc8a83">apply_precision_zero_padding</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf, char *str, int *len, int is_neg)</td></tr>
+<tr class="memdesc:ga6e5c084fa5eed942c324f8cd24dc8a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pads integer string with leading zeros to match precision.  <br /></td></tr>
+<tr class="separator:ga6e5c084fa5eed942c324f8cd24dc8a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30409282b074f3ebdb581720c01b6e01" id="r_ga30409282b074f3ebdb581720c01b6e01"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga30409282b074f3ebdb581720c01b6e01">convert_ptr_to_hex</a> (void *ptr, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga30409282b074f3ebdb581720c01b6e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a pointer to a lowercase hexadecimal string.  <br /></td></tr>
+<tr class="separator:ga30409282b074f3ebdb581720c01b6e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbfe5eff654a3f11a5477521f75cf913" id="r_gafbfe5eff654a3f11a5477521f75cf913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gafbfe5eff654a3f11a5477521f75cf913">format_and_print_c</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gafbfe5eff654a3f11a5477521f75cf913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a character (<code>c</code>).  <br /></td></tr>
+<tr class="separator:gafbfe5eff654a3f11a5477521f75cf913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b782509f3896585fccace1841b730ed" id="r_ga0b782509f3896585fccace1841b730ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga0b782509f3896585fccace1841b730ed">format_and_print_id</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
 <tr class="memdesc:ga0b782509f3896585fccace1841b730ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <code>d</code> and <code>i</code> format specifiers for ft_printf.  <br /></td></tr>
 <tr class="separator:ga0b782509f3896585fccace1841b730ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d1d70423818f116167f1056aeb5e4b2" id="r_ga8d1d70423818f116167f1056aeb5e4b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga8d1d70423818f116167f1056aeb5e4b2">format_and_print_u</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
+<tr class="memitem:gabcef5f1f0068515d8aeacea970b5810b" id="r_gabcef5f1f0068515d8aeacea970b5810b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gabcef5f1f0068515d8aeacea970b5810b">format_and_print_p</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gabcef5f1f0068515d8aeacea970b5810b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <code>p</code> format specifier for ft_printf.  <br /></td></tr>
+<tr class="separator:gabcef5f1f0068515d8aeacea970b5810b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga899f4a8bb1f1b2cbc833a78483ba2d18" id="r_ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga899f4a8bb1f1b2cbc833a78483ba2d18">format_and_print_percent</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a literal percent sign (<code>%%</code>).  <br /></td></tr>
+<tr class="separator:ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf806bfeb1c4d5617375e996c8754327" id="r_gacf806bfeb1c4d5617375e996c8754327"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gacf806bfeb1c4d5617375e996c8754327">format_and_print_s</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gacf806bfeb1c4d5617375e996c8754327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a string (<code>s</code>).  <br /></td></tr>
+<tr class="separator:gacf806bfeb1c4d5617375e996c8754327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d1d70423818f116167f1056aeb5e4b2" id="r_ga8d1d70423818f116167f1056aeb5e4b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga8d1d70423818f116167f1056aeb5e4b2">format_and_print_u</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
 <tr class="memdesc:ga8d1d70423818f116167f1056aeb5e4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <code>u</code> format specifier for ft_printf.  <br /></td></tr>
 <tr class="separator:ga8d1d70423818f116167f1056aeb5e4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa3b7df74b709d853749469c6264813a5" id="r_gaa3b7df74b709d853749469c6264813a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa3b7df74b709d853749469c6264813a5">format_and_print_x</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, int upper, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
+<tr class="memitem:gaa3b7df74b709d853749469c6264813a5" id="r_gaa3b7df74b709d853749469c6264813a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa3b7df74b709d853749469c6264813a5">format_and_print_x</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, int upper, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
 <tr class="memdesc:gaa3b7df74b709d853749469c6264813a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles <code>x</code> and <code>X</code> format specifiers for ft_printf.  <br /></td></tr>
 <tr class="separator:gaa3b7df74b709d853749469c6264813a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabcef5f1f0068515d8aeacea970b5810b" id="r_gabcef5f1f0068515d8aeacea970b5810b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gabcef5f1f0068515d8aeacea970b5810b">format_and_print_p</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gabcef5f1f0068515d8aeacea970b5810b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a pointer argument (<code>p</code>).  <br /></td></tr>
-<tr class="separator:gabcef5f1f0068515d8aeacea970b5810b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga899f4a8bb1f1b2cbc833a78483ba2d18" id="r_ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga899f4a8bb1f1b2cbc833a78483ba2d18">format_and_print_percent</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints the '%' specifier.  <br /></td></tr>
-<tr class="separator:ga899f4a8bb1f1b2cbc833a78483ba2d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafbfe5eff654a3f11a5477521f75cf913" id="r_gafbfe5eff654a3f11a5477521f75cf913"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gafbfe5eff654a3f11a5477521f75cf913">format_and_print_c</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gafbfe5eff654a3f11a5477521f75cf913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a character (c).  <br /></td></tr>
-<tr class="separator:gafbfe5eff654a3f11a5477521f75cf913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf806bfeb1c4d5617375e996c8754327" id="r_gacf806bfeb1c4d5617375e996c8754327"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gacf806bfeb1c4d5617375e996c8754327">format_and_print_s</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gacf806bfeb1c4d5617375e996c8754327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints a string (s).  <br /></td></tr>
-<tr class="separator:gacf806bfeb1c4d5617375e996c8754327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae16fe0f1a52c32ad064808a3c6a59a6b" id="r_gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b">print_padding</a> (int padding, char pad_char, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints padding characters for formatting alignment.  <br /></td></tr>
-<tr class="separator:gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae7c2012f2c37b0c1dc9eb142fd254645" id="r_gae7c2012f2c37b0c1dc9eb142fd254645"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gae7c2012f2c37b0c1dc9eb142fd254645">handle_precision_s</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, int len)</td></tr>
-<tr class="memdesc:gae7c2012f2c37b0c1dc9eb142fd254645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjusts string length based on precision.  <br /></td></tr>
-<tr class="separator:gae7c2012f2c37b0c1dc9eb142fd254645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabc2e0d4a8cd512adbfdf2fdfc9c86518" id="r_gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518">handle_width</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, size_t len)</td></tr>
-<tr class="memdesc:gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the padding needed for width formatting.  <br /></td></tr>
-<tr class="separator:gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1ee8ae8a80a7d9141ea5339af8565f2e" id="r_ga1ee8ae8a80a7d9141ea5339af8565f2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga1ee8ae8a80a7d9141ea5339af8565f2e">ft_printf</a> (const char *format,...)</td></tr>
-<tr class="memdesc:ga1ee8ae8a80a7d9141ea5339af8565f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom implementation of the standard <code>printf</code>.  <br /></td></tr>
+<tr class="memdesc:ga1ee8ae8a80a7d9141ea5339af8565f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints formatted output according to the format string.  <br /></td></tr>
 <tr class="separator:ga1ee8ae8a80a7d9141ea5339af8565f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa7bcc73c5ce178020db24508a7ee7c35" id="r_gaa7bcc73c5ce178020db24508a7ee7c35"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35">handle_precision_int</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, char *str, int *len, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gaa7bcc73c5ce178020db24508a7ee7c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies precision formatting rules to integer output.  <br /></td></tr>
+<tr class="memitem:ga2e583a7c4a01929b4097646cd1fd1b07" id="r_ga2e583a7c4a01929b4097646cd1fd1b07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga2e583a7c4a01929b4097646cd1fd1b07">get_alternative_form_length</a> (char specifier)</td></tr>
+<tr class="memdesc:ga2e583a7c4a01929b4097646cd1fd1b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the prefix length for <code>x</code> and <code>X</code> when using <code>#</code> flag.  <br /></td></tr>
+<tr class="separator:ga2e583a7c4a01929b4097646cd1fd1b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga255cc9907ff69f2b99df4921a1c4fe81" id="r_ga255cc9907ff69f2b99df4921a1c4fe81"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga255cc9907ff69f2b99df4921a1c4fe81">handle_hashflag_zero_prec</a> (int *len, char *str, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga255cc9907ff69f2b99df4921a1c4fe81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles edge case for <code>"0"</code> with precision set to 0.  <br /></td></tr>
+<tr class="separator:ga255cc9907ff69f2b99df4921a1c4fe81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99e39f973ea7c6f86940a9e09f614187" id="r_ga99e39f973ea7c6f86940a9e09f614187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga99e39f973ea7c6f86940a9e09f614187">handle_minus_flag_p</a> (char *str, int padding, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="separator:ga99e39f973ea7c6f86940a9e09f614187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacce79252e17d60959aa4b7109dd1c983" id="r_gacce79252e17d60959aa4b7109dd1c983"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gacce79252e17d60959aa4b7109dd1c983">handle_null_ptr</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gacce79252e17d60959aa4b7109dd1c983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default string for a NULL pointer.  <br /></td></tr>
+<tr class="separator:gacce79252e17d60959aa4b7109dd1c983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7bcc73c5ce178020db24508a7ee7c35" id="r_gaa7bcc73c5ce178020db24508a7ee7c35"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35">handle_precision_int</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, char *str, int *len, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gaa7bcc73c5ce178020db24508a7ee7c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies precision formatting to a numeric string.  <br /></td></tr>
 <tr class="separator:gaa7bcc73c5ce178020db24508a7ee7c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8e27f1579f5ce04bc544a54bdd2cdd4c" id="r_ga8e27f1579f5ce04bc544a54bdd2cdd4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga8e27f1579f5ce04bc544a54bdd2cdd4c">initialize_printf_structs</a> (<a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:ga8e27f1579f5ce04bc544a54bdd2cdd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and initializes internal structures for <code>ft_printf</code>.  <br /></td></tr>
+<tr class="memitem:ga31fc88579b69e5a1c0d928f2ffe7f84e" id="r_ga31fc88579b69e5a1c0d928f2ffe7f84e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga31fc88579b69e5a1c0d928f2ffe7f84e">handle_precision_p</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, char *str, int *len, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="separator:ga31fc88579b69e5a1c0d928f2ffe7f84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7c2012f2c37b0c1dc9eb142fd254645" id="r_gae7c2012f2c37b0c1dc9eb142fd254645"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gae7c2012f2c37b0c1dc9eb142fd254645">handle_precision_s</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, int len)</td></tr>
+<tr class="memdesc:gae7c2012f2c37b0c1dc9eb142fd254645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies precision limit to string length.  <br /></td></tr>
+<tr class="separator:gae7c2012f2c37b0c1dc9eb142fd254645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga587f424e5fa2cbd5ac21b42addae5b47" id="r_ga587f424e5fa2cbd5ac21b42addae5b47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga587f424e5fa2cbd5ac21b42addae5b47">handle_space_flag_p</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf, int *padding)</td></tr>
+<tr class="separator:ga587f424e5fa2cbd5ac21b42addae5b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc2e0d4a8cd512adbfdf2fdfc9c86518" id="r_gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518">handle_width</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, size_t len)</td></tr>
+<tr class="memdesc:gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the number of padding characters to apply.  <br /></td></tr>
+<tr class="separator:gabc2e0d4a8cd512adbfdf2fdfc9c86518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2670b3bca3f6ceaed31cd1a2dbb298e" id="r_gae2670b3bca3f6ceaed31cd1a2dbb298e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gae2670b3bca3f6ceaed31cd1a2dbb298e">initialize_fmt</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:gae2670b3bca3f6ceaed31cd1a2dbb298e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <code>t_fmt</code> (format specifier) structure.  <br /></td></tr>
+<tr class="separator:gae2670b3bca3f6ceaed31cd1a2dbb298e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49a3f38f50a7028c32eb4f851d7403ed" id="r_ga49a3f38f50a7028c32eb4f851d7403ed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga49a3f38f50a7028c32eb4f851d7403ed">initialize_pf</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga49a3f38f50a7028c32eb4f851d7403ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a <code>t_pf</code> (printf state) structure.  <br /></td></tr>
+<tr class="separator:ga49a3f38f50a7028c32eb4f851d7403ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e27f1579f5ce04bc544a54bdd2cdd4c" id="r_ga8e27f1579f5ce04bc544a54bdd2cdd4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga8e27f1579f5ce04bc544a54bdd2cdd4c">initialize_printf_structs</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga8e27f1579f5ce04bc544a54bdd2cdd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates and initializes the structures required by <code>ft_printf</code>.  <br /></td></tr>
 <tr class="separator:ga8e27f1579f5ce04bc544a54bdd2cdd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad4eb4ac8d3062ea34374e0d8df6c4ea8" id="r_gad4eb4ac8d3062ea34374e0d8df6c4ea8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gad4eb4ac8d3062ea34374e0d8df6c4ea8">is_valid_flag</a> (char c)</td></tr>
-<tr class="memdesc:gad4eb4ac8d3062ea34374e0d8df6c4ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a character is a valid format flag for <code>ft_printf</code>.  <br /></td></tr>
+<tr class="memdesc:gad4eb4ac8d3062ea34374e0d8df6c4ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a character is a valid format flag.  <br /></td></tr>
 <tr class="separator:gad4eb4ac8d3062ea34374e0d8df6c4ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac7b8e89f96ef51cc231154661c3820ad" id="r_gac7b8e89f96ef51cc231154661c3820ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad">print_formatted_number</a> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, char *str, int len, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gac7b8e89f96ef51cc231154661c3820ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats and prints an integer with padding, precision, and flags.  <br /></td></tr>
-<tr class="separator:gac7b8e89f96ef51cc231154661c3820ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2617b9b2fbed3066797610ffec2466b2" id="r_ga2617b9b2fbed3066797610ffec2466b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga2617b9b2fbed3066797610ffec2466b2">requires_alternative_form</a> (char specifier, char *str)</td></tr>
-<tr class="memdesc:ga2617b9b2fbed3066797610ffec2466b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if alternative form is required.  <br /></td></tr>
-<tr class="separator:ga2617b9b2fbed3066797610ffec2466b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08fd55b27fba90fcd1ddb78affd20223" id="r_ga08fd55b27fba90fcd1ddb78affd20223"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga08fd55b27fba90fcd1ddb78affd20223">prepend_alternative_form</a> (char *str, char specifier, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:ga08fd55b27fba90fcd1ddb78affd20223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends the alternative form prefix (0x or 0X).  <br /></td></tr>
+<tr class="memitem:ga0388068b21e988ee71ddf823587b5b3e" id="r_ga0388068b21e988ee71ddf823587b5b3e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga0388068b21e988ee71ddf823587b5b3e">parse_and_handle_specifier</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga0388068b21e988ee71ddf823587b5b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delegates the specifier to the appropriate formatter.  <br /></td></tr>
+<tr class="separator:ga0388068b21e988ee71ddf823587b5b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga488b597e690ef798f479d2f5e3e2d186" id="r_ga488b597e690ef798f479d2f5e3e2d186"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga488b597e690ef798f479d2f5e3e2d186">parse_flags</a> (const char **format, <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:ga488b597e690ef798f479d2f5e3e2d186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses format flags and sets corresponding bits.  <br /></td></tr>
+<tr class="separator:ga488b597e690ef798f479d2f5e3e2d186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf376eb51ee032fc69095c267010b1fb8" id="r_gaf376eb51ee032fc69095c267010b1fb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaf376eb51ee032fc69095c267010b1fb8">parse_precision</a> (const char **format, <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:gaf376eb51ee032fc69095c267010b1fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses precision (e.g., <code>%.5d</code>).  <br /></td></tr>
+<tr class="separator:gaf376eb51ee032fc69095c267010b1fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c224f4a6a4e294e3aaa4e8d6847880c" id="r_ga9c224f4a6a4e294e3aaa4e8d6847880c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga9c224f4a6a4e294e3aaa4e8d6847880c">parse_specifier</a> (const char **format, <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:ga9c224f4a6a4e294e3aaa4e8d6847880c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates and stores the conversion specifier.  <br /></td></tr>
+<tr class="separator:ga9c224f4a6a4e294e3aaa4e8d6847880c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga663f15d261a2032d3a2c2914e584a6e5" id="r_ga663f15d261a2032d3a2c2914e584a6e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga663f15d261a2032d3a2c2914e584a6e5">parse_width</a> (const char **format, <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:ga663f15d261a2032d3a2c2914e584a6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses field width (e.g., <code>%10d</code>).  <br /></td></tr>
+<tr class="separator:ga663f15d261a2032d3a2c2914e584a6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08fd55b27fba90fcd1ddb78affd20223" id="r_ga08fd55b27fba90fcd1ddb78affd20223"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga08fd55b27fba90fcd1ddb78affd20223">prepend_alternative_form</a> (char *str, char specifier, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga08fd55b27fba90fcd1ddb78affd20223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends the <code>0x</code> or <code>0X</code> prefix to a hexadecimal string.  <br /></td></tr>
 <tr class="separator:ga08fd55b27fba90fcd1ddb78affd20223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2e583a7c4a01929b4097646cd1fd1b07" id="r_ga2e583a7c4a01929b4097646cd1fd1b07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga2e583a7c4a01929b4097646cd1fd1b07">get_alternative_form_length</a> (char specifier)</td></tr>
-<tr class="memdesc:ga2e583a7c4a01929b4097646cd1fd1b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the alternative form prefix.  <br /></td></tr>
-<tr class="separator:ga2e583a7c4a01929b4097646cd1fd1b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga17e86515038f23b89a70e3adbf674563" id="r_ga17e86515038f23b89a70e3adbf674563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga17e86515038f23b89a70e3adbf674563">process_format_string</a> (const char *format, va_list *args, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:ga17e86515038f23b89a70e3adbf674563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes an entire format string for <code>ft_printf</code>.  <br /></td></tr>
+<tr class="memitem:ga481772c1bb608ee6e46836549586147e" id="r_ga481772c1bb608ee6e46836549586147e"><td class="memItemLeft" align="right" valign="top">static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga481772c1bb608ee6e46836549586147e">prepend_sign</a> (char *str, char sign, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga481772c1bb608ee6e46836549586147e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepends a sign character (<code>+</code> or space) to a number string.  <br /></td></tr>
+<tr class="separator:ga481772c1bb608ee6e46836549586147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7b8e89f96ef51cc231154661c3820ad" id="r_gac7b8e89f96ef51cc231154661c3820ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad">print_formatted_number</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, char *str, int len, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gac7b8e89f96ef51cc231154661c3820ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final formatter and dispatcher for integer output.  <br /></td></tr>
+<tr class="separator:gac7b8e89f96ef51cc231154661c3820ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae16fe0f1a52c32ad064808a3c6a59a6b" id="r_gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b">print_padding</a> (int padding, char pad_char, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a series of padding characters.  <br /></td></tr>
+<tr class="separator:gae16fe0f1a52c32ad064808a3c6a59a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9704f8e88d0e360b79a20491a061cbd1" id="r_ga9704f8e88d0e360b79a20491a061cbd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga9704f8e88d0e360b79a20491a061cbd1">print_right_aligned_p</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, char *str, int padding, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="separator:ga9704f8e88d0e360b79a20491a061cbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11560a51353dfcbd661d725aeffcefe1" id="r_ga11560a51353dfcbd661d725aeffcefe1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga11560a51353dfcbd661d725aeffcefe1">print_with_padding</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt, char *str, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga11560a51353dfcbd661d725aeffcefe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the pointer string with formatting and padding.  <br /></td></tr>
+<tr class="separator:ga11560a51353dfcbd661d725aeffcefe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb67909042a2ffa123f4b9cf719cb67b" id="r_gadb67909042a2ffa123f4b9cf719cb67b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gadb67909042a2ffa123f4b9cf719cb67b">print_with_padding</a> (<a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf, char *str, int padding)</td></tr>
+<tr class="memdesc:gadb67909042a2ffa123f4b9cf719cb67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the number string with left/right padding.  <br /></td></tr>
+<tr class="separator:gadb67909042a2ffa123f4b9cf719cb67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5b79d31ad28e9e51ed3c58e0e977a34" id="r_gab5b79d31ad28e9e51ed3c58e0e977a34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gab5b79d31ad28e9e51ed3c58e0e977a34">print_zero_padding_int</a> (int padding, char **str_ptr, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gab5b79d31ad28e9e51ed3c58e0e977a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes zero-padding and handles printing the sign first if needed.  <br /></td></tr>
+<tr class="separator:gab5b79d31ad28e9e51ed3c58e0e977a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15ff59459bb51e5f83ecec2f93cbb4fa" id="r_ga15ff59459bb51e5f83ecec2f93cbb4fa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga15ff59459bb51e5f83ecec2f93cbb4fa">process_conv_spec</a> (const char **format, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga15ff59459bb51e5f83ecec2f93cbb4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a single conversion specifier after <code>%</code>.  <br /></td></tr>
+<tr class="separator:ga15ff59459bb51e5f83ecec2f93cbb4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17e86515038f23b89a70e3adbf674563" id="r_ga17e86515038f23b89a70e3adbf674563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga17e86515038f23b89a70e3adbf674563">process_format_string</a> (const char *format, va_list *args, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga17e86515038f23b89a70e3adbf674563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Walks through the format string and dispatches format handlers.  <br /></td></tr>
 <tr class="separator:ga17e86515038f23b89a70e3adbf674563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafad49ba9992d52ea56e41c485ae91702" id="r_gafad49ba9992d52ea56e41c485ae91702"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gafad49ba9992d52ea56e41c485ae91702">setup_format</a> (const char **format, <a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt)</td></tr>
-<tr class="memdesc:gafad49ba9992d52ea56e41c485ae91702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a full format specifier and stores it in a t_fmt struct.  <br /></td></tr>
+<tr class="memitem:ga2617b9b2fbed3066797610ffec2466b2" id="r_ga2617b9b2fbed3066797610ffec2466b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga2617b9b2fbed3066797610ffec2466b2">requires_alternative_form</a> (char specifier, char *str)</td></tr>
+<tr class="memdesc:ga2617b9b2fbed3066797610ffec2466b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the alternative form (<code>#</code>) should be applied.  <br /></td></tr>
+<tr class="separator:ga2617b9b2fbed3066797610ffec2466b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1635090eb298b901ab76e1ced6ea28e" id="r_gab1635090eb298b901ab76e1ced6ea28e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gab1635090eb298b901ab76e1ced6ea28e">reset_fmt</a> (<a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:gab1635090eb298b901ab76e1ced6ea28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the format context for the next conversion.  <br /></td></tr>
+<tr class="separator:gab1635090eb298b901ab76e1ced6ea28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafad49ba9992d52ea56e41c485ae91702" id="r_gafad49ba9992d52ea56e41c485ae91702"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gafad49ba9992d52ea56e41c485ae91702">setup_format</a> (const char **format, <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *fmt)</td></tr>
+<tr class="memdesc:gafad49ba9992d52ea56e41c485ae91702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a full format specification (flags, width, precision, specifier).  <br /></td></tr>
 <tr class="separator:gafad49ba9992d52ea56e41c485ae91702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99676984fe7c307c6a18ead2c433c582" id="r_ga99676984fe7c307c6a18ead2c433c582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga99676984fe7c307c6a18ead2c433c582">write_safely</a> (int fd, char *str, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:ga99676984fe7c307c6a18ead2c433c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a string safely to a file descriptor.  <br /></td></tr>
-<tr class="separator:ga99676984fe7c307c6a18ead2c433c582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2a20aec11621e8ed7d1b04bdeebcf4b" id="r_gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa2a20aec11621e8ed7d1b04bdeebcf4b">write_safely_len</a> (int fd, char *str, size_t len, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="memdesc:gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a fixed number of bytes from a string to a file descriptor.  <br /></td></tr>
-<tr class="separator:gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga217645e34998565fc0975745f654c51a" id="r_ga217645e34998565fc0975745f654c51a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a">write_char_safely</a> (int fd, char c, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
+<tr class="memitem:ga217645e34998565fc0975745f654c51a" id="r_ga217645e34998565fc0975745f654c51a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a">write_char_safely</a> (int fd, char c, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
 <tr class="memdesc:ga217645e34998565fc0975745f654c51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely writes a single character to a file descriptor.  <br /></td></tr>
 <tr class="separator:ga217645e34998565fc0975745f654c51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga31fc88579b69e5a1c0d928f2ffe7f84e" id="r_ga31fc88579b69e5a1c0d928f2ffe7f84e"><td class="memItemLeft" align="right" valign="top"><a id="ga31fc88579b69e5a1c0d928f2ffe7f84e" name="ga31fc88579b69e5a1c0d928f2ffe7f84e"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>handle_precision_p</b> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, char *str, int *len, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="separator:ga31fc88579b69e5a1c0d928f2ffe7f84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga587f424e5fa2cbd5ac21b42addae5b47" id="r_ga587f424e5fa2cbd5ac21b42addae5b47"><td class="memItemLeft" align="right" valign="top"><a id="ga587f424e5fa2cbd5ac21b42addae5b47" name="ga587f424e5fa2cbd5ac21b42addae5b47"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handle_space_flag_p</b> (<a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf, int *padding)</td></tr>
-<tr class="separator:ga587f424e5fa2cbd5ac21b42addae5b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99e39f973ea7c6f86940a9e09f614187" id="r_ga99e39f973ea7c6f86940a9e09f614187"><td class="memItemLeft" align="right" valign="top"><a id="ga99e39f973ea7c6f86940a9e09f614187" name="ga99e39f973ea7c6f86940a9e09f614187"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handle_minus_flag_p</b> (char *str, int padding, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="separator:ga99e39f973ea7c6f86940a9e09f614187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9704f8e88d0e360b79a20491a061cbd1" id="r_ga9704f8e88d0e360b79a20491a061cbd1"><td class="memItemLeft" align="right" valign="top"><a id="ga9704f8e88d0e360b79a20491a061cbd1" name="ga9704f8e88d0e360b79a20491a061cbd1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p</b> (<a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *fmt, char *str, int padding, <a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *pf)</td></tr>
-<tr class="separator:ga9704f8e88d0e360b79a20491a061cbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99676984fe7c307c6a18ead2c433c582" id="r_ga99676984fe7c307c6a18ead2c433c582"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ga99676984fe7c307c6a18ead2c433c582">write_safely</a> (int fd, char *str, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:ga99676984fe7c307c6a18ead2c433c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely writes a null-terminated string to a file descriptor.  <br /></td></tr>
+<tr class="separator:ga99676984fe7c307c6a18ead2c433c582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2a20aec11621e8ed7d1b04bdeebcf4b" id="r_gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#gaa2a20aec11621e8ed7d1b04bdeebcf4b">write_safely_len</a> (int fd, char *str, size_t len, <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *pf)</td></tr>
+<tr class="memdesc:gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely writes <code>len</code> bytes from a string to a file descriptor.  <br /></td></tr>
+<tr class="separator:gaa2a20aec11621e8ed7d1b04bdeebcf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Custom implementation of the printf function. </p>
@@ -208,10 +313,492 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
 <ul>
 <li>Format string parsing</li>
 <li>Handling of flags, width, precision</li>
-<li>Type specifiers (e.g., d, s, x, etc.)</li>
+<li>Type specifiers (e.g., d, s, x, etc.) </li>
 </ul>
-<p>The main function is <code>ft_printf</code>, and its helpers are documented here to provide a complete overview of how formatted output is constructed. </p>
+<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structs__fmt" id="structs__fmt"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structs__fmt">&#9670;&#160;</a></span>s_fmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct s_fmt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Format specifier data. </p>
+<p>Stores parsed flags, field width, precision, and the actual type specifier. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Data Fields</h3></td></tr>
+<tr class="memitem:a601c3ffc3f8fe57f8a00396f7010e2da" id="r_a601c3ffc3f8fe57f8a00396f7010e2da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#a601c3ffc3f8fe57f8a00396f7010e2da">flags</a></td></tr>
+<tr class="separator:a601c3ffc3f8fe57f8a00396f7010e2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2736f7943178f36e4b0dc07177566b" id="r_a8e2736f7943178f36e4b0dc07177566b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#a8e2736f7943178f36e4b0dc07177566b">precision</a></td></tr>
+<tr class="separator:a8e2736f7943178f36e4b0dc07177566b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e1f426e9de7054cca328819f7a9ff9" id="r_aa2e1f426e9de7054cca328819f7a9ff9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#aa2e1f426e9de7054cca328819f7a9ff9">specifier</a></td></tr>
+<tr class="separator:aa2e1f426e9de7054cca328819f7a9ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c48af222395549d99153cd911612249" id="r_a9c48af222395549d99153cd911612249"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#a9c48af222395549d99153cd911612249">width</a></td></tr>
+<tr class="separator:a9c48af222395549d99153cd911612249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Field Documentation</h4>
+<a id="a601c3ffc3f8fe57f8a00396f7010e2da" name="a601c3ffc3f8fe57f8a00396f7010e2da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601c3ffc3f8fe57f8a00396f7010e2da">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_fmt::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e2736f7943178f36e4b0dc07177566b" name="a8e2736f7943178f36e4b0dc07177566b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2736f7943178f36e4b0dc07177566b">&#9670;&#160;</a></span>precision</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_fmt::precision</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e1f426e9de7054cca328819f7a9ff9" name="aa2e1f426e9de7054cca328819f7a9ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e1f426e9de7054cca328819f7a9ff9">&#9670;&#160;</a></span>specifier</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char s_fmt::specifier</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c48af222395549d99153cd911612249" name="a9c48af222395549d99153cd911612249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c48af222395549d99153cd911612249">&#9670;&#160;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_fmt::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structs__pf" id="structs__pf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structs__pf">&#9670;&#160;</a></span>s_pf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct s_pf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>State struct for ft_printf. </p>
+<p>Keeps track of total characters written, and internal errors. </p>
+</div><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for s_pf:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structs__pf__coll__graph.png" border="0" usemap="#as__pf_coll__map" alt="Collaboration graph"/></div>
+<map name="as__pf_coll__map" id="as__pf_coll__map">
+<area shape="rect" title="State struct for ft_printf." alt="" coords="10,93,59,119"/>
+<area shape="rect" href="group__ft__printf.html#structs__fmt" title="Format specifier data." alt="" coords="5,5,64,31"/>
+<area shape="poly" title=" " alt="" coords="37,45,37,93,32,93,32,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr><td colspan="2"><h3>Data Fields</h3></td></tr>
+<tr class="memitem:a54df23cc545bbeabea24ead1f6525ffd" id="r_a54df23cc545bbeabea24ead1f6525ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#a54df23cc545bbeabea24ead1f6525ffd">fmt</a></td></tr>
+<tr class="separator:a54df23cc545bbeabea24ead1f6525ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6525f1b5e1985ba708ce3cfb63a9a9a" id="r_ab6525f1b5e1985ba708ce3cfb63a9a9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ab6525f1b5e1985ba708ce3cfb63a9a9a">malloc_error</a></td></tr>
+<tr class="separator:ab6525f1b5e1985ba708ce3cfb63a9a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01cbd6df9aa209c33842905201de52e0" id="r_a01cbd6df9aa209c33842905201de52e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#a01cbd6df9aa209c33842905201de52e0">total</a></td></tr>
+<tr class="separator:a01cbd6df9aa209c33842905201de52e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30fc79c1e1bca6d0a9139d9efe9e187" id="r_ac30fc79c1e1bca6d0a9139d9efe9e187"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ft__printf.html#ac30fc79c1e1bca6d0a9139d9efe9e187">write_error</a></td></tr>
+<tr class="separator:ac30fc79c1e1bca6d0a9139d9efe9e187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Field Documentation</h4>
+<a id="a54df23cc545bbeabea24ead1f6525ffd" name="a54df23cc545bbeabea24ead1f6525ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54df23cc545bbeabea24ead1f6525ffd">&#9670;&#160;</a></span>fmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a>* s_pf::fmt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6525f1b5e1985ba708ce3cfb63a9a9a" name="ab6525f1b5e1985ba708ce3cfb63a9a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6525f1b5e1985ba708ce3cfb63a9a9a">&#9670;&#160;</a></span>malloc_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_pf::malloc_error</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01cbd6df9aa209c33842905201de52e0" name="a01cbd6df9aa209c33842905201de52e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01cbd6df9aa209c33842905201de52e0">&#9670;&#160;</a></span>total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_pf::total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac30fc79c1e1bca6d0a9139d9efe9e187" name="ac30fc79c1e1bca6d0a9139d9efe9e187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30fc79c1e1bca6d0a9139d9efe9e187">&#9670;&#160;</a></span>write_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int s_pf::write_error</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga521400f927527d085acd88f3c4c1ed26" name="ga521400f927527d085acd88f3c4c1ed26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga521400f927527d085acd88f3c4c1ed26">&#9670;&#160;</a></span>FLAG_HASH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLAG_HASH&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p>'#' flag: alternate form </p>
+
+</div>
+</div>
+<a id="ga0ed6d8c5e23a50435d0b062421930628" name="ga0ed6d8c5e23a50435d0b062421930628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ed6d8c5e23a50435d0b062421930628">&#9670;&#160;</a></span>FLAG_MINUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLAG_MINUS&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p>'-' flag: left-justify </p>
+
+</div>
+</div>
+<a id="gaea7256b4bde3d7bac93b313557817eb3" name="gaea7256b4bde3d7bac93b313557817eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea7256b4bde3d7bac93b313557817eb3">&#9670;&#160;</a></span>FLAG_PLUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLAG_PLUS&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p>'+' flag: show plus sign </p>
+
+</div>
+</div>
+<a id="gac52a3bb06f3f41e4333cfa493271b65c" name="gac52a3bb06f3f41e4333cfa493271b65c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac52a3bb06f3f41e4333cfa493271b65c">&#9670;&#160;</a></span>FLAG_SPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLAG_SPACE&#160;&#160;&#160;(1 &lt;&lt; 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p>' ' flag: leading space </p>
+
+</div>
+</div>
+<a id="ga61f982d4a09a1d3aa08ad5f4f2158bd3" name="ga61f982d4a09a1d3aa08ad5f4f2158bd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61f982d4a09a1d3aa08ad5f4f2158bd3">&#9670;&#160;</a></span>FLAG_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FLAG_ZERO&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+<p>'0' flag: zero padding </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga24abcdd5d7eda89284ed4559c7425062" name="ga24abcdd5d7eda89284ed4559c7425062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24abcdd5d7eda89284ed4559c7425062">&#9670;&#160;</a></span>t_fmt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__ft__printf.html#structs__fmt">s_fmt</a> <a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+</div>
+</div>
+<a id="gadc118d02d8e4ca83468f7123940bb824" name="gadc118d02d8e4ca83468f7123940bb824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc118d02d8e4ca83468f7123940bb824">&#9670;&#160;</a></span>t_pf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="group__ft__printf.html#structs__pf">s_pf</a> <a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gab7eced263df5f448f553c2dfe436225f" name="gab7eced263df5f448f553c2dfe436225f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab7eced263df5f448f553c2dfe436225f">&#9670;&#160;</a></span>apply_plus_space_hash_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * apply_plus_space_hash_flags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+
+<p>Applies <code>+</code>, space, and <code>#</code> flags to the formatted number. </p>
+<p>Prepends signs or prefixes to the string depending on format specifier and flags. Updates string length accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pf</td><td>The current printf state. </td></tr>
+    <tr><td class="paramname">str</td><td>Pointer to the number string (malloc'd). </td></tr>
+    <tr><td class="paramname">len</td><td>Pointer to its length (will be updated).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Newly formatted string with all flags applied, or <code>NULL</code> on error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga481772c1bb608ee6e46836549586147e" title="Prepends a sign character (+ or space) to a number string.">prepend_sign</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga08fd55b27fba90fcd1ddb78affd20223" title="Prepends the 0x or 0X prefix to a hexadecimal string.">prepend_alternative_form</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga2617b9b2fbed3066797610ffec2466b2" title="Checks whether the alternative form (#) should be applied.">requires_alternative_form</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga2e583a7c4a01929b4097646cd1fd1b07" title="Returns the prefix length for x and X when using # flag.">get_alternative_form_length</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga6e5c084fa5eed942c324f8cd24dc8a83" name="ga6e5c084fa5eed942c324f8cd24dc8a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e5c084fa5eed942c324f8cd24dc8a83">&#9670;&#160;</a></span>apply_precision_zero_padding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * apply_precision_zero_padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>is_neg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">handle_precision_int.c</a>&gt;</code></p>
+
+<p>Pads integer string with leading zeros to match precision. </p>
+<p>If precision is greater than the number of digits, this function inserts leading zeros. Handles negative numbers by preserving the <code>-</code> sign at the start of the result.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf global state. </td></tr>
+    <tr><td class="paramname">str</td><td>Malloc’d number string (will be freed if changed). </td></tr>
+    <tr><td class="paramname">len</td><td>Pointer to length of string (updated if modified). </td></tr>
+    <tr><td class="paramname">is_neg</td><td>1 if the number is negative (i.e., has <code>-</code> prefix), 0 otherwise.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new malloc’d string with applied precision, or <code>NULL</code> on error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__memory__utils.html#ga55cb9602200ccf92a7f43e58c6ee2679" title="Allocates and zeroes memory for an array.">ft_calloc</a> </dd>
+<dd>
+<a class="el" href="group__memory__utils.html#ga557de65a3f3e16f953f5dae59cdb6106" title="Fills memory with a constant byte.">ft_memset</a> </dd>
+<dd>
+<a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f" title="Copies a string from src to dest, up to size - 1 characters.">ft_strlcpy</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga30409282b074f3ebdb581720c01b6e01" name="ga30409282b074f3ebdb581720c01b6e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30409282b074f3ebdb581720c01b6e01">&#9670;&#160;</a></span>convert_ptr_to_hex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * convert_ptr_to_hex </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+
+<p>Converts a pointer to a lowercase hexadecimal string. </p>
+<p>Converts the pointer address to a lowercase hexadecimal string, prepends the <code>"0x"</code> prefix, and returns a newly allocated result.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to convert. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print context to set error flag if needed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Formatted pointer string or NULL on allocation error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#gae149b5d0ff36eee0fc083c79d99084c0" title="Converts an unsigned integer to a string in a given base.">ft_itoa_base</a> </dd>
+<dd>
+<a class="el" href="group__string__utils.html#ga96ed418d154fd8784dc0d1dc56b63746" title="Concatenates two strings into a newly allocated string.">ft_strjoin</a> </dd></dl>
+
+</div>
+</div>
 <a id="gafbfe5eff654a3f11a5477521f75cf913" name="gafbfe5eff654a3f11a5477521f75cf913"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gafbfe5eff654a3f11a5477521f75cf913">&#9670;&#160;</a></span>format_and_print_c()</h2>
 
@@ -221,7 +808,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="memname">void format_and_print_c </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -233,7 +820,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -244,22 +831,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
       </table>
 </div><div class="memdoc">
 
-<p>Formats and prints a character (c). </p>
-<p>Retrieves a character from the variadic arguments and prints it with optional padding and alignment.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Formats and prints a character (<code>c</code>). </p>
+<p>Retrieves a single character from the variadic list and prints it with optional alignment and width padding.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the formatting structure. </td></tr>
-    <tr><td class="paramname">args</td><td>Pointer to the variadic argument list. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format specifier structure. </td></tr>
+    <tr><td class="paramname">args</td><td>Argument list containing the character. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print context structure.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Handles left or right alignment based on FLAG_MINUS. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the padding needed for width formatting.">handle_width</a> </dd>
+<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the number of padding characters to apply.">handle_width</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints padding characters for formatting alignment.">print_padding</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints a series of padding characters.">print_padding</a> </dd></dl>
 
 </div>
 </div>
@@ -272,7 +860,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="memname">void format_and_print_id </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -284,7 +872,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -295,22 +883,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
 <p>Handles <code>d</code> and <code>i</code> format specifiers for ft_printf. </p>
-<p>Converts an integer to string using <code>ft_itoa</code>, applies precision handling via <code>handle_precision_int</code>, and prints the formatted result.</p>
-<p>Sets the malloc error flag in <code>pf</code> if memory allocation fails.</p>
+<p>Converts an integer value to string using <code>ft_itoa</code>, applies formatting using <code>handle_precision_int</code>, and writes the result using <code>print_formatted_number</code>. If a memory allocation fails, the <code>malloc_error</code> flag is set in the state struct.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format descriptor containing flags, width, and precision. </td></tr>
-    <tr><td class="paramname">args</td><td>Pointer to the va_list containing the argument. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor (flags, width, precision). </td></tr>
+    <tr><td class="paramname">args</td><td>Pointer to <code>va_list</code> with the argument. </td></tr>
+    <tr><td class="paramname">pf</td><td>State struct tracking write progress and error flags.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#gaee82edadd5da0974eb20fb97a1b53e7a" title="Converts a long long integer to a string.">ft_itoa</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#ga8a6ea3765dfd826eabfc00d36e28ea38" title="Converts an integer to a string.">ft_itoa</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting rules to integer output.">handle_precision_int</a> </dd>
+<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting to a numeric string.">handle_precision_int</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Formats and prints an integer with padding, precision, and flags.">print_formatted_number</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Final formatter and dispatcher for integer output.">print_formatted_number</a> </dd></dl>
 
 </div>
 </div>
@@ -323,7 +912,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="memname">void format_and_print_p </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -335,7 +924,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -346,21 +935,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print_right_aligned_p
       </table>
 </div><div class="memdoc">
 
-<p>Formats and prints a pointer argument (<code>p</code>). </p>
-<p>Converts the given pointer to a hex string and applies padding, precision, and flags based on the format descriptor. Handles NULL pointers with a special output. Tracks all errors via <code>t_pf</code>.</p>
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+
+<p>Handles <code>p</code> format specifier for ft_printf. </p>
+<p>This function formats and prints a pointer argument. It converts the pointer to hexadecimal, applies precision and alignment based on flags, and handles the null case gracefully.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>The format specification (flags, width, precision). </td></tr>
-    <tr><td class="paramname">args</td><td>The argument list (from va_list). </td></tr>
-    <tr><td class="paramname">pf</td><td>The print state tracker for error handling and length.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor (flags, width, precision). </td></tr>
+    <tr><td class="paramname">args</td><td>Argument list (<code>va_list</code>) from <code>ft_printf</code>. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print context structure.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>print_with_padding </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga11560a51353dfcbd661d725aeffcefe1" title="Prints the pointer string with formatting and padding.">print_with_padding</a> </dd>
 <dd>
-handle_null_ptr </dd>
+<a class="el" href="group__ft__printf.html#gacce79252e17d60959aa4b7109dd1c983" title="Returns the default string for a NULL pointer.">handle_null_ptr</a> </dd>
 <dd>
-convert_ptr_to_hex </dd></dl>
+<a class="el" href="group__ft__printf.html#ga30409282b074f3ebdb581720c01b6e01" title="Converts a pointer to a lowercase hexadecimal string.">convert_ptr_to_hex</a> </dd></dl>
 
 </div>
 </div>
@@ -373,13 +964,13 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="memname">void format_and_print_percent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -390,21 +981,22 @@ convert_ptr_to_hex </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Formats and prints the '%' specifier. </p>
-<p>Handles printing a literal percent sign with optional width and padding.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Formats and prints a literal percent sign (<code>%%</code>). </p>
+<p>Prints a single percent character with optional width padding. Padding is done with &lsquo;&rsquo; '<code>or</code>'0'<code>, and alignment respects the </code>FLAG_MINUS` flag.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the formatting structure. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor (width and flags). </td></tr>
+    <tr><td class="paramname">pf</td><td>Print context for error tracking and byte count.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Uses zero-padding if FLAG_ZERO is set, and handles alignment with FLAG_MINUS. Updates write_error if a write fails.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints padding characters for formatting alignment.">print_padding</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the number of padding characters to apply.">handle_width</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd>
+<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints a series of padding characters.">print_padding</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the padding needed for width formatting.">handle_width</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd></dl>
 
 </div>
 </div>
@@ -417,7 +1009,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="memname">void format_and_print_s </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -429,7 +1021,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -440,24 +1032,26 @@ convert_ptr_to_hex </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Formats and prints a string (s). </p>
-<p>Retrieves a string from the variadic arguments and prints it with optional width, precision, and alignment.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Formats and prints a string (<code>s</code>). </p>
+<p>Retrieves a string from the variadic list and prints it with optional width, alignment, and precision. NULL strings are replaced by <code>"(null)"</code>.</p>
+<p>If a precision is set, the string is truncated to that length. Alignment follows the <code>FLAG_MINUS</code> flag.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the formatting structure. </td></tr>
-    <tr><td class="paramname">args</td><td>Pointer to the variadic argument list. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor for width and precision. </td></tr>
+    <tr><td class="paramname">args</td><td>Variadic arguments (string to print). </td></tr>
+    <tr><td class="paramname">pf</td><td>Print state and error tracking.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Precision truncates the string if specified. If the string is NULL, prints "(null)". Alignment is based on FLAG_MINUS.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gae7c2012f2c37b0c1dc9eb142fd254645" title="Adjusts string length based on precision.">handle_precision_s</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gae7c2012f2c37b0c1dc9eb142fd254645" title="Applies precision limit to string length.">handle_precision_s</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the padding needed for width formatting.">handle_width</a> </dd>
+<a class="el" href="group__ft__printf.html#gaa2a20aec11621e8ed7d1b04bdeebcf4b" title="Safely writes len bytes from a string to a file descriptor.">write_safely_len</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints padding characters for formatting alignment.">print_padding</a> </dd>
+<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the number of padding characters to apply.">handle_width</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gaa2a20aec11621e8ed7d1b04bdeebcf4b" title="Writes a fixed number of bytes from a string to a file descriptor.">write_safely_len</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints a series of padding characters.">print_padding</a> </dd></dl>
 
 </div>
 </div>
@@ -470,7 +1064,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="memname">void format_and_print_u </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -482,7 +1076,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -493,21 +1087,23 @@ convert_ptr_to_hex </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
 <p>Handles <code>u</code> format specifier for ft_printf. </p>
-<p>Converts an unsigned integer to string using <code>ft_utoa</code>, applies precision handling, and prints the result.</p>
+<p>Converts an unsigned integer to string using <code>ft_utoa</code>, applies precision, and writes the formatted result using <code>print_formatted_number</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format descriptor containing flags, width, and precision. </td></tr>
-    <tr><td class="paramname">args</td><td>Pointer to the va_list containing the argument. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor (flags, width, precision). </td></tr>
+    <tr><td class="paramname">args</td><td>Pointer to <code>va_list</code> with the argument. </td></tr>
+    <tr><td class="paramname">pf</td><td>State struct tracking write progress and error flags.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#ga39c9ad51e0123319c0ddc5ae6f379fb5" title="Converts an unsigned long long integer to a string.">ft_utoa</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#ga39c9ad51e0123319c0ddc5ae6f379fb5" title="Converts an unsigned long long to a decimal string.">ft_utoa</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting rules to integer output.">handle_precision_int</a> </dd>
+<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting to a numeric string.">handle_precision_int</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Formats and prints an integer with padding, precision, and flags.">print_formatted_number</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Final formatter and dispatcher for integer output.">print_formatted_number</a> </dd></dl>
 
 </div>
 </div>
@@ -520,7 +1116,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="memname">void format_and_print_x </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -538,7 +1134,7 @@ convert_ptr_to_hex </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -549,22 +1145,24 @@ convert_ptr_to_hex </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
 <p>Handles <code>x</code> and <code>X</code> format specifiers for ft_printf. </p>
-<p>Converts an unsigned integer to a hexadecimal string using <code>ft_itoa_base</code>, applies precision formatting, and prints the result.</p>
+<p>Converts an unsigned integer to hexadecimal using <code>ft_itoa_base</code>, applies precision, and prints the formatted result. If <code>upper</code> is non-zero, the hexadecimal letters are uppercase (for <code>X</code>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Format descriptor with formatting flags and specifier. </td></tr>
-    <tr><td class="paramname">args</td><td>Pointer to the va_list containing the argument. </td></tr>
-    <tr><td class="paramname">upper</td><td>Whether to print in uppercase (1 for <code>X</code>, 0 for <code>x</code>). </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor (flags, width, precision). </td></tr>
+    <tr><td class="paramname">args</td><td>Pointer to <code>va_list</code> with the argument. </td></tr>
+    <tr><td class="paramname">upper</td><td>If non-zero, use uppercase letters in output. </td></tr>
+    <tr><td class="paramname">pf</td><td>State struct tracking write progress and error flags.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#gae149b5d0ff36eee0fc083c79d99084c0" title="Converts an unsigned long long integer to a string in the specified base.">ft_itoa_base</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#gae149b5d0ff36eee0fc083c79d99084c0" title="Converts an unsigned integer to a string in a given base.">ft_itoa_base</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting rules to integer output.">handle_precision_int</a> </dd>
+<a class="el" href="group__ft__printf.html#gaa7bcc73c5ce178020db24508a7ee7c35" title="Applies precision formatting to a numeric string.">handle_precision_int</a> </dd>
 <dd>
-<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Formats and prints an integer with padding, precision, and flags.">print_formatted_number</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#gac7b8e89f96ef51cc231154661c3820ad" title="Final formatter and dispatcher for integer output.">print_formatted_number</a> </dd></dl>
 
 </div>
 </div>
@@ -594,23 +1192,27 @@ convert_ptr_to_hex </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Custom implementation of the standard <code>printf</code>. </p>
-<p>This function parses a format string and prints formatted output to standard output (fd = 1). It supports a subset of standard format specifiers (e.g., d, s, x, etc.).</p>
-<p>Internally, it initializes a formatting context (<code>t_pf</code>) and parses the format string using <code>process_format_string</code>. Memory is dynamically allocated for the formatting structures, and errors are tracked (e.g., malloc failure or write failure).</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Prints formatted output according to the format string. </p>
+<p>Mimics the behavior of the standard <code>printf</code> function:</p><ul>
+<li>Parses the format string</li>
+<li>Processes and prints each format specifier with its argument</li>
+<li>Uses internal state via <code>t_pf</code> to manage memory and write errors</li>
+</ul>
+<p>If a memory allocation or write operation fails, returns <code>-1</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">format</td><td>The format string to be parsed. </td></tr>
-    <tr><td class="paramname">...</td><td>Variadic arguments corresponding to format specifiers.</td></tr>
+    <tr><td class="paramname">format</td><td>The format string (e.g. "Hello %s\n"). </td></tr>
+    <tr><td class="paramname">...</td><td>Variadic arguments matching format specifiers.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of characters written on success, or -1 on error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function must be used with proper format and argument types. </dd>
+<dl class="section return"><dt>Returns</dt><dd>The number of characters written, or <code>-1</code> on error.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function must be passed valid format and matching arguments. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga8e27f1579f5ce04bc544a54bdd2cdd4c" title="Allocates and initializes the structures required by ft_printf.">initialize_printf_structs</a> </dd>
 <dd>
-Memory errors (e.g., malloc) or write errors will cause -1 return.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga8e27f1579f5ce04bc544a54bdd2cdd4c" title="Allocates and initializes internal structures for ft_printf.">initialize_printf_structs</a> </dd>
-<dd>
-<a class="el" href="group__ft__printf.html#ga17e86515038f23b89a70e3adbf674563" title="Processes an entire format string for ft_printf.">process_format_string</a> </dd></dl>
+<a class="el" href="group__ft__printf.html#ga17e86515038f23b89a70e3adbf674563" title="Walks through the format string and dispatches format handlers.">process_format_string</a> </dd></dl>
 
 </div>
 </div>
@@ -630,15 +1232,149 @@ Memory errors (e.g., malloc) or write errors will cause -1 return.</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the length of the alternative form prefix. </p>
-<p>Used to adjust output length when alternative form is applied. For hexadecimal, the prefix is 2 characters ("0x" or "0X").</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Returns the prefix length for <code>x</code> and <code>X</code> when using <code>#</code> flag. </p>
+<p>The prefix for alternative hexadecimal output is always two characters: <code>0x</code> or <code>0X</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">specifier</td><td>Format specifier ('x' or 'X'). </td></tr>
+    <tr><td class="paramname">specifier</td><td>The current format specifier. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Length of prefix to apply (typically 2, or 0 if not applicable). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of the prefix (2 if applicable, 0 otherwise). </dd></dl>
+
+</div>
+</div>
+<a id="ga255cc9907ff69f2b99df4921a1c4fe81" name="ga255cc9907ff69f2b99df4921a1c4fe81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga255cc9907ff69f2b99df4921a1c4fe81">&#9670;&#160;</a></span>handle_hashflag_zero_prec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * handle_hashflag_zero_prec </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="handle__precision__int_8c.html">handle_precision_int.c</a>&gt;</code></p>
+
+<p>Handles edge case for <code>"0"</code> with precision set to 0. </p>
+<p>When precision is explicitly 0 and the value is also <code>0</code>, the result is normally an empty string unless the <code>#</code> flag is set for hex.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>Pointer to the string length (will be updated). </td></tr>
+    <tr><td class="paramname">str</td><td>The current numeric string. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf global state.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New string or NULL on allocation failure.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Returns <code>"(null)"</code> if memory allocation fails. </dd></dl>
+
+</div>
+</div>
+<a id="ga99e39f973ea7c6f86940a9e09f614187" name="ga99e39f973ea7c6f86940a9e09f614187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99e39f973ea7c6f86940a9e09f614187">&#9670;&#160;</a></span>handle_minus_flag_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handle_minus_flag_p </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>padding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+</div>
+</div>
+<a id="gacce79252e17d60959aa4b7109dd1c983" name="gacce79252e17d60959aa4b7109dd1c983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacce79252e17d60959aa4b7109dd1c983">&#9670;&#160;</a></span>handle_null_ptr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * handle_null_ptr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+
+<p>Returns the default string for a NULL pointer. </p>
+<p>Allocates and returns the literal string <code>(nil)</code> to represent null pointers in <code>p</code> format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pf</td><td>Print state tracker to set malloc error flag if needed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated string or NULL on allocation failure.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gaaacf33ac82063226a213d2ee49adc65f" title="Allocates and duplicates a null-terminated string.">ft_strdup</a> </dd></dl>
 
 </div>
 </div>
@@ -651,7 +1387,7 @@ Memory errors (e.g., malloc) or write errors will cause -1 return.</dd></dl>
         <tr>
           <td class="memname">char * handle_precision_int </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -669,7 +1405,7 @@ Memory errors (e.g., malloc) or write errors will cause -1 return.</dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -680,21 +1416,69 @@ Memory errors (e.g., malloc) or write errors will cause -1 return.</dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Applies precision formatting rules to integer output. </p>
-<p>This is the main interface for formatting integers according to precision. It handles negative numbers, zero value suppression, and applies leading zeros when necessary.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Applies precision formatting to a numeric string. </p>
+<p>This is the main function used for formatting <code>d</code>, <code>i</code>, <code>u</code>, <code>x</code>, <code>X</code> according to the precision field of the format string. It takes care of:</p><ul>
+<li>Adding leading zeros</li>
+<li>Skipping output for <code>"0"</code> when precision is 0</li>
+<li>Handling negative sign in integer</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the current format specification. </td></tr>
-    <tr><td class="paramname">str</td><td>The numeric string to format (must be malloc'd). </td></tr>
-    <tr><td class="paramname">len</td><td>Pointer to the string length (updated if changed). </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Current format specifier. </td></tr>
+    <tr><td class="paramname">str</td><td>Numeric string to process (must be malloc’d). </td></tr>
+    <tr><td class="paramname">len</td><td>Pointer to the string length (updated). </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to the ft_printf global state.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The updated (and possibly reallocated) string, or NULL on error.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>apply_precision_zero_padding </dd>
+<dl class="section return"><dt>Returns</dt><dd>The updated string (malloc’d), or <code>NULL</code> on error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga6e5c084fa5eed942c324f8cd24dc8a83" title="Pads integer string with leading zeros to match precision.">apply_precision_zero_padding</a> </dd>
 <dd>
-handle_hashflag_zero_prec </dd></dl>
+<a class="el" href="group__ft__printf.html#ga255cc9907ff69f2b99df4921a1c4fe81" title="Handles edge case for &quot;0&quot; with precision set to 0.">handle_hashflag_zero_prec</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga31fc88579b69e5a1c0d928f2ffe7f84e" name="ga31fc88579b69e5a1c0d928f2ffe7f84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31fc88579b69e5a1c0d928f2ffe7f84e">&#9670;&#160;</a></span>handle_precision_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * handle_precision_p </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -707,7 +1491,7 @@ handle_hashflag_zero_prec </dd></dl>
         <tr>
           <td class="memname">int handle_precision_s </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -724,16 +1508,48 @@ handle_hashflag_zero_prec </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Adjusts string length based on precision. </p>
-<p>Used for string (<code>s</code>) formatting to truncate the output to match the given precision if specified.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Applies precision limit to string length. </p>
+<p>Truncates the given string length to the precision value if one is specified (non-negative). Used when formatting <code>s</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the format specifier struct. </td></tr>
-    <tr><td class="paramname">len</td><td>The original length of the string.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format specifier structure. </td></tr>
+    <tr><td class="paramname">len</td><td>Original string length.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The adjusted length, truncated to precision if applicable. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Truncated length if precision applies, otherwise original length. </dd></dl>
+
+</div>
+</div>
+<a id="ga587f424e5fa2cbd5ac21b42addae5b47" name="ga587f424e5fa2cbd5ac21b42addae5b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga587f424e5fa2cbd5ac21b42addae5b47">&#9670;&#160;</a></span>handle_space_flag_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handle_space_flag_p </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>padding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -746,7 +1562,7 @@ handle_hashflag_zero_prec </dd></dl>
         <tr>
           <td class="memname">int handle_width </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -763,16 +1579,97 @@ handle_hashflag_zero_prec </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Computes the padding needed for width formatting. </p>
-<p>Calculates how many characters should be added to satisfy the field width requirement for the current formatted argument.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Computes the number of padding characters to apply. </p>
+<p>Calculates how many characters must be padded to the left or right to meet the field width requirement.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the format specifier struct. </td></tr>
-    <tr><td class="paramname">len</td><td>The length of the content to be printed.</td></tr>
+    <tr><td class="paramname">fmt</td><td>Format descriptor. </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the current content to be printed.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of padding characters required. Returns 0 if content is already wide enough. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of characters to pad (may be zero). </dd></dl>
+
+</div>
+</div>
+<a id="gae2670b3bca3f6ceaed31cd1a2dbb298e" name="gae2670b3bca3f6ceaed31cd1a2dbb298e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2670b3bca3f6ceaed31cd1a2dbb298e">&#9670;&#160;</a></span>initialize_fmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void initialize_fmt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">initialize_printf_structs.c</a>&gt;</code></p>
+
+<p>Initializes a <code>t_fmt</code> (format specifier) structure. </p>
+<p>Sets formatting fields to their default values:</p><ul>
+<li><code>flags = 0</code></li>
+<li><code>width = 0</code></li>
+<li><code>precision = -1</code> (unset)</li>
+<li><code>specifier = 0</code> (null character)</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>Pointer to the <code>t_fmt</code> structure to initialize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga49a3f38f50a7028c32eb4f851d7403ed" name="ga49a3f38f50a7028c32eb4f851d7403ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49a3f38f50a7028c32eb4f851d7403ed">&#9670;&#160;</a></span>initialize_pf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void initialize_pf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="initialize__printf__structs_8c.html">initialize_printf_structs.c</a>&gt;</code></p>
+
+<p>Initializes a <code>t_pf</code> (printf state) structure. </p>
+<p>Sets total written characters, write error, and malloc error tracking fields to zero.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pf</td><td>Pointer to the <code>t_pf</code> structure to initialize. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -785,25 +1682,27 @@ handle_hashflag_zero_prec </dd></dl>
         <tr>
           <td class="memname">int initialize_printf_structs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates and initializes internal structures for <code>ft_printf</code>. </p>
-<p>Allocates memory for the format specifier structure (<code>t_fmt</code>) and initializes both the global print state (<code>t_pf</code>) and the format fields.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Allocates and initializes the structures required by <code>ft_printf</code>. </p>
+<p>This function sets up the main state structure (<code>t_pf</code>) and allocates a <code>t_fmt</code> format descriptor. All fields are initialized to their default values. If allocation fails, returns -1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pf</td><td>A pointer to the main <code>t_pf</code> structure to initialize.</td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to the <code>t_pf</code> structure that will be initialized.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, or -1 if memory allocation fails.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>initialize_pf </dd>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, or -1 if allocation fails.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga49a3f38f50a7028c32eb4f851d7403ed" title="Initializes a t_pf (printf state) structure.">initialize_pf</a> </dd>
 <dd>
-initialize_fmt </dd></dl>
+<a class="el" href="group__ft__printf.html#gae2670b3bca3f6ceaed31cd1a2dbb298e" title="Initializes a t_fmt (format specifier) structure.">initialize_fmt</a> </dd></dl>
 
 </div>
 </div>
@@ -823,21 +1722,285 @@ initialize_fmt </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if a character is a valid format flag for <code>ft_printf</code>. </p>
-<p>Valid flags include:</p><ul>
-<li>'#' for alternative form</li>
-<li>'0' for zero padding</li>
-<li>'-' for left alignment</li>
-<li>'+' for always show sign</li>
-<li>' ' (space) for leading space</li>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Checks if a character is a valid format flag. </p>
+<p>Recognized flags include:</p><ul>
+<li><code>#</code>: alternate form</li>
+<li><code>0</code>: zero padding</li>
+<li><code>-</code>: left-justify</li>
+<li><code>+</code>: show plus sign</li>
+<li>&lsquo;&rsquo; '` (space): leading space for positive numbers</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td>The character to check. </td></tr>
+    <tr><td class="paramname">c</td><td>The character to evaluate.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 if the character is a valid flag, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga0388068b21e988ee71ddf823587b5b3e" name="ga0388068b21e988ee71ddf823587b5b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0388068b21e988ee71ddf823587b5b3e">&#9670;&#160;</a></span>parse_and_handle_specifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void parse_and_handle_specifier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+
+<p>Delegates the specifier to the appropriate formatter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>Current format context (<code>t_fmt</code>). </td></tr>
+    <tr><td class="paramname">args</td><td>Active variadic argument list. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print state tracker (<code>t_pf</code>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gafbfe5eff654a3f11a5477521f75cf913" title="Formats and prints a character (c).">format_and_print_c</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#gacf806bfeb1c4d5617375e996c8754327" title="Formats and prints a string (s).">format_and_print_s</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga0b782509f3896585fccace1841b730ed" title="Handles d and i format specifiers for ft_printf.">format_and_print_id</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga8d1d70423818f116167f1056aeb5e4b2" title="Handles u format specifier for ft_printf.">format_and_print_u</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#gaa3b7df74b709d853749469c6264813a5" title="Handles x and X format specifiers for ft_printf.">format_and_print_x</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga899f4a8bb1f1b2cbc833a78483ba2d18" title="Formats and prints a literal percent sign (%%).">format_and_print_percent</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga488b597e690ef798f479d2f5e3e2d186" name="ga488b597e690ef798f479d2f5e3e2d186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga488b597e690ef798f479d2f5e3e2d186">&#9670;&#160;</a></span>parse_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void parse_flags </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+
+<p>Parses format flags and sets corresponding bits. </p>
+<p>Flags include: <code>#</code>, <code>0</code>, <code>-</code>, <code>+</code>, and space.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Format string pointer (will be advanced). </td></tr>
+    <tr><td class="paramname">fmt</td><td>Target format context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gad4eb4ac8d3062ea34374e0d8df6c4ea8" title="Checks if a character is a valid format flag.">is_valid_flag</a> </dd></dl>
+
+</div>
+</div>
+<a id="gaf376eb51ee032fc69095c267010b1fb8" name="gaf376eb51ee032fc69095c267010b1fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf376eb51ee032fc69095c267010b1fb8">&#9670;&#160;</a></span>parse_precision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void parse_precision </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+
+<p>Parses precision (e.g., <code>%.5d</code>). </p>
+<p>Precision is stored in <code>fmt-&gt;precision</code>. If the <code>.</code> is present but no digits follow, precision is set to <code>0</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Format string pointer (will be advanced). </td></tr>
+    <tr><td class="paramname">fmt</td><td>Target format context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#ga8258398d7cd6fe184af3d0420732ce64" title="Converts a string to a signed integer.">ft_atoi</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9c224f4a6a4e294e3aaa4e8d6847880c" name="ga9c224f4a6a4e294e3aaa4e8d6847880c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c224f4a6a4e294e3aaa4e8d6847880c">&#9670;&#160;</a></span>parse_specifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int parse_specifier </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+
+<p>Validates and stores the conversion specifier. </p>
+<p>Accepted specifiers: <code>c</code>, <code>s</code>, <code>p</code>, <code>d</code>, <code>i</code>, <code>u</code>, <code>x</code>, <code>X</code>, <code>%</code></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Format string pointer (will be advanced). </td></tr>
+    <tr><td class="paramname">fmt</td><td>Target format context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if valid, -1 if unknown specifier.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gaf0c4dbae2a90feb1f5a346bb2eb1fbc5" title="Finds the first occurrence of a character in a string.">ft_strchr</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga663f15d261a2032d3a2c2914e584a6e5" name="ga663f15d261a2032d3a2c2914e584a6e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga663f15d261a2032d3a2c2914e584a6e5">&#9670;&#160;</a></span>parse_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void parse_width </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="setup__format_8c.html">setup_format.c</a>&gt;</code></p>
+
+<p>Parses field width (e.g., <code>%10d</code>). </p>
+<p>Stores the integer width value in <code>fmt-&gt;width</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Format string pointer (will be advanced). </td></tr>
+    <tr><td class="paramname">fmt</td><td>Target format context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__number__conversions.html#ga8258398d7cd6fe184af3d0420732ce64" title="Converts a string to a signed integer.">ft_atoi</a> </dd></dl>
 
 </div>
 </div>
@@ -862,7 +2025,7 @@ initialize_fmt </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -873,22 +2036,77 @@ initialize_fmt </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Prepends the alternative form prefix (0x or 0X). </p>
-<p>Allocates and returns a new string with the correct prefix added to the input hexadecimal string, e.g., "0x1f" or "0X1F".</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Prepends the <code>0x</code> or <code>0X</code> prefix to a hexadecimal string. </p>
+<p>Allocates a new string containing the appropriate prefix followed by the original string. Frees the original string and updates the printf context if an allocation error occurs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>The original hexadecimal string (must be malloc'd). </td></tr>
-    <tr><td class="paramname">specifier</td><td>Format specifier, either 'x' or 'X'. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure (for error reporting).</td></tr>
+    <tr><td class="paramname">specifier</td><td>Either &lsquo;'x&rsquo;<code>or</code>'X'`, determines the prefix casing. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to the printf context for error tracking.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New string with prefix, or NULL on allocation failure. On failure, sets pf-&gt;malloc_error and frees the original string.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9" title="Returns the number of characters in a string.">ft_strlen</a> </dd>
-<dd>
-<a class="el" href="group__string__utils.html#ga1f2ff2312e5994560c9537cd9173be94" title="Compares two strings lexicographically.">ft_strcmp</a> </dd>
-<dd>
-strlcpy </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly allocated string with prefix, or NULL on error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f" title="Copies a string from src to dest, up to size - 1 characters.">ft_strlcpy</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga481772c1bb608ee6e46836549586147e" name="ga481772c1bb608ee6e46836549586147e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga481772c1bb608ee6e46836549586147e">&#9670;&#160;</a></span>prepend_sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char * prepend_sign </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>sign</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+
+<p>Prepends a sign character (<code>+</code> or space) to a number string. </p>
+<p>Allocates and returns a new string with the specified sign inserted at the beginning. Frees the old string. Used for <code>d</code> / <code>i</code> formatting.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The numeric string to modify (will be freed). </td></tr>
+    <tr><td class="paramname">sign</td><td>The character to prepend (<code>+</code> or &lsquo;&rsquo; '`). </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to the printf context (for error tracking).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Newly allocated string with prepended sign, or <code>NULL</code> on error.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f" title="Copies a string from src to dest, up to size - 1 characters.">ft_strlcpy</a> </dd></dl>
 
 </div>
 </div>
@@ -901,7 +2119,7 @@ strlcpy </dd></dl>
         <tr>
           <td class="memname">void print_formatted_number </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -919,7 +2137,7 @@ strlcpy </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -930,24 +2148,24 @@ strlcpy </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Formats and prints an integer with padding, precision, and flags. </p>
-<p>This function prepares the number string by applying format flags (<code>+</code>, <code>#</code>, etc.), adjusts the padding, and then prints the result using the correct alignment and padding method.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Final formatter and dispatcher for integer output. </p>
+<p>This function prepares a number string for printing by applying:</p><ul>
+<li>flags (<code>+</code>, , <code>#</code>)</li>
+<li>width / zero-padding</li>
+<li>left/right alignment</li>
+</ul>
+<p>It prints the fully formatted number and handles memory cleanup.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fmt</td><td>Pointer to the current format specification. </td></tr>
-    <tr><td class="paramname">str</td><td>String representation of the number (must be malloc'd). </td></tr>
-    <tr><td class="paramname">len</td><td>Length of the input string. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">fmt</td><td>The current format descriptor. </td></tr>
+    <tr><td class="paramname">str</td><td>Malloc'd number string to format. </td></tr>
+    <tr><td class="paramname">len</td><td>Initial string length. </td></tr>
+    <tr><td class="paramname">pf</td><td>The printf context for output state tracking. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>apply_plus_space_hash_flags </dd>
-<dd>
-<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the padding needed for width formatting.">handle_width</a> </dd>
-<dd>
-print_with_padding </dd>
-<dd>
-print_zero_padding_int </dd></dl>
 
 </div>
 </div>
@@ -972,7 +2190,7 @@ print_zero_padding_int </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -983,18 +2201,300 @@ print_zero_padding_int </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Prints padding characters for formatting alignment. </p>
-<p>Writes a specified number of padding characters (e.g., spaces or zeros) to the standard output using <code>write_char_safely</code>, updating the total byte count in <code>t_pf</code>.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Prints a series of padding characters. </p>
+<p>This function prints <code>padding</code> number of characters (typically &lsquo;&rsquo; '<code>or </code>'0'<code>) using</code>write_char_safely`. It is used to align formatted output to the desired width.</p>
+<p>If a write error occurs, it sets <code>pf-&gt;write_error</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">padding</td><td>Number of padding characters to print. </td></tr>
-    <tr><td class="paramname">pad_char</td><td>The character to use for padding. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the printf state structure.</td></tr>
+    <tr><td class="paramname">padding</td><td>Number of characters to pad. </td></tr>
+    <tr><td class="paramname">pad_char</td><td>Character used for padding (usually ' ' or '0'). </td></tr>
+    <tr><td class="paramname">pf</td><td>Print context to track output and errors.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>If a write error occurs, <code>pf-&gt;write_error</code> is set.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga9704f8e88d0e360b79a20491a061cbd1" name="ga9704f8e88d0e360b79a20491a061cbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9704f8e88d0e360b79a20491a061cbd1">&#9670;&#160;</a></span>print_right_aligned_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_right_aligned_p </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>padding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+</div>
+</div>
+<a id="ga11560a51353dfcbd661d725aeffcefe1" name="ga11560a51353dfcbd661d725aeffcefe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11560a51353dfcbd661d725aeffcefe1">&#9670;&#160;</a></span>print_with_padding() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void print_with_padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="format__and__print__p_8c.html">format_and_print_p.c</a>&gt;</code></p>
+
+<p>Prints the pointer string with formatting and padding. </p>
+<p>This function applies precision and width formatting to the pointer string <code>str</code>, processes spacing or alignment flags, and prints the formatted result. It frees the input string once printed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>Format descriptor (flags, width, precision). </td></tr>
+    <tr><td class="paramname">str</td><td>String representation of the pointer. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to print context (error and length tracker).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga31fc88579b69e5a1c0d928f2ffe7f84e">handle_precision_p</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#gabc2e0d4a8cd512adbfdf2fdfc9c86518" title="Computes the number of padding characters to apply.">handle_width</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga587f424e5fa2cbd5ac21b42addae5b47">handle_space_flag_p</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga99e39f973ea7c6f86940a9e09f614187">handle_minus_flag_p</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga9704f8e88d0e360b79a20491a061cbd1">print_right_aligned_p</a> </dd></dl>
+
+</div>
+</div>
+<a id="gadb67909042a2ffa123f4b9cf719cb67b" name="gadb67909042a2ffa123f4b9cf719cb67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb67909042a2ffa123f4b9cf719cb67b">&#9670;&#160;</a></span>print_with_padding() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void print_with_padding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>padding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+
+<p>Writes the number string with left/right padding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pf</td><td>The current printf context. </td></tr>
+    <tr><td class="paramname">str</td><td>The string to print. </td></tr>
+    <tr><td class="paramname">padding</td><td>Number of padding spaces.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga99676984fe7c307c6a18ead2c433c582" title="Safely writes a null-terminated string to a file descriptor.">write_safely</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#gae16fe0f1a52c32ad064808a3c6a59a6b" title="Prints a series of padding characters.">print_padding</a> </dd></dl>
+
+</div>
+</div>
+<a id="gab5b79d31ad28e9e51ed3c58e0e977a34" name="gab5b79d31ad28e9e51ed3c58e0e977a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5b79d31ad28e9e51ed3c58e0e977a34">&#9670;&#160;</a></span>print_zero_padding_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void print_zero_padding_int </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>padding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>str_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="print__formatted__number_8c.html">print_formatted_number.c</a>&gt;</code></p>
+
+<p>Writes zero-padding and handles printing the sign first if needed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">padding</td><td>Amount of zeros to pad. </td></tr>
+    <tr><td class="paramname">str_ptr</td><td>Pointer to the string pointer (adjusted if sign is printed). </td></tr>
+    <tr><td class="paramname">pf</td><td>The printf state.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga15ff59459bb51e5f83ecec2f93cbb4fa" name="ga15ff59459bb51e5f83ecec2f93cbb4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15ff59459bb51e5f83ecec2f93cbb4fa">&#9670;&#160;</a></span>process_conv_spec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void process_conv_spec </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list *&#160;</td>
+          <td class="paramname"><em>args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
+          <td class="paramname"><em>pf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+
+<p>Parses a single conversion specifier after <code>%</code>. </p>
+<p>This function processes the format string starting from the current cursor. It resets the format context, sets up the format descriptor, and dispatches the appropriate formatter. If the format is invalid, it prints the raw characters until the next <code>%</code> or end of string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>Pointer to the current cursor in the format string. </td></tr>
+    <tr><td class="paramname">args</td><td>Argument list used for conversions. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print state context.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#gafad49ba9992d52ea56e41c485ae91702" title="Parses a full format specification (flags, width, precision, specifier).">setup_format</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#gab1635090eb298b901ab76e1ced6ea28e" title="Resets the format context for the next conversion.">reset_fmt</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga0388068b21e988ee71ddf823587b5b3e" title="Delegates the specifier to the appropriate formatter.">parse_and_handle_specifier</a> </dd>
+<dd>
+<a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd></dl>
 
 </div>
 </div>
@@ -1019,7 +2519,7 @@ print_zero_padding_int </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -1030,17 +2530,19 @@ print_zero_padding_int </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Processes an entire format string for <code>ft_printf</code>. </p>
-<p>Iterates through the format string and processes each character. When encountering a <code>%</code>, parses the format specifier and prints the corresponding argument. Normal characters are printed directly.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Walks through the format string and dispatches format handlers. </p>
+<p>This is the main format processing loop for <code>ft_printf</code>. It iterates through the characters in the format string. When encountering <code>%</code>, it parses and processes a specifier. Otherwise, it prints the character.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">format</td><td>The format string passed to <code>ft_printf</code>. </td></tr>
-    <tr><td class="paramname">args</td><td>The variadic argument list. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to the print state tracker.</td></tr>
+    <tr><td class="paramname">format</td><td>The format string to parse. </td></tr>
+    <tr><td class="paramname">args</td><td>The active variadic arguments. </td></tr>
+    <tr><td class="paramname">pf</td><td>Print state context.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd>process_conv_spec </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga15ff59459bb51e5f83ecec2f93cbb4fa" title="Parses a single conversion specifier after %.">process_conv_spec</a> </dd>
 <dd>
 <a class="el" href="group__ft__printf.html#ga217645e34998565fc0975745f654c51a" title="Safely writes a single character to a file descriptor.">write_char_safely</a> </dd></dl>
 
@@ -1072,17 +2574,54 @@ print_zero_padding_int </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if alternative form is required. </p>
-<p>Returns 1 if the alternative form (<code>#</code>) should be applied, meaning the specifier is either 'x' or 'X' and the value is non-zero.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Checks whether the alternative form (<code>#</code>) should be applied. </p>
+<p>Alternative form is only applied if the specifier is &lsquo;'x&rsquo;<code>or</code>'X'<code>and the value is non-zero (e.g., not</code>"0"`).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">specifier</td><td>Format specifier character ('x' or 'X'). </td></tr>
-    <tr><td class="paramname">str</td><td>String representation of the number.</td></tr>
+    <tr><td class="paramname">specifier</td><td>The format specifier character (<code>x</code> or <code>X</code>). </td></tr>
+    <tr><td class="paramname">str</td><td>String representation of the value to print.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 if alternative form is needed, 0 otherwise.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga1f2ff2312e5994560c9537cd9173be94" title="Compares two strings lexicographically.">ft_strcmp</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if prefix should be applied, 0 otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gab1635090eb298b901ab76e1ced6ea28e" name="gab1635090eb298b901ab76e1ced6ea28e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1635090eb298b901ab76e1ced6ea28e">&#9670;&#160;</a></span>reset_fmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void reset_fmt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="process__format__string_8c.html">process_format_string.c</a>&gt;</code></p>
+
+<p>Resets the format context for the next conversion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fmt</td><td>The format descriptor to reset. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1101,7 +2640,7 @@ print_zero_padding_int </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#ab64b7f84a9a9e80d8cf6f6f4525fd4cb">t_fmt</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#ga24abcdd5d7eda89284ed4559c7425062">t_fmt</a> *&#160;</td>
           <td class="paramname"><em>fmt</em>&#160;</td>
         </tr>
         <tr>
@@ -1112,23 +2651,25 @@ print_zero_padding_int </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Parses a full format specifier and stores it in a t_fmt struct. </p>
-<p>This function parses flags, width, precision, and the conversion specifier in order. It returns -1 if the specifier is invalid.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Parses a full format specification (flags, width, precision, specifier). </p>
+<p>Parses from <code>%</code> until the final specifier character. Populates the given <code>t_fmt</code> structure accordingly.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">format</td><td>Pointer to the format string pointer. </td></tr>
-    <tr><td class="paramname">fmt</td><td>Pointer to the format specification struct. </td></tr>
+    <tr><td class="paramname">format</td><td>Format string pointer (will be advanced). </td></tr>
+    <tr><td class="paramname">fmt</td><td>Pointer to the format structure to populate.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if specifier is invalid.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>parse_flags </dd>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on invalid specifier.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__ft__printf.html#ga488b597e690ef798f479d2f5e3e2d186" title="Parses format flags and sets corresponding bits.">parse_flags</a> </dd>
 <dd>
-parse_width </dd>
+<a class="el" href="group__ft__printf.html#ga663f15d261a2032d3a2c2914e584a6e5" title="Parses field width (e.g., %10d).">parse_width</a> </dd>
 <dd>
-parse_precision </dd>
+<a class="el" href="group__ft__printf.html#gaf376eb51ee032fc69095c267010b1fb8" title="Parses precision (e.g., %.5d).">parse_precision</a> </dd>
 <dd>
-parse_specifier </dd></dl>
+<a class="el" href="group__ft__printf.html#ga9c224f4a6a4e294e3aaa4e8d6847880c" title="Validates and stores the conversion specifier.">parse_specifier</a> </dd></dl>
 
 </div>
 </div>
@@ -1153,7 +2694,7 @@ parse_specifier </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -1164,13 +2705,15 @@ parse_specifier </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
 <p>Safely writes a single character to a file descriptor. </p>
-<p>Writes one character <code>c</code> to file descriptor <code>fd</code>. If interrupted by a signal (<code>EINTR</code>), the write is retried. On other errors, sets <code>pf-&gt;write_error</code>. On success, adds 1 to <code>pf-&gt;total</code>.</p>
+<p>Attempts to write <code>c</code> to <code>fd</code>. If interrupted (<code>EINTR</code>), retries. Updates total byte count or sets write error in <code>pf</code> on failure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>The file descriptor to write to. </td></tr>
-    <tr><td class="paramname">c</td><td>The character to write. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to a <code>t_pf</code> struct for tracking state. </td></tr>
+    <tr><td class="paramname">fd</td><td>File descriptor to write to. </td></tr>
+    <tr><td class="paramname">c</td><td>Character to write. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to printf state context (<code>t_pf</code>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1198,7 +2741,7 @@ parse_specifier </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -1209,13 +2752,15 @@ parse_specifier </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Writes a string safely to a file descriptor. </p>
-<p>Writes the entire string <code>str</code> to the given file descriptor <code>fd</code>, handling partial writes and system interruptions (<code>EINTR</code>). On error, it sets <code>pf-&gt;write_error</code> to 1. On success, it increments <code>pf-&gt;total</code> by the number of bytes written.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Safely writes a null-terminated string to a file descriptor. </p>
+<p>This function ensures the full content of <code>str</code> is written to <code>fd</code>, handling partial writes and interruptions caused by signals (<code>EINTR</code>). Updates the <code>total</code> field in <code>t_pf</code> and sets <code>write_error</code> on failure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>The file descriptor to write to. </td></tr>
-    <tr><td class="paramname">str</td><td>The null-terminated string to write. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to a <code>t_pf</code> struct for tracking state.</td></tr>
+    <tr><td class="paramname">fd</td><td>File descriptor to write to. </td></tr>
+    <tr><td class="paramname">str</td><td>Null-terminated string to write. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to printf state context (<code>t_pf</code>).</td></tr>
   </table>
   </dd>
 </dl>
@@ -1250,7 +2795,7 @@ parse_specifier </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="libft_8h.html#a0b00e89fabfc0a10e680bed7b84926e9">t_pf</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group__ft__printf.html#gadc118d02d8e4ca83468f7123940bb824">t_pf</a> *&#160;</td>
           <td class="paramname"><em>pf</em>&#160;</td>
         </tr>
         <tr>
@@ -1261,14 +2806,16 @@ parse_specifier </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Writes a fixed number of bytes from a string to a file descriptor. </p>
-<p>Similar to <code>write_safely</code>, but instead of a null-terminated string, this function writes exactly <code>len</code> bytes. Handles partial writes and sets <code>pf-&gt;write_error</code> on failure. Updates <code>pf-&gt;total</code> on success.</p>
+<p><code>#include &lt;<a class="el" href="ft__printf_8h.html">ft_printf.h</a>&gt;</code></p>
+
+<p>Safely writes <code>len</code> bytes from a string to a file descriptor. </p>
+<p>Unlike <code>write_safely</code>, this function writes a fixed number of bytes (useful for non-null-terminated data). Handles <code>EINTR</code> and write errors.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>The file descriptor to write to. </td></tr>
-    <tr><td class="paramname">str</td><td>The string containing data to write. </td></tr>
-    <tr><td class="paramname">len</td><td>Number of bytes to write from <code>str</code>. </td></tr>
-    <tr><td class="paramname">pf</td><td>Pointer to a <code>t_pf</code> struct for tracking state. </td></tr>
+    <tr><td class="paramname">fd</td><td>File descriptor to write to. </td></tr>
+    <tr><td class="paramname">str</td><td>Buffer containing data to write. </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes to write. </td></tr>
+    <tr><td class="paramname">pf</td><td>Pointer to printf state context (<code>t_pf</code>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1276,9 +2823,12 @@ parse_specifier </dd></dl>
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__string__utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,71 +102,26 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
 <tr class="memitem:ft__split_8c" id="r_ft__split_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__split_8c.html">ft_split.c</a></td></tr>
-<tr class="memdesc:ft__split_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings using a single delimiter. <br /></td></tr>
+<tr class="memdesc:ft__split_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings using a single delimiter character. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ft__split__charset_8c" id="r_ft__split__charset_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__split__charset_8c.html">ft_split_charset.c</a></td></tr>
 <tr class="memdesc:ft__split__charset_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings based on a set of delimiters. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strcat_8c" id="r_ft__strcat_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strcat_8c.html">ft_strcat.c</a></td></tr>
-<tr class="memdesc:ft__strcat_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates one string to the end of another. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strchr_8c" id="r_ft__strchr_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strchr_8c.html">ft_strchr.c</a></td></tr>
-<tr class="memdesc:ft__strchr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locates the first occurrence of a character in a string. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strcmp_8c" id="r_ft__strcmp_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strcmp_8c.html">ft_strcmp.c</a></td></tr>
-<tr class="memdesc:ft__strcmp_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two strings lexicographically. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strdup_8c" id="r_ft__strdup_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strdup_8c.html">ft_strdup.c</a></td></tr>
-<tr class="memdesc:ft__strdup_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates a null-terminated string. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__striteri_8c" id="r_ft__striteri_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__striteri_8c.html">ft_striteri.c</a></td></tr>
-<tr class="memdesc:ft__striteri_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each character of a string with its index. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strjoin_8c" id="r_ft__strjoin_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strjoin_8c.html">ft_strjoin.c</a></td></tr>
-<tr class="memdesc:ft__strjoin_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two strings into a new one. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strlcat_8c" id="r_ft__strlcat_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strlcat_8c.html">ft_strlcat.c</a></td></tr>
-<tr class="memdesc:ft__strlcat_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a string to another with buffer size limitation. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strlcpy_8c" id="r_ft__strlcpy_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strlcpy_8c.html">ft_strlcpy.c</a></td></tr>
-<tr class="memdesc:ft__strlcpy_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safely copies a string with buffer size limitation. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strlen_8c" id="r_ft__strlen_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strlen_8c.html">ft_strlen.c</a></td></tr>
-<tr class="memdesc:ft__strlen_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of a null-terminated string. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strmapi_8c" id="r_ft__strmapi_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strmapi_8c.html">ft_strmapi.c</a></td></tr>
-<tr class="memdesc:ft__strmapi_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each character of a string. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strncmp_8c" id="r_ft__strncmp_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strncmp_8c.html">ft_strncmp.c</a></td></tr>
-<tr class="memdesc:ft__strncmp_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two strings up to a given number of characters. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strndup_8c" id="r_ft__strndup_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strndup_8c.html">ft_strndup.c</a></td></tr>
-<tr class="memdesc:ft__strndup_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates a string up to a maximum number of characters. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strnstr_8c" id="r_ft__strnstr_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strnstr_8c.html">ft_strnstr.c</a></td></tr>
-<tr class="memdesc:ft__strnstr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locates a substring in a string within a limited length. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__strrchr_8c" id="r_ft__strrchr_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strrchr_8c.html">ft_strrchr.c</a></td></tr>
-<tr class="memdesc:ft__strrchr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the last occurrence of a character in a string. <br /></td></tr>
+<tr class="memitem:ft__string_8h" id="r_ft__string_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__string_8h.html">ft_string.h</a></td></tr>
+<tr class="memdesc:ft__string_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">String manipulation utility functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ft__strtrim_8c" id="r_ft__strtrim_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__strtrim_8c.html">ft_strtrim.c</a></td></tr>
 <tr class="memdesc:ft__strtrim_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trims characters from the beginning and end of a string. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__substr_8c" id="r_ft__substr_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__substr_8c.html">ft_substr.c</a></td></tr>
-<tr class="memdesc:ft__substr_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts a substring from a string. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__tolower_8c" id="r_ft__tolower_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__tolower_8c.html">ft_tolower.c</a></td></tr>
-<tr class="memdesc:ft__tolower_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to lowercase. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ft__toupper_8c" id="r_ft__toupper_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__toupper_8c.html">ft_toupper.c</a></td></tr>
-<tr class="memdesc:ft__toupper_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to uppercase. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:skip__whitespace_8c" id="r_skip__whitespace_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="skip__whitespace_8c.html">skip_whitespace.c</a></td></tr>
-<tr class="memdesc:skip__whitespace_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips whitespace characters in a string. <br /></td></tr>
+<tr class="memdesc:skip__whitespace_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility functions to skip leading whitespace in C strings. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga8a6ea3765dfd826eabfc00d36e28ea38" id="r_ga8a6ea3765dfd826eabfc00d36e28ea38"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga8a6ea3765dfd826eabfc00d36e28ea38">ft_itoa</a> (int n)</td></tr>
+<tr class="memdesc:ga8a6ea3765dfd826eabfc00d36e28ea38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an integer to a string.  <br /></td></tr>
+<tr class="separator:ga8a6ea3765dfd826eabfc00d36e28ea38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad655e50a31a6b7fe0f802f653128e8aa" id="r_gad655e50a31a6b7fe0f802f653128e8aa"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gad655e50a31a6b7fe0f802f653128e8aa">ft_split</a> (const char *s, char c)</td></tr>
 <tr class="memdesc:gad655e50a31a6b7fe0f802f653128e8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into substrings based on a delimiter character.  <br /></td></tr>
 <tr class="separator:gad655e50a31a6b7fe0f802f653128e8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,7 +150,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga96ed418d154fd8784dc0d1dc56b63746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two strings into a newly allocated string.  <br /></td></tr>
 <tr class="separator:ga96ed418d154fd8784dc0d1dc56b63746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga63c2ecb2ed6af7d8032256183418ed9c" id="r_ga63c2ecb2ed6af7d8032256183418ed9c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga63c2ecb2ed6af7d8032256183418ed9c">ft_strjoin_and_free</a> (char *s1, char *s2, int free_s1, int free_s2)</td></tr>
-<tr class="memdesc:ga63c2ecb2ed6af7d8032256183418ed9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates two strings and optionally frees the originals.  <br /></td></tr>
 <tr class="separator:ga63c2ecb2ed6af7d8032256183418ed9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga87a42176d750415c82eb7d453abb39ee" id="r_ga87a42176d750415c82eb7d453abb39ee"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga87a42176d750415c82eb7d453abb39ee">ft_strlcat</a> (char *dest, const char *src, size_t size)</td></tr>
 <tr class="memdesc:ga87a42176d750415c82eb7d453abb39ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates <code>src</code> to the end of <code>dest</code> while ensuring null-termination.  <br /></td></tr>
@@ -186,9 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga828402378653640f545a4be2e00e92f9" id="r_ga828402378653640f545a4be2e00e92f9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9">ft_strlen</a> (const char *str)</td></tr>
 <tr class="memdesc:ga828402378653640f545a4be2e00e92f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of characters in a string.  <br /></td></tr>
 <tr class="separator:ga828402378653640f545a4be2e00e92f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga668b60557bfc9d60c2d3ccda8afadf49" id="r_ga668b60557bfc9d60c2d3ccda8afadf49"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga668b60557bfc9d60c2d3ccda8afadf49">ft_strmapi</a> (char const *s, char(*f)(unsigned int, char))</td></tr>
-<tr class="memdesc:ga668b60557bfc9d60c2d3ccda8afadf49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each character of a string to create a new string.  <br /></td></tr>
-<tr class="separator:ga668b60557bfc9d60c2d3ccda8afadf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ab3537787399531fe94aabac484610b" id="r_ga4ab3537787399531fe94aabac484610b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga4ab3537787399531fe94aabac484610b">ft_strmapi</a> (char const  *s, char(*f)(unsigned int, char))</td></tr>
+<tr class="memdesc:ga4ab3537787399531fe94aabac484610b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a function to each character of a string to create a new string.  <br /></td></tr>
+<tr class="separator:ga4ab3537787399531fe94aabac484610b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9d2fe792187aa4ed08e5864fb2c4d6dc" id="r_ga9d2fe792187aa4ed08e5864fb2c4d6dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga9d2fe792187aa4ed08e5864fb2c4d6dc">ft_strncmp</a> (const char *s1, const char *s2, size_t n)</td></tr>
 <tr class="memdesc:ga9d2fe792187aa4ed08e5864fb2c4d6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two strings up to <code>n</code> characters.  <br /></td></tr>
 <tr class="separator:ga9d2fe792187aa4ed08e5864fb2c4d6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,15 +184,15 @@ Functions</h2></td></tr>
 <tr class="memitem:gab86e5297914753b6c82d7e3c3020ce17" id="r_gab86e5297914753b6c82d7e3c3020ce17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gab86e5297914753b6c82d7e3c3020ce17">ft_tolower</a> (int c)</td></tr>
 <tr class="memdesc:gab86e5297914753b6c82d7e3c3020ce17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to lowercase.  <br /></td></tr>
 <tr class="separator:gab86e5297914753b6c82d7e3c3020ce17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9d40fac3d6a3b78b69e9d0886b213909" id="r_ga9d40fac3d6a3b78b69e9d0886b213909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga9d40fac3d6a3b78b69e9d0886b213909">skip_whitespace_index</a> (const char *input, int *i)</td></tr>
-<tr class="memdesc:ga9d40fac3d6a3b78b69e9d0886b213909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the first non-whitespace character in a string.  <br /></td></tr>
-<tr class="separator:ga9d40fac3d6a3b78b69e9d0886b213909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc04e33eec58ff8c6677754d363d8b43" id="r_gafc04e33eec58ff8c6677754d363d8b43"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gafc04e33eec58ff8c6677754d363d8b43">skip_whitespace_ptr</a> (const char *s)</td></tr>
-<tr class="memdesc:gafc04e33eec58ff8c6677754d363d8b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the index while skipping whitespace characters.  <br /></td></tr>
-<tr class="separator:gafc04e33eec58ff8c6677754d363d8b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaef116be7b5bceafff4b59f20a4433d12" id="r_gaef116be7b5bceafff4b59f20a4433d12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gaef116be7b5bceafff4b59f20a4433d12">ft_toupper</a> (int c)</td></tr>
 <tr class="memdesc:gaef116be7b5bceafff4b59f20a4433d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to uppercase.  <br /></td></tr>
 <tr class="separator:gaef116be7b5bceafff4b59f20a4433d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d40fac3d6a3b78b69e9d0886b213909" id="r_ga9d40fac3d6a3b78b69e9d0886b213909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#ga9d40fac3d6a3b78b69e9d0886b213909">skip_whitespace_index</a> (const char *input, int *i)</td></tr>
+<tr class="memdesc:ga9d40fac3d6a3b78b69e9d0886b213909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skips leading whitespace by incrementing a pointer index.  <br /></td></tr>
+<tr class="separator:ga9d40fac3d6a3b78b69e9d0886b213909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc04e33eec58ff8c6677754d363d8b43" id="r_gafc04e33eec58ff8c6677754d363d8b43"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__string__utils.html#gafc04e33eec58ff8c6677754d363d8b43">skip_whitespace_ptr</a> (const char *s)</td></tr>
+<tr class="memdesc:gafc04e33eec58ff8c6677754d363d8b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the first non-whitespace character.  <br /></td></tr>
+<tr class="separator:gafc04e33eec58ff8c6677754d363d8b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions for handling and manipulating C strings. </p>
@@ -227,35 +201,39 @@ Functions</h2></td></tr>
 <li>Extracting substrings</li>
 <li>Skipping whitespace</li>
 <li>Finding characters or substrings</li>
-<li>Transforming string content</li>
-</ul>
-<p>This group includes:</p><ul>
-<li><a class="el" href="group__string__utils.html#gabddd38a6932076fb5971760d83744092">ft_strcat</a></li>
-<li><a class="el" href="group__string__utils.html#ga0763cbf4916c91719cc264b181aed1e3">ft_split_charset</a></li>
-<li><a class="el" href="group__string__utils.html#gad655e50a31a6b7fe0f802f653128e8aa">ft_split</a></li>
-<li><a class="el" href="group__string__utils.html#gaf0c4dbae2a90feb1f5a346bb2eb1fbc5">ft_strchr</a></li>
-<li><a class="el" href="group__string__utils.html#gabd6399ee5613eb8f1b12e609116cb4c8">ft_strcpy</a></li>
-<li><a class="el" href="group__string__utils.html#gaaacf33ac82063226a213d2ee49adc65f">ft_strdup</a></li>
-<li><a class="el" href="group__string__utils.html#gada722cffd2c6c8169ae339afd0f9763c">ft_striteri</a></li>
-<li><a class="el" href="group__string__utils.html#ga96ed418d154fd8784dc0d1dc56b63746">ft_strjoin</a></li>
-<li><a class="el" href="group__string__utils.html#ga63c2ecb2ed6af7d8032256183418ed9c">ft_strjoin_and_free</a></li>
-<li><a class="el" href="group__string__utils.html#ga87a42176d750415c82eb7d453abb39ee">ft_strlcat</a></li>
-<li><a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f">ft_strlcpy</a></li>
-<li><a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9">ft_strlen</a></li>
-<li><a class="el" href="group__string__utils.html#ga668b60557bfc9d60c2d3ccda8afadf49">ft_strmapi</a></li>
-<li><a class="el" href="group__string__utils.html#ga1f2ff2312e5994560c9537cd9173be94">ft_strcmp</a></li>
-<li><a class="el" href="group__string__utils.html#ga9d2fe792187aa4ed08e5864fb2c4d6dc">ft_strncmp</a></li>
-<li><a class="el" href="group__string__utils.html#gafe88bad8e470071731600b6d3c02841b">ft_strndup</a></li>
-<li><a class="el" href="group__string__utils.html#ga14b236fa10c117b080df2de058d2078d">ft_strnstr</a></li>
-<li><a class="el" href="group__string__utils.html#ga527dfea8e1b8fa683f39f39ba2c91f66">ft_strrchr</a></li>
-<li><a class="el" href="group__string__utils.html#ga56dfb2788a841e3ac30520ee3f084270">ft_strtrim</a></li>
-<li><a class="el" href="group__string__utils.html#gac44b46fdf9966cd329bd873d92761611">ft_substr</a></li>
-<li><a class="el" href="group__string__utils.html#gab86e5297914753b6c82d7e3c3020ce17">ft_tolower</a></li>
-<li><a class="el" href="group__char__check.html#gaef116be7b5bceafff4b59f20a4433d12">ft_toupper</a></li>
-<li><a class="el" href="group__string__utils.html#ga9d40fac3d6a3b78b69e9d0886b213909">skip_whitespace_index</a></li>
-<li><a class="el" href="group__string__utils.html#gafc04e33eec58ff8c6677754d363d8b43">skip_whitespace_ptr</a> </li>
+<li>Transforming string content </li>
 </ul>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga8a6ea3765dfd826eabfc00d36e28ea38" name="ga8a6ea3765dfd826eabfc00d36e28ea38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a6ea3765dfd826eabfc00d36e28ea38">&#9670;&#160;</a></span>ft_itoa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * ft_itoa </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__number__conversion_8c.html">ft_number_conversion.c</a>&gt;</code></p>
+
+<p>Converts an integer to a string. </p>
+<p>Allocates and returns a new string representing the integer <code>n</code>. Handles negative numbers and returns NULL if allocation fails.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>The integer to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A null-terminated string representing <code>n</code>, or NULL on failure. </dd></dl>
+
+</div>
+</div>
 <a id="gad655e50a31a6b7fe0f802f653128e8aa" name="gad655e50a31a6b7fe0f802f653128e8aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad655e50a31a6b7fe0f802f653128e8aa">&#9670;&#160;</a></span>ft_split()</h2>
 
@@ -282,8 +260,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Splits a string into substrings based on a delimiter character. </p>
-<p>Allocates and returns a NULL-terminated array of substrings resulting from splitting the input string by the delimiter character.</p>
+<p>Splits the input string <code>s</code> into substrings separated by the delimiter <code>c</code>. The resulting substrings are stored in a newly allocated NULL-terminated array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to split. </td></tr>
@@ -292,13 +272,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A newly allocated array of substrings, or NULL on failure.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>ft_w_count </dd>
+<dl class="section note"><dt>Note</dt><dd>The input string is not modified. Each substring and the array itself must be freed manually using <code>ft_free_array</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ft__split_8c.html#afd5d6028f8877684a589df81a633b7d1" title="Counts how many substrings will result from splitting.">ft_w_count</a> </dd>
 <dd>
-ft_fill_array </dd>
+<a class="el" href="ft__split_8c.html#a4d566749573b5abec93dbbe02472bb81" title="Fills the output array with substrings from input.">ft_fill_array</a> </dd>
 <dd>
 <a class="el" href="group__string__utils.html#gac44b46fdf9966cd329bd873d92761611" title="Extracts a substring from a string.">ft_substr</a> </dd>
 <dd>
-<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array of pointers.">ft_free_array</a> </dd></dl>
+<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array.">ft_free_array</a> </dd></dl>
 
 </div>
 </div>
@@ -328,8 +309,10 @@ ft_fill_array </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Splits a string into substrings based on a character set. </p>
-<p>This function uses a charset (set of delimiters) to split the string <code>s</code> into a NULL-terminated array of substrings.</p>
+<p>This function splits the input string <code>s</code> into substrings using the set of delimiter characters defined in <code>charset</code>. Each substring is allocated dynamically and stored in a NULL-terminated array.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>The string to split. </td></tr>
@@ -338,11 +321,11 @@ ft_fill_array </dd>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A newly allocated array of substrings, or NULL on error.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>ft_w_count_charset </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ft__split__charset_8c.html#a31e3b0b620316ac7bf9fc1f671a6b13f" title="Counts the number of substrings in a split.">ft_w_count_charset</a> </dd>
 <dd>
-ft_fill_array_charset </dd>
+<a class="el" href="ft__split__charset_8c.html#ae738c27d419d4329672d7d0354874a35" title="Fills an array of substrings from the input string.">ft_fill_array_charset</a> </dd>
 <dd>
-<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array of pointers.">ft_free_array</a> </dd></dl>
+<a class="el" href="group__array__utils.html#ga7442001d09b754cee8ef5b530109e855" title="Frees a NULL-terminated array.">ft_free_array</a> </dd></dl>
 
 </div>
 </div>
@@ -371,6 +354,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Appends the <code>src</code> string to the end of the <code>dest</code> string. </p>
 <p>This function assumes that <code>dest</code> points to a buffer large enough to hold the resulting string, including the null terminator.</p>
@@ -412,6 +397,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Finds the first occurrence of a character in a string. </p>
 <p>Searches for the first occurrence of the character <code>c</code> in the string <code>str</code>. The terminating null byte (<code>\0</code>) is considered part of the string.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -450,6 +437,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Compares two strings lexicographically. </p>
 <p>This function compares the characters of <code>s1</code> and <code>s2</code> one by one. The comparison stops at the first differing character or when a null byte is reached.</p>
@@ -494,6 +483,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Compares two strings lexicographically. </p>
 <p>This function compares the characters of <code>s1</code> and <code>s2</code> one by one. The comparison stops at the first differing character or when a null byte is reached.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -522,6 +513,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Allocates and duplicates a null-terminated string. </p>
 <p>Allocates memory for a copy of the string <code>src</code>, copies its contents (including the null terminator), and returns a pointer to the new string.</p>
@@ -564,6 +557,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Applies a function to each character of a string, passing its index. </p>
 <p>Iterates over the string <code>s</code> and applies the function <code>f</code> to each character. The function receives the index of the character and a pointer to it, allowing in-place modification.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -602,6 +597,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Concatenates two strings into a newly allocated string. </p>
 <p>Allocates a new string containing the contents of <code>s1</code> followed by <code>s2</code>. If either string is NULL, it is treated as an empty string.</p>
@@ -658,24 +655,7 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
-<p>Concatenates two strings and optionally frees the originals. </p>
-<p>This function joins two strings into a new one. Depending on the values of <code>free_s1</code> and <code>free_s2</code>, it can free the memory of <code>s1</code> and/or <code>s2</code> after use.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">s1</td><td>First string to join. </td></tr>
-    <tr><td class="paramname">s2</td><td>Second string to join. </td></tr>
-    <tr><td class="paramname">free_s1</td><td>If non-zero, <code>s1</code> is freed after concatenation. </td></tr>
-    <tr><td class="paramname">free_s2</td><td>If non-zero, <code>s2</code> is freed after concatenation.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A new string containing the concatenation of <code>s1</code> and <code>s2</code>, or NULL if allocation fails.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>s1</code> or <code>s2</code> is NULL, it is replaced with an empty string.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gaaacf33ac82063226a213d2ee49adc65f" title="Allocates and duplicates a null-terminated string.">ft_strdup</a> </dd>
-<dd>
-<a class="el" href="group__string__utils.html#ga828402378653640f545a4be2e00e92f9" title="Returns the number of characters in a string.">ft_strlen</a> </dd>
-<dd>
-<a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f" title="Copies a string from src to dest, up to size - 1 characters.">ft_strlcpy</a> </dd></dl>
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 </div>
 </div>
@@ -710,6 +690,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Concatenates <code>src</code> to the end of <code>dest</code> while ensuring null-termination. </p>
 <p>This function appends the <code>src</code> string to the end of the <code>dest</code> string. It ensures that the result fits within the buffer size given by <code>size</code>, including the null-terminator. If <code>size</code> is less than or equal to the length of <code>dest</code>, the function returns <code>size + strlen(src)</code> without appending.</p>
@@ -760,6 +742,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Copies a string from <code>src</code> to <code>dest</code>, up to <code>size</code> - 1 characters. </p>
 <p>Copies up to <code>size - 1</code> characters from the null-terminated string <code>src</code> to <code>dest</code>, null-terminating the result. If <code>size</code> is 0, nothing is written to <code>dest</code>, but the length of <code>src</code> is still returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -790,6 +774,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Returns the number of characters in a string. </p>
 <p>Iterates through the given null-terminated string to determine its length (not including the terminating <code>\0</code>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -802,8 +788,8 @@ ft_fill_array_charset </dd>
 
 </div>
 </div>
-<a id="ga668b60557bfc9d60c2d3ccda8afadf49" name="ga668b60557bfc9d60c2d3ccda8afadf49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga668b60557bfc9d60c2d3ccda8afadf49">&#9670;&#160;</a></span>ft_strmapi()</h2>
+<a id="ga4ab3537787399531fe94aabac484610b" name="ga4ab3537787399531fe94aabac484610b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ab3537787399531fe94aabac484610b">&#9670;&#160;</a></span>ft_strmapi()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -827,6 +813,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Applies a function to each character of a string to create a new string. </p>
 <p>Allocates a new string where each character is the result of applying the given function <code>f</code> to the corresponding character of the input string <code>s</code>. The function <code>f</code> receives the index of each character as its first argument.</p>
@@ -874,6 +862,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Compares two strings up to <code>n</code> characters. </p>
 <p>This function compares the first <code>n</code> characters of the strings <code>s1</code> and <code>s2</code>. The comparison is done using unsigned characters.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -914,6 +904,8 @@ ft_fill_array_charset </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Creates a copy of a string, up to <code>n</code> characters. </p>
 <p>This function allocates memory and copies at most <code>n</code> characters from the string <code>src</code> to a new string. The new string is always null-terminated.</p>
@@ -963,6 +955,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Searches for a substring in a string within a max length. </p>
 <p>This function searches for the first occurrence of the null-terminated string <code>little</code> in the string <code>big</code>, where not more than <code>len</code> characters are searched. Characters after a <code>\0</code> character are not searched.</p>
 <p>If <code>little</code> is an empty string, <code>big</code> is returned. If <code>little</code> occurs nowhere in <code>big</code> within the first <code>len</code> characters, NULL is returned.</p>
@@ -1004,6 +998,8 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Returns a pointer to the last occurrence of a character in a string. </p>
 <p>Scans the string <code>str</code> for the last occurrence of the character <code>c</code> (interpreted as an unsigned char). If found, a pointer to the character is returned. If not, NULL is returned.</p>
 <p>If <code>c</code> is '\0', a pointer to the null terminator at the end of the string is returned.</p>
@@ -1044,20 +1040,22 @@ ft_fill_array_charset </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Trims characters from both ends of a string. </p>
-<p>Allocates and returns a copy of the string <code>s1</code> with the characters specified in <code>set</code> removed from the beginning and end.</p>
+<p>Allocates and returns a new string derived from <code>s1</code> with all characters found in <code>set</code> removed from both the beginning and the end. The returned string is NULL-terminated and dynamically allocated.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s1</td><td>The original null-terminated string to trim. </td></tr>
-    <tr><td class="paramname">set</td><td>The set of characters to trim. </td></tr>
+    <tr><td class="paramname">set</td><td>The set of characters to remove. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A newly allocated trimmed string, or NULL on allocation failure.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the resulting trimmed string is empty, a string containing only '\0' is returned.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>ft_trim_start </dd>
+<dl class="section note"><dt>Note</dt><dd>If the trimmed result is empty, the function returns a string containing only '\0'. The caller is responsible for freeing the result.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ft__strtrim_8c.html#a85d24e03306228c872a227c9c4fad9fa" title="Finds the starting index after trimming leading characters.">ft_trim_start</a> </dd>
 <dd>
-ft_trim_end </dd>
+<a class="el" href="ft__strtrim_8c.html#acf2a23fef2863d9e8b1f269a8aace31f" title="Finds the ending index before trimming trailing characters.">ft_trim_end</a> </dd>
 <dd>
 <a class="el" href="group__string__utils.html#ga95de924e4140ae426bf2e05acfb5fe4f" title="Copies a string from src to dest, up to size - 1 characters.">ft_strlcpy</a> </dd></dl>
 
@@ -1095,6 +1093,8 @@ ft_trim_end </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Extracts a substring from a string. </p>
 <p>Allocates and returns a new string, which is a substring of <code>s</code> starting from index <code>start</code> and up to <code>len</code> characters long. If <code>start</code> is greater than or equal to the length of <code>s</code>, an empty string is returned. The length of the returned substring is either <code>len</code> or the remaining length from <code>start</code>, whichever is smaller.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1128,6 +1128,8 @@ ft_trim_end </dd>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
 <p>Converts a character to lowercase. </p>
 <p>If the character <code>c</code> is an uppercase letter (between 'A' and 'Z'), it is converted to its lowercase equivalent by adding the difference between the ASCII values of 'a' and 'A'. If <code>c</code> is not an uppercase letter, the function returns <code>c</code> unchanged.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1137,7 +1139,7 @@ ft_trim_end </dd>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The lowercase version of <code>c</code> if it is an uppercase letter; otherwise, returns <code>c</code> unchanged.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__char__check.html#gaef116be7b5bceafff4b59f20a4433d12" title="Converts a character to uppercase.">ft_toupper</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gaef116be7b5bceafff4b59f20a4433d12" title="Converts a character to uppercase.">ft_toupper</a> </dd></dl>
 
 </div>
 </div>
@@ -1156,6 +1158,8 @@ ft_trim_end </dd>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
 
 <p>Converts a character to uppercase. </p>
 <p>If the character <code>c</code> is a lowercase letter (between 'a' and 'z'), it is converted to its uppercase equivalent by subtracting the difference between the ASCII values of 'a' and 'A'. If <code>c</code> is not a lowercase letter, the function returns <code>c</code> unchanged.</p>
@@ -1196,16 +1200,18 @@ ft_trim_end </dd>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the first non-whitespace character in a string. </p>
-<p>This function returns a pointer to the first character in the string <code>s</code> that is not a whitespace character. If the string consists only of whitespace characters, it returns a pointer to the null-terminator.</p>
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
+<p>Skips leading whitespace by incrementing a pointer index. </p>
+<p>This function iterates through the <code>input</code> string from the position indicated by the index <code>*i</code>, incrementing the index until a non-whitespace character is reached. Whitespace is detected using <code>ft_isspace</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td>The string to search for non-whitespace characters.</td></tr>
+    <tr><td class="paramname">input</td><td>The string to search for whitespace. </td></tr>
+    <tr><td class="paramname">i</td><td>Pointer to the current index, which will be updated in-place.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the first non-whitespace character in the string, or the null-terminator if no such character exists.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga9d40fac3d6a3b78b69e9d0886b213909" title="Returns a pointer to the first non-whitespace character in a string.">skip_whitespace_index</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gafc04e33eec58ff8c6677754d363d8b43" title="Returns a pointer to the first non-whitespace character.">skip_whitespace_ptr</a> </dd></dl>
 
 </div>
 </div>
@@ -1225,23 +1231,28 @@ ft_trim_end </dd>
       </table>
 </div><div class="memdoc">
 
-<p>Increments the index while skipping whitespace characters. </p>
-<p>This function iterates through the <code>input</code> string from the position indicated by the index <code>*i</code>, incrementing the index until a non-whitespace character is encountered. It is commonly used for string parsing where leading spaces need to be skipped.</p>
+<p><code>#include &lt;<a class="el" href="ft__string_8h.html">ft_string.h</a>&gt;</code></p>
+
+<p>Returns a pointer to the first non-whitespace character. </p>
+<p>Iterates through the string <code>s</code> and returns a pointer to the first character that is not a whitespace character. If all characters are whitespace, returns a pointer to the null-terminator.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td>The string to search for whitespace. </td></tr>
-    <tr><td class="paramname">i</td><td>The current index in the string, which will be incremented to skip whitespace characters.</td></tr>
+    <tr><td class="paramname">s</td><td>The string to scan. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#gafc04e33eec58ff8c6677754d363d8b43" title="Increments the index while skipping whitespace characters.">skip_whitespace_ptr</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the first non-whitespace character, or to '\0'.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__string__utils.html#ga9d40fac3d6a3b78b69e9d0886b213909" title="Skips leading whitespace by incrementing a pointer index.">skip_whitespace_index</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>

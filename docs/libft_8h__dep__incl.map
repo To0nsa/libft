@@ -1,0 +1,65 @@
+<map id="libft.h" name="libft.h">
+<area shape="rect" id="Node000001" title="My custom C library (libft)." alt="" coords="2113,5,2172,31"/>
+<area shape="rect" id="Node000002" href="$angle__utils_8c.html" title="Angle conversion and normalization utilities." alt="" coords="5,86,109,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2100,22,1739,22,1165,27,856,34,564,45,311,61,122,81,91,88,90,83,121,76,311,55,563,40,856,29,1165,22,1739,16,2100,16"/>
+<area shape="rect" id="Node000003" href="$distance__utils_8c.html" title="Distance computation utilities for 2D points." alt="" coords="133,86,256,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="2100,22,1763,24,1231,32,676,50,443,64,268,81,233,89,232,83,268,76,443,58,676,45,1231,27,1763,19,2100,17"/>
+<area shape="rect" id="Node000004" href="$file__utils_8c.html" title=" " alt="" coords="280,86,368,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2099,22,1779,22,1280,28,1013,35,761,46,543,61,381,81,354,88,353,83,379,76,543,56,761,40,1013,30,1280,23,1779,17,2099,16"/>
+<area shape="rect" id="Node000005" href="$format__and__print__numbers_8c.html" title="Handles numeric specifiers for ft_printf." alt="" coords="393,86,602,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2099,22,1873,23,1509,30,1068,48,839,62,615,81,560,89,560,83,614,76,839,57,1068,42,1509,24,1873,17,2099,16"/>
+<area shape="rect" id="Node000006" href="$format__and__print__p_8c.html" title="Handles p format specifier for ft_printf." alt="" coords="627,86,787,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="2100,21,1897,21,1577,27,1193,45,994,61,799,81,756,89,755,83,798,76,994,55,1193,40,1577,22,1897,16,2100,16"/>
+<area shape="rect" id="Node000007" href="$format__print__csper_8c.html" title="Handles printing of c, s, and %% specifiers for ft_printf." alt="" coords="811,86,965,111"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="2100,22,1921,23,1644,30,1315,48,1145,63,978,81,936,89,935,83,977,76,1144,57,1315,43,1644,25,1921,18,2100,16"/>
+<area shape="rect" id="Node000008" href="$format__utils_8c.html" title="Utilities for handling padding, width, and precision in ft_printf." alt="" coords="989,86,1101,111"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="2099,21,1939,21,1695,27,1407,45,1259,61,1114,81,1082,89,1081,83,1113,76,1258,56,1407,40,1695,22,1939,16,2099,16"/>
+<area shape="rect" id="Node000009" href="$ft__2darray_8c.html" title="Utilities for dynamically allocated 2D integer arrays." alt="" coords="1126,86,1223,111"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="2099,21,1955,21,1741,28,1490,46,1361,61,1235,81,1207,88,1206,83,1234,76,1360,56,1490,41,1741,23,1955,16,2099,16"/>
+<area shape="rect" id="Node000010" href="$ft__array_8c.html" title="Implementation of pointer and integer array utilities." alt="" coords="1247,86,1329,111"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="2100,21,1970,22,1782,29,1563,47,1451,62,1342,81,1317,88,1316,83,1341,76,1450,56,1563,41,1782,23,1970,16,2100,16"/>
+<area shape="rect" id="Node000011" href="$ft__list_8c.html" title="Linked list operations for libft." alt="" coords="1353,86,1423,111"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="2100,21,1983,22,1818,29,1627,47,1530,62,1435,81,1414,88,1412,83,1434,76,1529,57,1627,42,1818,24,1983,17,2100,16"/>
+<area shape="rect" id="Node000012" href="$ft__memory_8c.html" title="Low&#45;level memory manipulation utilities." alt="" coords="1447,86,1550,111"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="2099,24,1868,39,1716,56,1562,81,1534,88,1532,83,1561,76,1715,51,1868,34,2099,18"/>
+<area shape="rect" id="Node000013" href="$ft__number__conversion_8c.html" title="Number&#45;to&#45;string and string&#45;to&#45;number conversion functions." alt="" coords="1574,86,1751,111"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="2100,28,1764,81,1724,89,1723,83,1764,76,2099,23"/>
+<area shape="rect" id="Node000014" href="$ft__output_8c.html" title="File descriptor&#45;based output functions." alt="" coords="1776,86,1867,111"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="2101,30,1999,52,1879,81,1855,88,1854,83,1878,76,1998,47,2100,25"/>
+<area shape="rect" id="Node000015" href="$ft__printf_8c.html" title="Custom printf implementation (ft_printf entry point)." alt="" coords="1891,86,1973,111"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="2101,38,1964,89,1962,83,2099,33"/>
+<area shape="rect" id="Node000016" href="$ft__qsort_8c.html" title="Generic quicksort implementation with fallback to insertion sort." alt="" coords="1997,86,2080,111"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="2118,41,2056,88,2052,84,2115,37"/>
+<area shape="rect" id="Node000017" href="$ft__split_8c.html" title="Splits a string into substrings using a single delimiter character." alt="" coords="2104,86,2181,111"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="2145,44,2145,86,2140,86,2140,44"/>
+<area shape="rect" id="Node000018" href="$ft__split__charset_8c.html" title="Splits a string into substrings based on a set of delimiters." alt="" coords="2206,86,2338,111"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="2175,36,2254,83,2251,88,2172,40"/>
+<area shape="rect" id="Node000019" href="$ft__string_8c.html" title=" " alt="" coords="2362,86,2449,111"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="2186,28,2351,76,2373,83,2372,88,2350,81,2185,33"/>
+<area shape="rect" id="Node000020" href="$ft__strtrim_8c.html" title="Trims characters from the beginning and end of a string." alt="" coords="2473,86,2567,111"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="2186,23,2311,44,2462,76,2487,83,2486,89,2461,81,2310,49,2185,28"/>
+<area shape="rect" id="Node000021" href="$ft__utils_8c.html" title="General&#45;purpose utility functions." alt="" coords="2591,86,2668,111"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="2186,19,2359,37,2469,53,2579,76,2603,83,2601,88,2578,81,2468,58,2359,42,2186,25"/>
+<area shape="rect" id="Node000022" href="$get__next__line_8c.html" title="Implementation of the get_next_line function." alt="" coords="2693,86,2814,111"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="2186,19,2400,38,2539,54,2680,76,2713,83,2712,89,2680,81,2539,59,2399,43,2186,25"/>
+<area shape="rect" id="Node000023" href="$handle__precision__int_8c.html" title="Precision formatting for integer values in ft_printf." alt="" coords="2838,86,3005,111"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="2186,19,2456,37,2640,53,2827,76,2869,83,2868,89,2826,81,2640,59,2456,42,2185,24"/>
+<area shape="rect" id="Node000024" href="$initialize__printf__structs_8c.html" title="Initialization helpers for ft_printf internal state." alt="" coords="3029,86,3211,111"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="2186,18,2530,34,2772,51,3018,76,3064,83,3063,89,3017,81,2771,56,2530,39,2186,23"/>
+<area shape="rect" id="Node000025" href="$math__utils_8c.html" title="Utility math functions for floating&#45;point operations." alt="" coords="3235,86,3338,111"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="2186,18,2694,35,3000,52,3128,63,3224,76,3254,83,3253,89,3224,81,3127,69,3000,58,2693,40,2186,23"/>
+<area shape="rect" id="Node000026" href="$print__formatted__number_8c.html" title="Handles formatting and output of integers in ft_printf." alt="" coords="3362,86,3553,111"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="2186,17,2370,19,2657,28,2999,46,3177,59,3351,76,3400,83,3400,89,3350,81,3177,64,2999,51,2657,33,2370,25,2186,22"/>
+<area shape="rect" id="Node000027" href="$printf__alternative__form_8c.html" title="Handles the # flag for hexadecimal output in ft_printf." alt="" coords="3577,79,3711,119"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="2186,17,2850,34,3262,51,3435,63,3566,76,3577,78,3576,83,3565,81,3435,68,3262,57,2850,39,2186,23"/>
+<area shape="rect" id="Node000028" href="$process__format__string_8c.html" title="Parses and handles format specifiers for ft_printf." alt="" coords="3736,86,3915,111"/>
+<area shape="poly" id="edge27_Node000001_Node000028" title=" " alt="" coords="2186,17,2921,35,3384,53,3578,64,3724,76,3772,83,3772,89,3724,81,3578,69,3383,58,2921,41,2185,23"/>
+<area shape="rect" id="Node000029" href="$setup__format_8c.html" title="Parses format specifications for ft_printf." alt="" coords="3939,86,4059,111"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="2186,17,2509,19,3014,28,3540,45,3761,59,3927,76,3962,83,3961,89,3926,81,3761,64,3540,51,3014,33,2509,25,2186,22"/>
+<area shape="rect" id="Node000030" href="$skip__whitespace_8c.html" title="Utility functions to skip leading whitespace in C strings." alt="" coords="4083,86,4224,111"/>
+<area shape="poly" id="edge29_Node000001_Node000030" title=" " alt="" coords="2186,17,2532,20,3078,29,3650,46,3890,60,4071,76,4111,83,4110,89,4070,81,3890,65,3650,52,3078,34,2532,25,2186,22"/>
+<area shape="rect" id="Node000031" href="$vector__utils_8c.html" title=" " alt="" coords="4248,86,4357,111"/>
+<area shape="poly" id="edge30_Node000001_Node000031" title=" " alt="" coords="2186,16,2558,16,3153,22,3474,29,3777,40,4040,55,4236,76,4269,83,4267,89,4236,81,4039,61,3777,45,3474,34,3153,27,2558,22,2186,22"/>
+<area shape="rect" id="Node000032" href="$write__safely_8c.html" title="Safe low&#45;level write utilities for ft_printf." alt="" coords="4382,86,4493,111"/>
+<area shape="poly" id="edge31_Node000001_Node000032" title=" " alt="" coords="2186,16,2579,16,3213,21,3555,28,3879,39,4159,54,4370,76,4403,83,4401,89,4369,81,4159,60,3879,44,3555,33,3212,26,2579,21,2186,22"/>
+</map>

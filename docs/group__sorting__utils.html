@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +51,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__sorting__utils.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,6 +91,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#files">Files</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Sorting Utilities</div></div>
 </div><!--header-->
@@ -81,28 +102,51 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:ft__cmp_8c" id="r_ft__cmp_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__cmp_8c.html">ft_cmp.c</a></td></tr>
-<tr class="memdesc:ft__cmp_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison functions for qsort usage. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ft__qsort_8c" id="r_ft__qsort_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__qsort_8c.html">ft_qsort.c</a></td></tr>
-<tr class="memdesc:ft__qsort_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of a generic quicksort with median-of-three pivoting. <br /></td></tr>
+<tr class="memdesc:ft__qsort_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic quicksort implementation with fallback to insertion sort. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ft__sorting_8h" id="r_ft__sorting_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ft__sorting_8h.html">ft_sorting.h</a></td></tr>
+<tr class="memdesc:ft__sorting_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorting utility functions and comparators. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga45fedc8f35438429f1c16dffd34b51f0" id="r_ga45fedc8f35438429f1c16dffd34b51f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sorting__utils.html#ga45fedc8f35438429f1c16dffd34b51f0">QSORT_THRESHOLD</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:ga45fedc8f35438429f1c16dffd34b51f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaaedb17f00b23fc8b1250f6f76611eb83" id="r_gaaedb17f00b23fc8b1250f6f76611eb83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sorting__utils.html#gaaedb17f00b23fc8b1250f6f76611eb83">double_cmp</a> (const void *a, const void *b)</td></tr>
 <tr class="memdesc:gaaedb17f00b23fc8b1250f6f76611eb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison function for two doubles.  <br /></td></tr>
 <tr class="separator:gaaedb17f00b23fc8b1250f6f76611eb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a8adb08d610dfcccd0bf4a6693c81be" id="r_ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be">ft_qsort</a> (void *base, size_t nmemb, size_t size, int(*cmp)(const void *, const void *))</td></tr>
+<tr class="memdesc:ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts an array using quicksort and insertion sort fallback.  <br /></td></tr>
+<tr class="separator:ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8b7eae2b51d6b88f5f3cb52fdf0270c2" id="r_ga8b7eae2b51d6b88f5f3cb52fdf0270c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sorting__utils.html#ga8b7eae2b51d6b88f5f3cb52fdf0270c2">int_cmp</a> (const void *a, const void *b)</td></tr>
 <tr class="memdesc:ga8b7eae2b51d6b88f5f3cb52fdf0270c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comparison function for two integers.  <br /></td></tr>
 <tr class="separator:ga8b7eae2b51d6b88f5f3cb52fdf0270c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8a8adb08d610dfcccd0bf4a6693c81be" id="r_ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be">ft_qsort</a> (void *base, size_t nmemb, size_t size, int(*cmp)(const void *, const void *))</td></tr>
-<tr class="memdesc:ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts a generic array using quicksort with insertion fallback.  <br /></td></tr>
-<tr class="separator:ga8a8adb08d610dfcccd0bf4a6693c81be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>General-purpose sorting utilities including a custom quicksort. </p>
 <p>This group contains functions related to sorting arrays using a generic implementation of the quicksort algorithm. It also includes basic comparator functions for integers and doubles that can be passed to <code>ft_qsort</code>. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga45fedc8f35438429f1c16dffd34b51f0" name="ga45fedc8f35438429f1c16dffd34b51f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45fedc8f35438429f1c16dffd34b51f0">&#9670;&#160;</a></span>QSORT_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QSORT_THRESHOLD&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="ft__sorting_8h.html">ft_sorting.h</a>&gt;</code></p>
+<p>Threshold to switch sort strategy </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gaaedb17f00b23fc8b1250f6f76611eb83" name="gaaedb17f00b23fc8b1250f6f76611eb83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaaedb17f00b23fc8b1250f6f76611eb83">&#9670;&#160;</a></span>double_cmp()</h2>
@@ -130,8 +174,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__sorting_8h.html">ft_sorting.h</a>&gt;</code></p>
+
 <p>Comparison function for two doubles. </p>
-<p>Compares the values pointed to by <code>a</code> and <code>b</code>.</p>
+<p>Compares the two doubles pointed to by <code>a</code> and <code>b</code> and returns a standard comparator result.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>Pointer to the first double. </td></tr>
@@ -140,7 +186,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Negative if <code>a &lt; b</code>, 0 if equal, positive if <code>a &gt; b</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be" title="Sorts a generic array using quicksort with insertion fallback.">ft_qsort</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be" title="Sorts an array using quicksort and insertion sort fallback.">ft_qsort</a> </dd></dl>
 
 </div>
 </div>
@@ -182,17 +228,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sorts a generic array using quicksort with insertion fallback. </p>
-<p>This function sorts an array of any data type using the quicksort algorithm. For small subarrays, insertion sort is used instead for better performance.</p>
+<p><code>#include &lt;<a class="el" href="ft__sorting_8h.html">ft_sorting.h</a>&gt;</code></p>
+
+<p>Sorts an array using quicksort and insertion sort fallback. </p>
+<p>Sorts an array of any type using a generic quicksort implementation. Falls back to insertion sort for small subarrays.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">base</td><td>Pointer to the first element of the array. </td></tr>
     <tr><td class="paramname">nmemb</td><td>Number of elements in the array. </td></tr>
-    <tr><td class="paramname">size</td><td>Size (in bytes) of each element. </td></tr>
-    <tr><td class="paramname">cmp</td><td>Comparison function, must return:<ul>
-<li>Negative if first &lt; second</li>
-<li>Zero if first == second</li>
-<li>Positive if first &gt; second</li>
+    <tr><td class="paramname">size</td><td>Size in bytes of each element. </td></tr>
+    <tr><td class="paramname">cmp</td><td>Comparison function returning:<ul>
+<li>Negative if a &lt; b</li>
+<li>0 if a == b</li>
+<li>Positive if a &gt; b</li>
 </ul>
 </td></tr>
   </table>
@@ -230,8 +278,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="ft__sorting_8h.html">ft_sorting.h</a>&gt;</code></p>
+
 <p>Comparison function for two integers. </p>
-<p>Compares the values pointed to by <code>a</code> and <code>b</code>.</p>
+<p>Compares the two integers pointed to by <code>a</code> and <code>b</code> and returns a standard comparator result.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>Pointer to the first integer. </td></tr>
@@ -240,14 +290,17 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Negative if <code>a &lt; b</code>, 0 if equal, positive if <code>a &gt; b</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be" title="Sorts a generic array using quicksort with insertion fallback.">ft_qsort</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__sorting__utils.html#ga8a8adb08d610dfcccd0bf4a6693c81be" title="Sorts an array using quicksort and insertion sort fallback.">ft_qsort</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
 </body>
 </html>
